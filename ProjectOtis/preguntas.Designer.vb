@@ -28,7 +28,7 @@ Partial Class preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1160, 451)
+        Me.ClientSize = New System.Drawing.Size(1133, 451)
         Me.Name = "preguntas"
         Me.Text = "preguntas"
         Me.ResumeLayout(False)
