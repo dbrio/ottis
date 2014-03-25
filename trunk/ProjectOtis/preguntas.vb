@@ -1,6 +1,7 @@
 ﻿Public Class preguntas
     Dim id As Integer = 1
     Dim idRespuesta As Integer = 1
+
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Respuestas' Puede moverla o quitarla según sea necesario.
         Me.RespuestasTableAdapter.Fill(Me.DatasetOtis.Respuestas)
@@ -11,8 +12,8 @@
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, 1)
         LabelPregunta.Text = Pregunta
 
-        Dim Respueta As String = RespuestasTableAdapter.FillBy(Me.DatasetOtis.Respuestas, 1)
-        RadioButtonRespuesta.Text = Respueta
+        Dim Respueta As String = RespuestasTableAdapter.FillBy(1, 1)
+        Label1.Text = Respueta
 
 
 
@@ -31,7 +32,6 @@
         id = id + 1
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
         LabelPregunta.Text = Pregunta
-
         idRespuesta = idRespuesta + 1
 
 
