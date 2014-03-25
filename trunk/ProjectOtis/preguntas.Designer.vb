@@ -23,9 +23,13 @@ Partial Class preguntas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim RespuestaLabel As System.Windows.Forms.Label
         Me.PreguntasLabel = New System.Windows.Forms.Label()
         Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
+        Me.LabelPregunta = New System.Windows.Forms.Label()
+        Me.ButtonOk = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
@@ -33,23 +37,31 @@ Partial Class preguntas
         Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Preguntas1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter()
-        Me.LabelPregunta = New System.Windows.Forms.Label()
+        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter()
+        Me.RadioButtonRespuesta = New System.Windows.Forms.RadioButton()
+        Me.RespuestaRadioButton = New System.Windows.Forms.RadioButton()
+        RespuestaLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PreguntasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PreguntasLabel
         '
         Me.PreguntasLabel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Preguntas1BindingSource3, "Preguntas", True))
-        Me.PreguntasLabel.Location = New System.Drawing.Point(380, 122)
+        Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PreguntasLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PreguntasLabel.Location = New System.Drawing.Point(15, 122)
         Me.PreguntasLabel.Name = "PreguntasLabel"
-        Me.PreguntasLabel.Size = New System.Drawing.Size(406, 23)
+        Me.PreguntasLabel.Size = New System.Drawing.Size(1106, 53)
         Me.PreguntasLabel.TabIndex = 2
-        Me.PreguntasLabel.Text = "Label1"
+        Me.PreguntasLabel.Text = "Preguntas"
+        Me.PreguntasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Preguntas1BindingSource3
         '
@@ -60,6 +72,35 @@ Partial Class preguntas
         '
         Me.DatasetOtis.DataSetName = "DatasetOtis"
         Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'LabelPregunta
+        '
+        Me.LabelPregunta.AutoSize = True
+        Me.LabelPregunta.Location = New System.Drawing.Point(12, 9)
+        Me.LabelPregunta.Name = "LabelPregunta"
+        Me.LabelPregunta.Size = New System.Drawing.Size(39, 13)
+        Me.LabelPregunta.TabIndex = 0
+        Me.LabelPregunta.Text = "Label1"
+        '
+        'ButtonOk
+        '
+        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOk.Location = New System.Drawing.Point(859, 372)
+        Me.ButtonOk.Name = "ButtonOk"
+        Me.ButtonOk.Size = New System.Drawing.Size(121, 47)
+        Me.ButtonOk.TabIndex = 3
+        Me.ButtonOk.Text = "Ok"
+        Me.ButtonOk.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(1000, 372)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(121, 47)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Saltar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'PreguntasBindingSource
         '
@@ -77,6 +118,7 @@ Partial Class preguntas
         Me.TableAdapterManager.CategoríaTableAdapter = Nothing
         Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
         Me.TableAdapterManager.PreguntasTableAdapter = Me.PreguntasTableAdapter
+        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Preguntas1BindingSource
@@ -98,20 +140,56 @@ Partial Class preguntas
         '
         Me.Preguntas1TableAdapter.ClearBeforeFill = True
         '
-        'LabelPregunta
+        'RespuestasBindingSource
         '
-        Me.LabelPregunta.AutoSize = True
-        Me.LabelPregunta.Location = New System.Drawing.Point(12, 9)
-        Me.LabelPregunta.Name = "LabelPregunta"
-        Me.LabelPregunta.Size = New System.Drawing.Size(39, 13)
-        Me.LabelPregunta.TabIndex = 0
-        Me.LabelPregunta.Text = "Label1"
+        Me.RespuestasBindingSource.DataMember = "Respuestas"
+        Me.RespuestasBindingSource.DataSource = Me.DatasetOtis
+        '
+        'RespuestasTableAdapter
+        '
+        Me.RespuestasTableAdapter.ClearBeforeFill = True
+        '
+        'RadioButtonRespuesta
+        '
+        Me.RadioButtonRespuesta.AutoSize = True
+        Me.RadioButtonRespuesta.Location = New System.Drawing.Point(15, 48)
+        Me.RadioButtonRespuesta.Name = "RadioButtonRespuesta"
+        Me.RadioButtonRespuesta.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButtonRespuesta.TabIndex = 5
+        Me.RadioButtonRespuesta.TabStop = True
+        Me.RadioButtonRespuesta.Text = "RadioButton1"
+        Me.RadioButtonRespuesta.UseVisualStyleBackColor = True
+        '
+        'RespuestaLabel
+        '
+        RespuestaLabel.AutoSize = True
+        RespuestaLabel.Location = New System.Drawing.Point(443, 275)
+        RespuestaLabel.Name = "RespuestaLabel"
+        RespuestaLabel.Size = New System.Drawing.Size(61, 13)
+        RespuestaLabel.TabIndex = 5
+        RespuestaLabel.Text = "Respuesta:"
+        '
+        'RespuestaRadioButton
+        '
+        Me.RespuestaRadioButton.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
+        Me.RespuestaRadioButton.Location = New System.Drawing.Point(510, 269)
+        Me.RespuestaRadioButton.Name = "RespuestaRadioButton"
+        Me.RespuestaRadioButton.Size = New System.Drawing.Size(104, 24)
+        Me.RespuestaRadioButton.TabIndex = 6
+        Me.RespuestaRadioButton.TabStop = True
+        Me.RespuestaRadioButton.Text = "RadioButton1"
+        Me.RespuestaRadioButton.UseVisualStyleBackColor = True
         '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1133, 451)
+        Me.ClientSize = New System.Drawing.Size(1141, 498)
+        Me.Controls.Add(RespuestaLabel)
+        Me.Controls.Add(Me.RespuestaRadioButton)
+        Me.Controls.Add(Me.RadioButtonRespuesta)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
         Me.Name = "preguntas"
@@ -122,6 +200,7 @@ Partial Class preguntas
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,4 +216,10 @@ Partial Class preguntas
     Friend WithEvents Preguntas1TableAdapter As ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter
     Friend WithEvents PreguntasLabel As System.Windows.Forms.Label
     Friend WithEvents LabelPregunta As System.Windows.Forms.Label
+    Friend WithEvents ButtonOk As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents RespuestasBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents RespuestasTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter
+    Friend WithEvents RadioButtonRespuesta As System.Windows.Forms.RadioButton
+    Friend WithEvents RespuestaRadioButton As System.Windows.Forms.RadioButton
 End Class
