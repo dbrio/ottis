@@ -27,7 +27,6 @@ Partial Class preguntas
         Me.LabelPregunta = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.RadioButtonRespuesta = New System.Windows.Forms.RadioButton()
         Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
         Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
@@ -44,6 +43,7 @@ Partial Class preguntas
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -56,23 +56,25 @@ Partial Class preguntas
         'PreguntasLabel
         '
         Me.PreguntasLabel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Preguntas1BindingSource3, "Preguntas", True))
-        Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreguntasLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PreguntasLabel.Location = New System.Drawing.Point(15, 122)
+        Me.PreguntasLabel.Location = New System.Drawing.Point(15, 60)
         Me.PreguntasLabel.Name = "PreguntasLabel"
-        Me.PreguntasLabel.Size = New System.Drawing.Size(1106, 53)
+        Me.PreguntasLabel.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.PreguntasLabel.Size = New System.Drawing.Size(1106, 172)
         Me.PreguntasLabel.TabIndex = 2
         Me.PreguntasLabel.Text = "Preguntas"
-        Me.PreguntasLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.PreguntasLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'LabelPregunta
         '
         Me.LabelPregunta.AutoSize = True
-        Me.LabelPregunta.Location = New System.Drawing.Point(12, 9)
+        Me.LabelPregunta.Location = New System.Drawing.Point(20, 21)
         Me.LabelPregunta.Name = "LabelPregunta"
         Me.LabelPregunta.Size = New System.Drawing.Size(39, 13)
         Me.LabelPregunta.TabIndex = 0
         Me.LabelPregunta.Text = "Label1"
+        Me.LabelPregunta.Visible = False
         '
         'ButtonOk
         '
@@ -93,17 +95,6 @@ Partial Class preguntas
         Me.Button1.TabIndex = 4
         Me.Button1.Text = "Saltar"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'RadioButtonRespuesta
-        '
-        Me.RadioButtonRespuesta.AutoSize = True
-        Me.RadioButtonRespuesta.Location = New System.Drawing.Point(15, 48)
-        Me.RadioButtonRespuesta.Name = "RadioButtonRespuesta"
-        Me.RadioButtonRespuesta.Size = New System.Drawing.Size(90, 17)
-        Me.RadioButtonRespuesta.TabIndex = 5
-        Me.RadioButtonRespuesta.TabStop = True
-        Me.RadioButtonRespuesta.Text = "RadioButton1"
-        Me.RadioButtonRespuesta.UseVisualStyleBackColor = True
         '
         'RespuestaRadioA
         '
@@ -217,17 +208,27 @@ Partial Class preguntas
         Me.RadioButtonE.Text = "RadioButton1"
         Me.RadioButtonE.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Arial Unicode MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 6)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(85, 33)
+        Me.Label1.TabIndex = 11
+        Me.Label1.Text = "Label1"
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1141, 498)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadioButtonE)
         Me.Controls.Add(Me.RadioButtonD)
         Me.Controls.Add(Me.RadioButtonC)
         Me.Controls.Add(Me.RadioButtonB)
         Me.Controls.Add(Me.RespuestaRadioA)
-        Me.Controls.Add(Me.RadioButtonRespuesta)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
@@ -260,10 +261,10 @@ Partial Class preguntas
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents RespuestasBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RespuestasTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter
-    Friend WithEvents RadioButtonRespuesta As System.Windows.Forms.RadioButton
     Friend WithEvents RespuestaRadioA As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonB As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonC As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonD As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonE As System.Windows.Forms.RadioButton
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
