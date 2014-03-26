@@ -110,9 +110,10 @@ Partial Class preguntas
         'RespuestaRadioA
         '
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(64, 285)
+        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(25, 285)
         Me.RespuestaRadioA.Name = "RespuestaRadioA"
-        Me.RespuestaRadioA.Size = New System.Drawing.Size(185, 24)
+        Me.RespuestaRadioA.Size = New System.Drawing.Size(213, 24)
         Me.RespuestaRadioA.TabIndex = 6
         Me.RespuestaRadioA.TabStop = True
         Me.RespuestaRadioA.Text = "RadioButton1"
@@ -168,9 +169,10 @@ Partial Class preguntas
         'RadioButtonB
         '
         Me.RadioButtonB.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonB.Location = New System.Drawing.Point(283, 285)
+        Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonB.Location = New System.Drawing.Point(246, 285)
         Me.RadioButtonB.Name = "RadioButtonB"
-        Me.RadioButtonB.Size = New System.Drawing.Size(187, 24)
+        Me.RadioButtonB.Size = New System.Drawing.Size(222, 24)
         Me.RadioButtonB.TabIndex = 7
         Me.RadioButtonB.TabStop = True
         Me.RadioButtonB.Text = "RadioButton1"
@@ -179,9 +181,10 @@ Partial Class preguntas
         'RadioButtonC
         '
         Me.RadioButtonC.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonC.Location = New System.Drawing.Point(511, 285)
+        Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonC.Location = New System.Drawing.Point(475, 285)
         Me.RadioButtonC.Name = "RadioButtonC"
-        Me.RadioButtonC.Size = New System.Drawing.Size(185, 24)
+        Me.RadioButtonC.Size = New System.Drawing.Size(205, 24)
         Me.RadioButtonC.TabIndex = 8
         Me.RadioButtonC.TabStop = True
         Me.RadioButtonC.Text = "RadioButton1"
@@ -190,9 +193,10 @@ Partial Class preguntas
         'RadioButtonD
         '
         Me.RadioButtonD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonD.Location = New System.Drawing.Point(722, 285)
+        Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonD.Location = New System.Drawing.Point(689, 285)
         Me.RadioButtonD.Name = "RadioButtonD"
-        Me.RadioButtonD.Size = New System.Drawing.Size(204, 24)
+        Me.RadioButtonD.Size = New System.Drawing.Size(230, 24)
         Me.RadioButtonD.TabIndex = 9
         Me.RadioButtonD.TabStop = True
         Me.RadioButtonD.Text = "RadioButton1"
@@ -201,9 +205,10 @@ Partial Class preguntas
         'RadioButtonE
         '
         Me.RadioButtonE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonE.Location = New System.Drawing.Point(958, 285)
+        Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonE.Location = New System.Drawing.Point(928, 285)
         Me.RadioButtonE.Name = "RadioButtonE"
-        Me.RadioButtonE.Size = New System.Drawing.Size(171, 24)
+        Me.RadioButtonE.Size = New System.Drawing.Size(193, 24)
         Me.RadioButtonE.TabIndex = 10
         Me.RadioButtonE.TabStop = True
         Me.RadioButtonE.Text = "RadioButton1"
