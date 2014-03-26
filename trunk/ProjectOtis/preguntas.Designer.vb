@@ -23,6 +23,7 @@ Partial Class preguntas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim IdRespuestaUsuarioLabel As System.Windows.Forms.Label
         Me.PreguntasLabel = New System.Windows.Forms.Label()
         Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
@@ -44,6 +45,12 @@ Partial Class preguntas
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
+        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.IdRespuestaUsuarioLabel1 = New System.Windows.Forms.Label()
+        IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +58,9 @@ Partial Class preguntas
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PreguntasLabel
@@ -141,6 +151,7 @@ Partial Class preguntas
         Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
         Me.TableAdapterManager.PreguntasTableAdapter = Me.PreguntasTableAdapter
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'Preguntas1BindingSource
@@ -224,11 +235,53 @@ Partial Class preguntas
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Label1"
         '
+        'RespuestasUsuarioBindingSource
+        '
+        Me.RespuestasUsuarioBindingSource.DataSource = Me.DatasetOtis
+        Me.RespuestasUsuarioBindingSource.Position = 0
+        '
+        'RespuestasUsuarioTableAdapter
+        '
+        Me.RespuestasUsuarioTableAdapter.ClearBeforeFill = True
+        '
+        'RespuestasUsuarioBindingSource1
+        '
+        Me.RespuestasUsuarioBindingSource1.DataSource = Me.DatasetOtis
+        Me.RespuestasUsuarioBindingSource1.Position = 0
+        '
+        'RespuestasUsuarioBindingSource2
+        '
+        Me.RespuestasUsuarioBindingSource2.DataMember = "RespuestasUsuario"
+        Me.RespuestasUsuarioBindingSource2.DataSource = Me.DatasetOtis
+        '
+        'IdRespuestaUsuarioLabel
+        '
+        IdRespuestaUsuarioLabel.AutoSize = True
+        IdRespuestaUsuarioLabel.Location = New System.Drawing.Point(1120, 21)
+        IdRespuestaUsuarioLabel.Name = "IdRespuestaUsuarioLabel"
+        IdRespuestaUsuarioLabel.Size = New System.Drawing.Size(112, 13)
+        IdRespuestaUsuarioLabel.TabIndex = 11
+        IdRespuestaUsuarioLabel.Text = "Id Respuesta Usuario:"
+        IdRespuestaUsuarioLabel.Visible = False
+        '
+        'IdRespuestaUsuarioLabel1
+        '
+        Me.IdRespuestaUsuarioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RespuestasUsuarioBindingSource2, "IdRespuestaUsuario", True))
+        Me.IdRespuestaUsuarioLabel1.Location = New System.Drawing.Point(1238, 21)
+        Me.IdRespuestaUsuarioLabel1.Name = "IdRespuestaUsuarioLabel1"
+        Me.IdRespuestaUsuarioLabel1.Size = New System.Drawing.Size(100, 23)
+        Me.IdRespuestaUsuarioLabel1.TabIndex = 12
+        Me.IdRespuestaUsuarioLabel1.Text = "Label2"
+        Me.IdRespuestaUsuarioLabel1.Visible = False
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1141, 498)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(1354, 532)
+        Me.Controls.Add(IdRespuestaUsuarioLabel)
+        Me.Controls.Add(Me.IdRespuestaUsuarioLabel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadioButtonE)
         Me.Controls.Add(Me.RadioButtonD)
@@ -248,6 +301,9 @@ Partial Class preguntas
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -273,4 +329,9 @@ Partial Class preguntas
     Friend WithEvents RadioButtonD As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonE As System.Windows.Forms.RadioButton
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents RespuestasUsuarioBindingSource As System.Windows.Forms.BindingSource
+    Friend WithEvents RespuestasUsuarioTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter
+    Friend WithEvents RespuestasUsuarioBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents RespuestasUsuarioBindingSource2 As System.Windows.Forms.BindingSource
+    Friend WithEvents IdRespuestaUsuarioLabel1 As System.Windows.Forms.Label
 End Class

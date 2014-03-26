@@ -1,8 +1,11 @@
 ﻿Public Class preguntas
     Dim id As Integer = 1
     Dim idRespuesta As Integer = 6
+    Dim respuestaUsuario As String
 
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.RespuestasUsuario' Puede moverla o quitarla según sea necesario.
+        Me.RespuestasUsuarioTableAdapter.Fill(Me.DatasetOtis.RespuestasUsuario)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Respuestas' Puede moverla o quitarla según sea necesario.
         Me.RespuestasTableAdapter.Fill(Me.DatasetOtis.Respuestas)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Preguntas1' Puede moverla o quitarla según sea necesario.
@@ -22,8 +25,6 @@
         RadioButtonD.Text = Respueta4
         Dim Respueta5 As String = RespuestasTableAdapter.FillBy(5, 1)
         RadioButtonE.Text = Respueta5
-
-
 
 
     End Sub
@@ -68,6 +69,10 @@
         btnSaltar.Enabled = True
         ButtonOk.Enabled = False
 
+      
+
+        RespuestasUsuarioTableAdapter.InsertRespuestaUsuario(1, id, respuestaUsuario)
+
 
 
     End Sub
@@ -100,25 +105,30 @@
     Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
         ButtonOk.Enabled = True
         btnSaltar.Enabled = False
+        respuestaUsuario = "A"
     End Sub
 
     Private Sub RadioButtonB_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonB.CheckedChanged
         ButtonOk.Enabled = True
         btnSaltar.Enabled = False
+        respuestaUsuario = "B"
     End Sub
 
     Private Sub RadioButtonC_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonC.CheckedChanged
         ButtonOk.Enabled = True
         btnSaltar.Enabled = False
+        respuestaUsuario = "C"
     End Sub
 
     Private Sub RadioButtonD_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonD.CheckedChanged
         ButtonOk.Enabled = True
         btnSaltar.Enabled = False
+        respuestaUsuario = "D"
     End Sub
 
     Private Sub RadioButtonE_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonE.CheckedChanged
         ButtonOk.Enabled = True
         btnSaltar.Enabled = False
+        respuestaUsuario = "E"
     End Sub
 End Class
