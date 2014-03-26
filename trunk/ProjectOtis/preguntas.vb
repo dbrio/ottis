@@ -65,7 +65,8 @@
         If id = 81 Then
             ButtonOk.Enabled = False
         End If
-
+        btnSaltar.Enabled = True
+        ButtonOk.Enabled = False
 
 
 
@@ -94,5 +95,30 @@
         If id = 81 Then
             ButtonOk.Enabled = False
         End If
+    End Sub
+
+    Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
+        ButtonOk.Enabled = True
+        btnSaltar.Enabled = False
+    End Sub
+
+    Private Sub RadioButtonB_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonB.CheckedChanged
+        ButtonOk.Enabled = True
+        btnSaltar.Enabled = False
+    End Sub
+
+    Private Sub RadioButtonC_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonC.CheckedChanged
+        ButtonOk.Enabled = True
+        btnSaltar.Enabled = False
+    End Sub
+
+    Private Sub RadioButtonD_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonD.CheckedChanged
+        ButtonOk.Enabled = True
+        btnSaltar.Enabled = False
+    End Sub
+
+    Private Sub RadioButtonE_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonE.CheckedChanged
+        ButtonOk.Enabled = True
+        btnSaltar.Enabled = False
     End Sub
 End Class

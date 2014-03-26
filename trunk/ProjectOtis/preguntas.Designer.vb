@@ -88,6 +88,7 @@ Partial Class preguntas
         '
         'ButtonOk
         '
+        Me.ButtonOk.Enabled = False
         Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOk.Location = New System.Drawing.Point(859, 372)
         Me.ButtonOk.Name = "ButtonOk"
