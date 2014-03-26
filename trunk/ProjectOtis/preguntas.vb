@@ -11,7 +11,7 @@
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, 1)
         LabelPregunta.Text = Pregunta
-
+        Label1.Text = id
         Dim Respueta1 As String = RespuestasTableAdapter.FillBy(1, 1)
         RespuestaRadioA.Text = Respueta1
         Dim Respueta2 As String = RespuestasTableAdapter.FillBy(2, 1)
@@ -38,9 +38,10 @@
     
     Private Sub ButtonOk_Click(sender As Object, e As EventArgs) Handles ButtonOk.Click
         id = id + 1
+
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
         LabelPregunta.Text = Pregunta
-
+        Label1.Text = id
 
         Dim Respueta1 As String = RespuestasTableAdapter.FillBy(idRespuesta, id)
         RespuestaRadioA.Text = Respueta1
