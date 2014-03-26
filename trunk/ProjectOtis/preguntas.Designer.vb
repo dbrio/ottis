@@ -24,13 +24,13 @@ Partial Class preguntas
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.PreguntasLabel = New System.Windows.Forms.Label()
+        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelPregunta = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSaltar = New System.Windows.Forms.Button()
         Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
         Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
@@ -44,9 +44,9 @@ Partial Class preguntas
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PreguntasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +65,16 @@ Partial Class preguntas
         Me.PreguntasLabel.TabIndex = 2
         Me.PreguntasLabel.Text = "Preguntas"
         Me.PreguntasLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Preguntas1BindingSource3
+        '
+        Me.Preguntas1BindingSource3.DataMember = "Preguntas1"
+        Me.Preguntas1BindingSource3.DataSource = Me.DatasetOtis
+        '
+        'DatasetOtis
+        '
+        Me.DatasetOtis.DataSetName = "DatasetOtis"
+        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LabelPregunta
         '
@@ -86,15 +96,15 @@ Partial Class preguntas
         Me.ButtonOk.Text = "Ok"
         Me.ButtonOk.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnSaltar
         '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1000, 372)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(121, 47)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Saltar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSaltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaltar.Location = New System.Drawing.Point(1000, 372)
+        Me.btnSaltar.Name = "btnSaltar"
+        Me.btnSaltar.Size = New System.Drawing.Size(121, 47)
+        Me.btnSaltar.TabIndex = 4
+        Me.btnSaltar.Text = "Saltar"
+        Me.btnSaltar.UseVisualStyleBackColor = True
         '
         'RespuestaRadioA
         '
@@ -111,16 +121,6 @@ Partial Class preguntas
         '
         Me.RespuestasBindingSource.DataMember = "Respuestas"
         Me.RespuestasBindingSource.DataSource = Me.DatasetOtis
-        '
-        'DatasetOtis
-        '
-        Me.DatasetOtis.DataSetName = "DatasetOtis"
-        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'Preguntas1BindingSource3
-        '
-        Me.Preguntas1BindingSource3.DataMember = "Preguntas1"
-        Me.Preguntas1BindingSource3.DataSource = Me.DatasetOtis
         '
         'PreguntasBindingSource
         '
@@ -229,15 +229,15 @@ Partial Class preguntas
         Me.Controls.Add(Me.RadioButtonC)
         Me.Controls.Add(Me.RadioButtonB)
         Me.Controls.Add(Me.RespuestaRadioA)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSaltar)
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
         Me.Name = "preguntas"
         Me.Text = "preguntas"
-        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PreguntasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -258,7 +258,7 @@ Partial Class preguntas
     Friend WithEvents PreguntasLabel As System.Windows.Forms.Label
     Friend WithEvents LabelPregunta As System.Windows.Forms.Label
     Friend WithEvents ButtonOk As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnSaltar As System.Windows.Forms.Button
     Friend WithEvents RespuestasBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RespuestasTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter
     Friend WithEvents RespuestaRadioA As System.Windows.Forms.RadioButton
