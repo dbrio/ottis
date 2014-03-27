@@ -13,11 +13,7 @@
 
     End Sub
     Private Sub ButtonIngresar_Click(sender As Object, e As EventArgs) Handles ButtonIngresar.Click
-        If RNPTextEdit.EditValue = "" Then
-            MsgBox("Debe agregar un RNP", MsgBoxStyle.Information)
-            RNPTextEdit.Focus()
-            Exit Sub
-        End If
+        
 
         If NombreTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Nombre", MsgBoxStyle.Information)

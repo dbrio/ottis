@@ -23,6 +23,7 @@ Partial Class Welcome
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ButtonIrInstrucciones = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,11 +40,21 @@ Partial Class Welcome
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'ButtonIrInstrucciones
+        '
+        Me.ButtonIrInstrucciones.Location = New System.Drawing.Point(716, 425)
+        Me.ButtonIrInstrucciones.Name = "ButtonIrInstrucciones"
+        Me.ButtonIrInstrucciones.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonIrInstrucciones.TabIndex = 1
+        Me.ButtonIrInstrucciones.Text = "Button1"
+        Me.ButtonIrInstrucciones.UseVisualStyleBackColor = True
+        '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 460)
+        Me.Controls.Add(Me.ButtonIrInstrucciones)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Welcome"
         Me.Text = "Welcome"
@@ -53,4 +64,5 @@ Partial Class Welcome
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ButtonIrInstrucciones As System.Windows.Forms.Button
 End Class
