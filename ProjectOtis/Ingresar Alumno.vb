@@ -1,19 +1,25 @@
 ﻿Public Class Ingresar_Alumno
 
     Private Sub AlumnosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
-        Me.Validate()
-        Me.AlumnosBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me.DatasetOtis)
+        'Me.Validate()
+        'Me.AlumnosBindingSource.EndEdit()
+        'Me.TableAdapterManager.UpdateAll(Me.DatasetOtis)
 
     End Sub
 
     Private Sub Ingresar_Alumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
-        Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
+        'Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
 
     End Sub
 
     Private Sub ButtonIngresar_Click(sender As Object, e As EventArgs) Handles ButtonIngresar.Click
+
+        If RNPMaskedTextBox.Text = "" Then
+            MsgBox("Debe agregar un RNP", MsgBoxStyle.Information)
+            RNPMaskedTextBox.Focus()
+            Exit Sub
+        End If
 
         If NombreTextEdit.Text = "" Then
             MsgBox("Debe agregar un Nombre", MsgBoxStyle.Information)
@@ -27,11 +33,6 @@
             Exit Sub
         End If
 
-        If RNPTextEdit.Text = "" Then
-            MsgBox("Debe agregar un RNP", MsgBoxStyle.Information)
-            RNPTextEdit.Focus()
-            Exit Sub
-        End If
 
         If DireccionTextEdit.Text = "" Then
             MsgBox("Debe agregar una Direccion", MsgBoxStyle.Information)
@@ -39,26 +40,26 @@
             Exit Sub
         End If
 
-        If TelefonoTextEdit.Text = "" Then
+        If TelefonoMaskedTextBox.Text = "" Then
             MsgBox("Debe agregar un Telefono", MsgBoxStyle.Information)
-            TelefonoTextEdit.Focus()
+            TelefonoMaskedTextBox.Focus()
             Exit Sub
         End If
 
-        If CorreoTextEdit.Text = "" Then
+        If CorreoMaskedTextBox.Text = "" Then
             MsgBox("Debe agregar un Correo", MsgBoxStyle.Information)
-            CorreoTextEdit.Focus()
+            CorreoMaskedTextBox.Focus()
             Exit Sub
         End If
 
-        AlumnosTableAdapter.Insert(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+        AlumnosTableAdapter.Insert(RNPMaskedTextBox.Text, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoMaskedTextBox.Text, CorreoMaskedTextBox.Text)
 
         NombreTextEdit.Text = ""
         ApellidosTextEdit.Text = ""
-        RNPTextEdit.Text = ""
+        RNPMaskedTextBox.Text = ""
         DireccionTextEdit.Text = ""
-        TelefonoTextEdit.Text = ""
-        CorreoTextEdit.Text = ""
+        TelefonoMaskedTextBox.Text = ""
+        CorreoMaskedTextBox.Text = ""
 
 
     End Sub
