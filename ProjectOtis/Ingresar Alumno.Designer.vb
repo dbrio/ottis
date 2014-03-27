@@ -33,13 +33,13 @@ Partial Class Ingresar_Alumno
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
-        Me.RNPTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.ButtonIngresar = New System.Windows.Forms.Button()
+        Me.RNPMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.ApellidosTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.DireccionTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.ButtonIngresar = New System.Windows.Forms.Button()
+        Me.TelefonoMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.CorreoMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
         RNPLabel = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
@@ -48,12 +48,9 @@ Partial Class Ingresar_Alumno
         CorreoLabel = New System.Windows.Forms.Label()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DatasetOtis
@@ -81,108 +78,6 @@ Partial Class Ingresar_Alumno
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
-        'RNPLabel
-        '
-        RNPLabel.AutoSize = True
-        RNPLabel.Location = New System.Drawing.Point(465, 46)
-        RNPLabel.Name = "RNPLabel"
-        RNPLabel.Size = New System.Drawing.Size(33, 13)
-        RNPLabel.TabIndex = 1
-        RNPLabel.Text = "RNP:"
-        '
-        'RNPTextEdit
-        '
-        Me.RNPTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "RNP", True))
-        Me.RNPTextEdit.Location = New System.Drawing.Point(526, 43)
-        Me.RNPTextEdit.Name = "RNPTextEdit"
-        Me.RNPTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.RNPTextEdit.TabIndex = 2
-        '
-        'NombreLabel
-        '
-        NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(42, 46)
-        NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
-        NombreLabel.TabIndex = 3
-        NombreLabel.Text = "Nombre:"
-        '
-        'NombreTextEdit
-        '
-        Me.NombreTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Nombre", True))
-        Me.NombreTextEdit.Location = New System.Drawing.Point(103, 43)
-        Me.NombreTextEdit.Name = "NombreTextEdit"
-        Me.NombreTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.NombreTextEdit.TabIndex = 4
-        '
-        'ApellidosLabel
-        '
-        ApellidosLabel.AutoSize = True
-        ApellidosLabel.Location = New System.Drawing.Point(255, 46)
-        ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(52, 13)
-        ApellidosLabel.TabIndex = 5
-        ApellidosLabel.Text = "Apellidos:"
-        '
-        'ApellidosTextEdit
-        '
-        Me.ApellidosTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Apellidos", True))
-        Me.ApellidosTextEdit.Location = New System.Drawing.Point(316, 43)
-        Me.ApellidosTextEdit.Name = "ApellidosTextEdit"
-        Me.ApellidosTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.ApellidosTextEdit.TabIndex = 6
-        '
-        'DireccionLabel
-        '
-        DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(42, 105)
-        DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(55, 13)
-        DireccionLabel.TabIndex = 7
-        DireccionLabel.Text = "Direccion:"
-        '
-        'DireccionTextEdit
-        '
-        Me.DireccionTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Direccion", True))
-        Me.DireccionTextEdit.Location = New System.Drawing.Point(103, 102)
-        Me.DireccionTextEdit.Name = "DireccionTextEdit"
-        Me.DireccionTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.DireccionTextEdit.TabIndex = 8
-        '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(255, 105)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
-        TelefonoLabel.TabIndex = 9
-        TelefonoLabel.Text = "Telefono:"
-        '
-        'TelefonoTextEdit
-        '
-        Me.TelefonoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Telefono", True))
-        Me.TelefonoTextEdit.Location = New System.Drawing.Point(316, 102)
-        Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
-        Me.TelefonoTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.TelefonoTextEdit.TabIndex = 10
-        '
-        'CorreoLabel
-        '
-        CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(465, 105)
-        CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(41, 13)
-        CorreoLabel.TabIndex = 11
-        CorreoLabel.Text = "Correo:"
-        '
-        'CorreoTextEdit
-        '
-        Me.CorreoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Correo", True))
-        Me.CorreoTextEdit.Location = New System.Drawing.Point(526, 102)
-        Me.CorreoTextEdit.Name = "CorreoTextEdit"
-        Me.CorreoTextEdit.Size = New System.Drawing.Size(100, 20)
-        Me.CorreoTextEdit.TabIndex = 12
-        '
         'ButtonIngresar
         '
         Me.ButtonIngresar.Location = New System.Drawing.Point(140, 222)
@@ -192,14 +87,117 @@ Partial Class Ingresar_Alumno
         Me.ButtonIngresar.Text = "Ingresar"
         Me.ButtonIngresar.UseVisualStyleBackColor = True
         '
+        'RNPLabel
+        '
+        RNPLabel.AutoSize = True
+        RNPLabel.Location = New System.Drawing.Point(36, 31)
+        RNPLabel.Name = "RNPLabel"
+        RNPLabel.Size = New System.Drawing.Size(33, 13)
+        RNPLabel.TabIndex = 13
+        RNPLabel.Text = "RNP:"
+        '
+        'RNPMaskedTextBox
+        '
+        Me.RNPMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnosBindingSource, "RNP", True))
+        Me.RNPMaskedTextBox.Location = New System.Drawing.Point(80, 28)
+        Me.RNPMaskedTextBox.Mask = "0000-0000-00000"
+        Me.RNPMaskedTextBox.Name = "RNPMaskedTextBox"
+        Me.RNPMaskedTextBox.Size = New System.Drawing.Size(179, 20)
+        Me.RNPMaskedTextBox.TabIndex = 14
+        '
+        'NombreLabel
+        '
+        NombreLabel.AutoSize = True
+        NombreLabel.Location = New System.Drawing.Point(304, 31)
+        NombreLabel.Name = "NombreLabel"
+        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.TabIndex = 15
+        NombreLabel.Text = "Nombre:"
+        '
+        'NombreTextEdit
+        '
+        Me.NombreTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Nombre", True))
+        Me.NombreTextEdit.Location = New System.Drawing.Point(357, 28)
+        Me.NombreTextEdit.Name = "NombreTextEdit"
+        Me.NombreTextEdit.Size = New System.Drawing.Size(142, 20)
+        Me.NombreTextEdit.TabIndex = 16
+        '
+        'ApellidosLabel
+        '
+        ApellidosLabel.AutoSize = True
+        ApellidosLabel.Location = New System.Drawing.Point(547, 31)
+        ApellidosLabel.Name = "ApellidosLabel"
+        ApellidosLabel.Size = New System.Drawing.Size(52, 13)
+        ApellidosLabel.TabIndex = 17
+        ApellidosLabel.Text = "Apellidos:"
+        '
+        'ApellidosTextEdit
+        '
+        Me.ApellidosTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Apellidos", True))
+        Me.ApellidosTextEdit.Location = New System.Drawing.Point(600, 28)
+        Me.ApellidosTextEdit.Name = "ApellidosTextEdit"
+        Me.ApellidosTextEdit.Size = New System.Drawing.Size(142, 20)
+        Me.ApellidosTextEdit.TabIndex = 18
+        '
+        'DireccionLabel
+        '
+        DireccionLabel.AutoSize = True
+        DireccionLabel.Location = New System.Drawing.Point(89, 90)
+        DireccionLabel.Name = "DireccionLabel"
+        DireccionLabel.Size = New System.Drawing.Size(55, 13)
+        DireccionLabel.TabIndex = 19
+        DireccionLabel.Text = "Direccion:"
+        '
+        'DireccionTextEdit
+        '
+        Me.DireccionTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Direccion", True))
+        Me.DireccionTextEdit.Location = New System.Drawing.Point(150, 87)
+        Me.DireccionTextEdit.Name = "DireccionTextEdit"
+        Me.DireccionTextEdit.Size = New System.Drawing.Size(498, 20)
+        Me.DireccionTextEdit.TabIndex = 20
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(28, 157)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel.TabIndex = 21
+        TelefonoLabel.Text = "Telefono:"
+        '
+        'TelefonoMaskedTextBox
+        '
+        Me.TelefonoMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnosBindingSource, "Telefono", True))
+        Me.TelefonoMaskedTextBox.Location = New System.Drawing.Point(80, 154)
+        Me.TelefonoMaskedTextBox.Mask = "0000-0000"
+        Me.TelefonoMaskedTextBox.Name = "TelefonoMaskedTextBox"
+        Me.TelefonoMaskedTextBox.Size = New System.Drawing.Size(179, 20)
+        Me.TelefonoMaskedTextBox.TabIndex = 22
+        '
+        'CorreoLabel
+        '
+        CorreoLabel.AutoSize = True
+        CorreoLabel.Location = New System.Drawing.Point(428, 157)
+        CorreoLabel.Name = "CorreoLabel"
+        CorreoLabel.Size = New System.Drawing.Size(41, 13)
+        CorreoLabel.TabIndex = 23
+        CorreoLabel.Text = "Correo:"
+        '
+        'CorreoMaskedTextBox
+        '
+        Me.CorreoMaskedTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnosBindingSource, "Correo", True))
+        Me.CorreoMaskedTextBox.Location = New System.Drawing.Point(489, 154)
+        Me.CorreoMaskedTextBox.Name = "CorreoMaskedTextBox"
+        Me.CorreoMaskedTextBox.Size = New System.Drawing.Size(253, 20)
+        Me.CorreoMaskedTextBox.TabIndex = 24
+        '
         'Ingresar_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(701, 333)
-        Me.Controls.Add(Me.ButtonIngresar)
+        Me.ClientSize = New System.Drawing.Size(774, 333)
         Me.Controls.Add(RNPLabel)
-        Me.Controls.Add(Me.RNPTextEdit)
+        Me.Controls.Add(Me.RNPMaskedTextBox)
         Me.Controls.Add(NombreLabel)
         Me.Controls.Add(Me.NombreTextEdit)
         Me.Controls.Add(ApellidosLabel)
@@ -207,19 +205,17 @@ Partial Class Ingresar_Alumno
         Me.Controls.Add(DireccionLabel)
         Me.Controls.Add(Me.DireccionTextEdit)
         Me.Controls.Add(TelefonoLabel)
-        Me.Controls.Add(Me.TelefonoTextEdit)
+        Me.Controls.Add(Me.TelefonoMaskedTextBox)
         Me.Controls.Add(CorreoLabel)
-        Me.Controls.Add(Me.CorreoTextEdit)
+        Me.Controls.Add(Me.CorreoMaskedTextBox)
+        Me.Controls.Add(Me.ButtonIngresar)
         Me.Name = "Ingresar_Alumno"
         Me.Text = "Ingresar_Alumno"
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,11 +224,11 @@ Partial Class Ingresar_Alumno
     Friend WithEvents AlumnosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents AlumnosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter
     Friend WithEvents TableAdapterManager As ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager
-    Friend WithEvents RNPTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents ButtonIngresar As System.Windows.Forms.Button
+    Friend WithEvents RNPMaskedTextBox As System.Windows.Forms.MaskedTextBox
     Friend WithEvents NombreTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ApellidosTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents DireccionTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents ButtonIngresar As System.Windows.Forms.Button
+    Friend WithEvents TelefonoMaskedTextBox As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents CorreoMaskedTextBox As System.Windows.Forms.MaskedTextBox
 End Class
