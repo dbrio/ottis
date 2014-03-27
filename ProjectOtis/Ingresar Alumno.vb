@@ -12,55 +12,54 @@
         'Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
 
     End Sub
-
     Private Sub ButtonIngresar_Click(sender As Object, e As EventArgs) Handles ButtonIngresar.Click
-
-        If RNPMaskedTextBox.Text = "" Then
+        If RNPTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un RNP", MsgBoxStyle.Information)
-            RNPMaskedTextBox.Focus()
+            RNPTextEdit.Focus()
             Exit Sub
         End If
 
-        If NombreTextEdit.Text = "" Then
+        If NombreTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Nombre", MsgBoxStyle.Information)
             NombreTextEdit.Focus()
             Exit Sub
         End If
 
-        If ApellidosTextEdit.Text = "" Then
+        If ApellidosTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Apellido", MsgBoxStyle.Information)
             ApellidosTextEdit.Focus()
             Exit Sub
         End If
 
 
-        If DireccionTextEdit.Text = "" Then
+        If DireccionTextEdit.EditValue = "" Then
             MsgBox("Debe agregar una Direccion", MsgBoxStyle.Information)
             DireccionTextEdit.Focus()
             Exit Sub
         End If
 
-        If TelefonoMaskedTextBox.Text = "" Then
+        If TelefonoTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Telefono", MsgBoxStyle.Information)
-            TelefonoMaskedTextBox.Focus()
+            TelefonoTextEdit.Focus()
             Exit Sub
         End If
 
-        If CorreoMaskedTextBox.Text = "" Then
+        If CorreoTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Correo", MsgBoxStyle.Information)
-            CorreoMaskedTextBox.Focus()
+            CorreoTextEdit.Focus()
             Exit Sub
         End If
 
-        AlumnosTableAdapter.Insert(RNPMaskedTextBox.Text, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoMaskedTextBox.Text, CorreoMaskedTextBox.Text)
+        AlumnosTableAdapter.Insert(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
 
-        NombreTextEdit.Text = ""
-        ApellidosTextEdit.Text = ""
-        RNPMaskedTextBox.Text = ""
-        DireccionTextEdit.Text = ""
-        TelefonoMaskedTextBox.Text = ""
-        CorreoMaskedTextBox.Text = ""
+        NombreTextEdit.EditValue = ""
+        ApellidosTextEdit.EditValue = ""
+        RNPTextEdit.EditValue = ""
+        DireccionTextEdit.EditValue = ""
+        TelefonoTextEdit.EditValue = ""
+        CorreoTextEdit.EditValue = ""
 
-
+        Welcome.Show()
+        Me.Close()
     End Sub
 End Class
