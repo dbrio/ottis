@@ -27,7 +27,7 @@ Partial Class Form1
         '
         'ButtonEmpezar
         '
-        Me.ButtonEmpezar.Location = New System.Drawing.Point(550, 290)
+        Me.ButtonEmpezar.Location = New System.Drawing.Point(532, 279)
         Me.ButtonEmpezar.Name = "ButtonEmpezar"
         Me.ButtonEmpezar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonEmpezar.TabIndex = 0
@@ -38,10 +38,12 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1140, 521)
         Me.Controls.Add(Me.ButtonEmpezar)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
     End Sub
