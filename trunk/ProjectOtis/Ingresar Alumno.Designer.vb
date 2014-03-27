@@ -22,7 +22,6 @@ Partial Class Ingresar_Alumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
@@ -30,7 +29,7 @@ Partial Class Ingresar_Alumno
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         Me.ButtonIngresar = New System.Windows.Forms.Button()
@@ -82,6 +81,33 @@ Partial Class Ingresar_Alumno
         DireccionLabel.Size = New System.Drawing.Size(55, 13)
         DireccionLabel.TabIndex = 19
         DireccionLabel.Text = "Direccion:"
+        '
+        'RNPLabel
+        '
+        RNPLabel.AutoSize = True
+        RNPLabel.Location = New System.Drawing.Point(28, 31)
+        RNPLabel.Name = "RNPLabel"
+        RNPLabel.Size = New System.Drawing.Size(33, 13)
+        RNPLabel.TabIndex = 19
+        RNPLabel.Text = "RNP:"
+        '
+        'TelefonoLabel
+        '
+        TelefonoLabel.AutoSize = True
+        TelefonoLabel.Location = New System.Drawing.Point(34, 157)
+        TelefonoLabel.Name = "TelefonoLabel"
+        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel.TabIndex = 20
+        TelefonoLabel.Text = "Telefono:"
+        '
+        'CorreoLabel
+        '
+        CorreoLabel.AutoSize = True
+        CorreoLabel.Location = New System.Drawing.Point(472, 153)
+        CorreoLabel.Name = "CorreoLabel"
+        CorreoLabel.Size = New System.Drawing.Size(41, 13)
+        CorreoLabel.TabIndex = 21
+        CorreoLabel.Text = "Correo:"
         '
         'DatasetOtis
         '
@@ -141,15 +167,6 @@ Partial Class Ingresar_Alumno
         Me.DireccionTextEdit.Size = New System.Drawing.Size(498, 20)
         Me.DireccionTextEdit.TabIndex = 3
         '
-        'RNPLabel
-        '
-        RNPLabel.AutoSize = True
-        RNPLabel.Location = New System.Drawing.Point(28, 31)
-        RNPLabel.Name = "RNPLabel"
-        RNPLabel.Size = New System.Drawing.Size(33, 13)
-        RNPLabel.TabIndex = 19
-        RNPLabel.Text = "RNP:"
-        '
         'RNPTextEdit
         '
         Me.RNPTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "RNP", True))
@@ -158,15 +175,6 @@ Partial Class Ingresar_Alumno
         Me.RNPTextEdit.Size = New System.Drawing.Size(177, 20)
         Me.RNPTextEdit.TabIndex = 0
         '
-        'TelefonoLabel
-        '
-        TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(34, 157)
-        TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
-        TelefonoLabel.TabIndex = 20
-        TelefonoLabel.Text = "Telefono:"
-        '
         'TelefonoTextEdit
         '
         Me.TelefonoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Telefono", True))
@@ -174,15 +182,6 @@ Partial Class Ingresar_Alumno
         Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
         Me.TelefonoTextEdit.Size = New System.Drawing.Size(152, 20)
         Me.TelefonoTextEdit.TabIndex = 4
-        '
-        'CorreoLabel
-        '
-        CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(472, 153)
-        CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(41, 13)
-        CorreoLabel.TabIndex = 21
-        CorreoLabel.Text = "Correo:"
         '
         'CorreoTextEdit
         '
@@ -212,6 +211,7 @@ Partial Class Ingresar_Alumno
         Me.Controls.Add(Me.ButtonIngresar)
         Me.Name = "Ingresar_Alumno"
         Me.Text = "REGISTRO"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
