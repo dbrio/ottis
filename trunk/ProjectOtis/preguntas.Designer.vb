@@ -63,12 +63,22 @@ Partial Class preguntas
         CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'IdRespuestaUsuarioLabel
+        '
+        IdRespuestaUsuarioLabel.AutoSize = True
+        IdRespuestaUsuarioLabel.Location = New System.Drawing.Point(1120, 21)
+        IdRespuestaUsuarioLabel.Name = "IdRespuestaUsuarioLabel"
+        IdRespuestaUsuarioLabel.Size = New System.Drawing.Size(112, 13)
+        IdRespuestaUsuarioLabel.TabIndex = 11
+        IdRespuestaUsuarioLabel.Text = "Id Respuesta Usuario:"
+        IdRespuestaUsuarioLabel.Visible = False
+        '
         'PreguntasLabel
         '
         Me.PreguntasLabel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Preguntas1BindingSource3, "Preguntas", True))
         Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreguntasLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PreguntasLabel.Location = New System.Drawing.Point(15, 60)
+        Me.PreguntasLabel.Location = New System.Drawing.Point(85, 61)
         Me.PreguntasLabel.Name = "PreguntasLabel"
         Me.PreguntasLabel.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.PreguntasLabel.Size = New System.Drawing.Size(1106, 172)
@@ -98,30 +108,36 @@ Partial Class preguntas
         '
         'ButtonOk
         '
+        Me.ButtonOk.BackColor = System.Drawing.Color.DarkKhaki
         Me.ButtonOk.Enabled = False
+        Me.ButtonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOk.Location = New System.Drawing.Point(859, 372)
+        Me.ButtonOk.ForeColor = System.Drawing.Color.White
+        Me.ButtonOk.Location = New System.Drawing.Point(845, 437)
         Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(121, 47)
+        Me.ButtonOk.Size = New System.Drawing.Size(121, 56)
         Me.ButtonOk.TabIndex = 3
         Me.ButtonOk.Text = "Ok"
-        Me.ButtonOk.UseVisualStyleBackColor = True
+        Me.ButtonOk.UseVisualStyleBackColor = False
         '
         'btnSaltar
         '
+        Me.btnSaltar.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnSaltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaltar.Location = New System.Drawing.Point(1000, 372)
+        Me.btnSaltar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSaltar.Location = New System.Drawing.Point(1032, 437)
         Me.btnSaltar.Name = "btnSaltar"
-        Me.btnSaltar.Size = New System.Drawing.Size(121, 47)
+        Me.btnSaltar.Size = New System.Drawing.Size(121, 56)
         Me.btnSaltar.TabIndex = 4
         Me.btnSaltar.Text = "Saltar"
-        Me.btnSaltar.UseVisualStyleBackColor = True
+        Me.btnSaltar.UseVisualStyleBackColor = False
         '
         'RespuestaRadioA
         '
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(25, 285)
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(48, 285)
         Me.RespuestaRadioA.Name = "RespuestaRadioA"
         Me.RespuestaRadioA.Size = New System.Drawing.Size(213, 24)
         Me.RespuestaRadioA.TabIndex = 6
@@ -181,7 +197,7 @@ Partial Class preguntas
         '
         Me.RadioButtonB.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonB.Location = New System.Drawing.Point(246, 285)
+        Me.RadioButtonB.Location = New System.Drawing.Point(283, 285)
         Me.RadioButtonB.Name = "RadioButtonB"
         Me.RadioButtonB.Size = New System.Drawing.Size(222, 24)
         Me.RadioButtonB.TabIndex = 7
@@ -193,7 +209,7 @@ Partial Class preguntas
         '
         Me.RadioButtonC.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonC.Location = New System.Drawing.Point(475, 285)
+        Me.RadioButtonC.Location = New System.Drawing.Point(532, 285)
         Me.RadioButtonC.Name = "RadioButtonC"
         Me.RadioButtonC.Size = New System.Drawing.Size(205, 24)
         Me.RadioButtonC.TabIndex = 8
@@ -205,7 +221,7 @@ Partial Class preguntas
         '
         Me.RadioButtonD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonD.Location = New System.Drawing.Point(689, 285)
+        Me.RadioButtonD.Location = New System.Drawing.Point(797, 285)
         Me.RadioButtonD.Name = "RadioButtonD"
         Me.RadioButtonD.Size = New System.Drawing.Size(230, 24)
         Me.RadioButtonD.TabIndex = 9
@@ -217,9 +233,9 @@ Partial Class preguntas
         '
         Me.RadioButtonE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonE.Location = New System.Drawing.Point(928, 285)
+        Me.RadioButtonE.Location = New System.Drawing.Point(1055, 285)
         Me.RadioButtonE.Name = "RadioButtonE"
-        Me.RadioButtonE.Size = New System.Drawing.Size(193, 24)
+        Me.RadioButtonE.Size = New System.Drawing.Size(197, 24)
         Me.RadioButtonE.TabIndex = 10
         Me.RadioButtonE.TabStop = True
         Me.RadioButtonE.Text = "RadioButton1"
@@ -254,16 +270,6 @@ Partial Class preguntas
         Me.RespuestasUsuarioBindingSource2.DataMember = "RespuestasUsuario"
         Me.RespuestasUsuarioBindingSource2.DataSource = Me.DatasetOtis
         '
-        'IdRespuestaUsuarioLabel
-        '
-        IdRespuestaUsuarioLabel.AutoSize = True
-        IdRespuestaUsuarioLabel.Location = New System.Drawing.Point(1120, 21)
-        IdRespuestaUsuarioLabel.Name = "IdRespuestaUsuarioLabel"
-        IdRespuestaUsuarioLabel.Size = New System.Drawing.Size(112, 13)
-        IdRespuestaUsuarioLabel.TabIndex = 11
-        IdRespuestaUsuarioLabel.Text = "Id Respuesta Usuario:"
-        IdRespuestaUsuarioLabel.Visible = False
-        '
         'IdRespuestaUsuarioLabel1
         '
         Me.IdRespuestaUsuarioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RespuestasUsuarioBindingSource2, "IdRespuestaUsuario", True))
@@ -279,7 +285,8 @@ Partial Class preguntas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(1354, 532)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1267, 561)
         Me.Controls.Add(IdRespuestaUsuarioLabel)
         Me.Controls.Add(Me.IdRespuestaUsuarioLabel1)
         Me.Controls.Add(Me.Label1)
@@ -294,6 +301,7 @@ Partial Class preguntas
         Me.Controls.Add(Me.LabelPregunta)
         Me.Name = "preguntas"
         Me.Text = "preguntas"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
