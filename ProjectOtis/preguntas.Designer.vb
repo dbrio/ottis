@@ -22,50 +22,54 @@ Partial Class preguntas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim IdRespuestaUsuarioLabel As System.Windows.Forms.Label
         Dim IdAlumnoLabel As System.Windows.Forms.Label
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(preguntas))
         Me.PreguntasLabel = New System.Windows.Forms.Label()
-        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource()
-        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelPregunta = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
         Me.btnSaltar = New System.Windows.Forms.Button()
         Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
-        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource()
-        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource()
-        Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
-        Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
-        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource()
-        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource()
-        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource()
-        Me.Preguntas1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter()
-        Me.RespuestasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter()
         Me.RadioButtonB = New System.Windows.Forms.RadioButton()
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource()
-        Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
-        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource()
-        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource()
         Me.IdRespuestaUsuarioLabel1 = New System.Windows.Forms.Label()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
-        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.IdAlumnoLabel1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
+        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
+        Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
+        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter()
+        Me.RespuestasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter()
+        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
+        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
-        CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PreguntasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdRespuestaUsuarioLabel
@@ -77,6 +81,16 @@ Partial Class preguntas
         IdRespuestaUsuarioLabel.TabIndex = 11
         IdRespuestaUsuarioLabel.Text = "Id Respuesta Usuario:"
         IdRespuestaUsuarioLabel.Visible = False
+        '
+        'IdAlumnoLabel
+        '
+        IdAlumnoLabel.AutoSize = True
+        IdAlumnoLabel.Location = New System.Drawing.Point(149, 12)
+        IdAlumnoLabel.Name = "IdAlumnoLabel"
+        IdAlumnoLabel.Size = New System.Drawing.Size(57, 13)
+        IdAlumnoLabel.TabIndex = 12
+        IdAlumnoLabel.Text = "Id Alumno:"
+        IdAlumnoLabel.Visible = False
         '
         'PreguntasLabel
         '
@@ -90,16 +104,6 @@ Partial Class preguntas
         Me.PreguntasLabel.TabIndex = 2
         Me.PreguntasLabel.Text = "Preguntas"
         Me.PreguntasLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Preguntas1BindingSource3
-        '
-        Me.Preguntas1BindingSource3.DataMember = "Preguntas1"
-        Me.Preguntas1BindingSource3.DataSource = Me.DatasetOtis
-        '
-        'DatasetOtis
-        '
-        Me.DatasetOtis.DataSetName = "DatasetOtis"
-        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LabelPregunta
         '
@@ -119,9 +123,9 @@ Partial Class preguntas
         Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOk.ForeColor = System.Drawing.Color.White
         Me.ButtonOk.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ButtonOk.Location = New System.Drawing.Point(845, 437)
+        Me.ButtonOk.Location = New System.Drawing.Point(845, 613)
         Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(121, 56)
+        Me.ButtonOk.Size = New System.Drawing.Size(121, 59)
         Me.ButtonOk.TabIndex = 3
         Me.ButtonOk.Text = "Ok"
         Me.ButtonOk.UseVisualStyleBackColor = False
@@ -132,9 +136,9 @@ Partial Class preguntas
         Me.btnSaltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaltar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaltar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSaltar.Location = New System.Drawing.Point(1032, 437)
+        Me.btnSaltar.Location = New System.Drawing.Point(1032, 613)
         Me.btnSaltar.Name = "btnSaltar"
-        Me.btnSaltar.Size = New System.Drawing.Size(121, 56)
+        Me.btnSaltar.Size = New System.Drawing.Size(121, 59)
         Me.btnSaltar.TabIndex = 4
         Me.btnSaltar.Text = "Saltar"
         Me.btnSaltar.UseVisualStyleBackColor = False
@@ -150,54 +154,6 @@ Partial Class preguntas
         Me.RespuestaRadioA.TabStop = True
         Me.RespuestaRadioA.Text = "RadioButton1"
         Me.RespuestaRadioA.UseVisualStyleBackColor = True
-        '
-        'RespuestasBindingSource
-        '
-        Me.RespuestasBindingSource.DataMember = "Respuestas"
-        Me.RespuestasBindingSource.DataSource = Me.DatasetOtis
-        '
-        'PreguntasBindingSource
-        '
-        Me.PreguntasBindingSource.DataMember = "Preguntas"
-        Me.PreguntasBindingSource.DataSource = Me.DatasetOtis
-        '
-        'PreguntasTableAdapter
-        '
-        Me.PreguntasTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AlumnosTableAdapter = Nothing
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CategoríaTableAdapter = Nothing
-        Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
-        Me.TableAdapterManager.PreguntasTableAdapter = Me.PreguntasTableAdapter
-        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
-        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'Preguntas1BindingSource
-        '
-        Me.Preguntas1BindingSource.DataSource = Me.DatasetOtis
-        Me.Preguntas1BindingSource.Position = 0
-        '
-        'Preguntas1BindingSource1
-        '
-        Me.Preguntas1BindingSource1.DataSource = Me.DatasetOtis
-        Me.Preguntas1BindingSource1.Position = 0
-        '
-        'Preguntas1BindingSource2
-        '
-        Me.Preguntas1BindingSource2.DataSource = Me.DatasetOtis
-        Me.Preguntas1BindingSource2.Position = 0
-        '
-        'Preguntas1TableAdapter
-        '
-        Me.Preguntas1TableAdapter.ClearBeforeFill = True
-        '
-        'RespuestasTableAdapter
-        '
-        Me.RespuestasTableAdapter.ClearBeforeFill = True
         '
         'RadioButtonB
         '
@@ -257,6 +213,103 @@ Partial Class preguntas
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Label1"
         '
+        'IdRespuestaUsuarioLabel1
+        '
+        Me.IdRespuestaUsuarioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RespuestasUsuarioBindingSource2, "IdRespuestaUsuario", True))
+        Me.IdRespuestaUsuarioLabel1.Location = New System.Drawing.Point(1238, 21)
+        Me.IdRespuestaUsuarioLabel1.Name = "IdRespuestaUsuarioLabel1"
+        Me.IdRespuestaUsuarioLabel1.Size = New System.Drawing.Size(100, 23)
+        Me.IdRespuestaUsuarioLabel1.TabIndex = 12
+        Me.IdRespuestaUsuarioLabel1.Text = "Label2"
+        Me.IdRespuestaUsuarioLabel1.Visible = False
+        '
+        'IdAlumnoLabel1
+        '
+        Me.IdAlumnoLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnosBindingSource, "IdAlumno", True))
+        Me.IdAlumnoLabel1.Location = New System.Drawing.Point(212, 12)
+        Me.IdAlumnoLabel1.Name = "IdAlumnoLabel1"
+        Me.IdAlumnoLabel1.Size = New System.Drawing.Size(100, 23)
+        Me.IdAlumnoLabel1.TabIndex = 13
+        Me.IdAlumnoLabel1.Text = "Label2"
+        Me.IdAlumnoLabel1.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.ProjectOtis.My.Resources.Resources.barra_05
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 613)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(760, 53)
+        Me.PictureBox1.TabIndex = 14
+        Me.PictureBox1.TabStop = False
+        '
+        'AlumnosBindingSource
+        '
+        Me.AlumnosBindingSource.DataMember = "Alumnos"
+        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
+        '
+        'DatasetOtis
+        '
+        Me.DatasetOtis.DataSetName = "DatasetOtis"
+        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'RespuestasUsuarioBindingSource2
+        '
+        Me.RespuestasUsuarioBindingSource2.DataMember = "RespuestasUsuario"
+        Me.RespuestasUsuarioBindingSource2.DataSource = Me.DatasetOtis
+        '
+        'RespuestasBindingSource
+        '
+        Me.RespuestasBindingSource.DataMember = "Respuestas"
+        Me.RespuestasBindingSource.DataSource = Me.DatasetOtis
+        '
+        'Preguntas1BindingSource3
+        '
+        Me.Preguntas1BindingSource3.DataMember = "Preguntas1"
+        Me.Preguntas1BindingSource3.DataSource = Me.DatasetOtis
+        '
+        'PreguntasBindingSource
+        '
+        Me.PreguntasBindingSource.DataMember = "Preguntas"
+        Me.PreguntasBindingSource.DataSource = Me.DatasetOtis
+        '
+        'PreguntasTableAdapter
+        '
+        Me.PreguntasTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AlumnosTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CategoríaTableAdapter = Nothing
+        Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
+        Me.TableAdapterManager.PreguntasTableAdapter = Me.PreguntasTableAdapter
+        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'Preguntas1BindingSource
+        '
+        Me.Preguntas1BindingSource.DataSource = Me.DatasetOtis
+        Me.Preguntas1BindingSource.Position = 0
+        '
+        'Preguntas1BindingSource1
+        '
+        Me.Preguntas1BindingSource1.DataSource = Me.DatasetOtis
+        Me.Preguntas1BindingSource1.Position = 0
+        '
+        'Preguntas1BindingSource2
+        '
+        Me.Preguntas1BindingSource2.DataSource = Me.DatasetOtis
+        Me.Preguntas1BindingSource2.Position = 0
+        '
+        'Preguntas1TableAdapter
+        '
+        Me.Preguntas1TableAdapter.ClearBeforeFill = True
+        '
+        'RespuestasTableAdapter
+        '
+        Me.RespuestasTableAdapter.ClearBeforeFill = True
+        '
         'RespuestasUsuarioBindingSource
         '
         Me.RespuestasUsuarioBindingSource.DataSource = Me.DatasetOtis
@@ -271,49 +324,9 @@ Partial Class preguntas
         Me.RespuestasUsuarioBindingSource1.DataSource = Me.DatasetOtis
         Me.RespuestasUsuarioBindingSource1.Position = 0
         '
-        'RespuestasUsuarioBindingSource2
-        '
-        Me.RespuestasUsuarioBindingSource2.DataMember = "RespuestasUsuario"
-        Me.RespuestasUsuarioBindingSource2.DataSource = Me.DatasetOtis
-        '
-        'IdRespuestaUsuarioLabel1
-        '
-        Me.IdRespuestaUsuarioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.RespuestasUsuarioBindingSource2, "IdRespuestaUsuario", True))
-        Me.IdRespuestaUsuarioLabel1.Location = New System.Drawing.Point(1238, 21)
-        Me.IdRespuestaUsuarioLabel1.Name = "IdRespuestaUsuarioLabel1"
-        Me.IdRespuestaUsuarioLabel1.Size = New System.Drawing.Size(100, 23)
-        Me.IdRespuestaUsuarioLabel1.TabIndex = 12
-        Me.IdRespuestaUsuarioLabel1.Text = "Label2"
-        Me.IdRespuestaUsuarioLabel1.Visible = False
-        '
-        'AlumnosBindingSource
-        '
-        Me.AlumnosBindingSource.DataMember = "Alumnos"
-        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
-        '
         'AlumnosTableAdapter
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
-        '
-        'IdAlumnoLabel
-        '
-        IdAlumnoLabel.AutoSize = True
-        IdAlumnoLabel.Location = New System.Drawing.Point(149, 12)
-        IdAlumnoLabel.Name = "IdAlumnoLabel"
-        IdAlumnoLabel.Size = New System.Drawing.Size(57, 13)
-        IdAlumnoLabel.TabIndex = 12
-        IdAlumnoLabel.Text = "Id Alumno:"
-        IdAlumnoLabel.Visible = False
-        '
-        'IdAlumnoLabel1
-        '
-        Me.IdAlumnoLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.AlumnosBindingSource, "IdAlumno", True))
-        Me.IdAlumnoLabel1.Location = New System.Drawing.Point(212, 12)
-        Me.IdAlumnoLabel1.Name = "IdAlumnoLabel1"
-        Me.IdAlumnoLabel1.Size = New System.Drawing.Size(100, 23)
-        Me.IdAlumnoLabel1.TabIndex = 13
-        Me.IdAlumnoLabel1.Text = "Label2"
-        Me.IdAlumnoLabel1.Visible = False
         '
         'preguntas
         '
@@ -321,7 +334,8 @@ Partial Class preguntas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1354, 578)
+        Me.ClientSize = New System.Drawing.Size(1353, 688)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(IdAlumnoLabel)
         Me.Controls.Add(Me.IdAlumnoLabel1)
         Me.Controls.Add(IdRespuestaUsuarioLabel)
@@ -336,20 +350,22 @@ Partial Class preguntas
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
+        Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "preguntas"
-        Me.Text = "preguntas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PreguntasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RespuestasUsuarioBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -383,4 +399,5 @@ Partial Class preguntas
     Friend WithEvents AlumnosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents AlumnosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter
     Friend WithEvents IdAlumnoLabel1 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

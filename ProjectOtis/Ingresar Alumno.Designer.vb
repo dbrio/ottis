@@ -22,14 +22,16 @@ Partial Class Ingresar_Alumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
         Dim RNPLabel As System.Windows.Forms.Label
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
+        Dim Label1 As System.Windows.Forms.Label
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         Me.ButtonIngresar = New System.Windows.Forms.Button()
@@ -45,6 +47,7 @@ Partial Class Ingresar_Alumno
         RNPLabel = New System.Windows.Forms.Label()
         TelefonoLabel = New System.Windows.Forms.Label()
         CorreoLabel = New System.Windows.Forms.Label()
+        Label1 = New System.Windows.Forms.Label()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,54 +61,66 @@ Partial Class Ingresar_Alumno
         'NombreLabel
         '
         NombreLabel.AutoSize = True
-        NombreLabel.Location = New System.Drawing.Point(304, 31)
+        NombreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        NombreLabel.ForeColor = System.Drawing.Color.DimGray
+        NombreLabel.Location = New System.Drawing.Point(512, 116)
         NombreLabel.Name = "NombreLabel"
-        NombreLabel.Size = New System.Drawing.Size(47, 13)
+        NombreLabel.Size = New System.Drawing.Size(96, 24)
         NombreLabel.TabIndex = 15
-        NombreLabel.Text = "Nombre:"
+        NombreLabel.Text = "* Nombre:"
         '
         'ApellidosLabel
         '
         ApellidosLabel.AutoSize = True
-        ApellidosLabel.Location = New System.Drawing.Point(547, 31)
+        ApellidosLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ApellidosLabel.ForeColor = System.Drawing.Color.DimGray
+        ApellidosLabel.Location = New System.Drawing.Point(815, 116)
         ApellidosLabel.Name = "ApellidosLabel"
-        ApellidosLabel.Size = New System.Drawing.Size(52, 13)
+        ApellidosLabel.Size = New System.Drawing.Size(105, 24)
         ApellidosLabel.TabIndex = 17
-        ApellidosLabel.Text = "Apellidos:"
+        ApellidosLabel.Text = "* Apellidos:"
         '
         'DireccionLabel
         '
         DireccionLabel.AutoSize = True
-        DireccionLabel.Location = New System.Drawing.Point(89, 90)
+        DireccionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DireccionLabel.ForeColor = System.Drawing.Color.DimGray
+        DireccionLabel.Location = New System.Drawing.Point(150, 205)
         DireccionLabel.Name = "DireccionLabel"
-        DireccionLabel.Size = New System.Drawing.Size(55, 13)
+        DireccionLabel.Size = New System.Drawing.Size(107, 24)
         DireccionLabel.TabIndex = 19
-        DireccionLabel.Text = "Direccion:"
+        DireccionLabel.Text = "* Direccion:"
         '
         'RNPLabel
         '
         RNPLabel.AutoSize = True
-        RNPLabel.Location = New System.Drawing.Point(28, 31)
+        RNPLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        RNPLabel.ForeColor = System.Drawing.Color.DimGray
+        RNPLabel.Location = New System.Drawing.Point(150, 116)
         RNPLabel.Name = "RNPLabel"
-        RNPLabel.Size = New System.Drawing.Size(33, 13)
+        RNPLabel.Size = New System.Drawing.Size(144, 24)
         RNPLabel.TabIndex = 19
-        RNPLabel.Text = "RNP:"
+        RNPLabel.Text = "N° de Identidad:"
         '
         'TelefonoLabel
         '
         TelefonoLabel.AutoSize = True
-        TelefonoLabel.Location = New System.Drawing.Point(34, 157)
+        TelefonoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TelefonoLabel.ForeColor = System.Drawing.Color.DimGray
+        TelefonoLabel.Location = New System.Drawing.Point(150, 284)
         TelefonoLabel.Name = "TelefonoLabel"
-        TelefonoLabel.Size = New System.Drawing.Size(52, 13)
+        TelefonoLabel.Size = New System.Drawing.Size(102, 24)
         TelefonoLabel.TabIndex = 20
-        TelefonoLabel.Text = "Telefono:"
+        TelefonoLabel.Text = "* Telefono:"
         '
         'CorreoLabel
         '
         CorreoLabel.AutoSize = True
-        CorreoLabel.Location = New System.Drawing.Point(472, 153)
+        CorreoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        CorreoLabel.ForeColor = System.Drawing.Color.DimGray
+        CorreoLabel.Location = New System.Drawing.Point(742, 278)
         CorreoLabel.Name = "CorreoLabel"
-        CorreoLabel.Size = New System.Drawing.Size(41, 13)
+        CorreoLabel.Size = New System.Drawing.Size(73, 24)
         CorreoLabel.TabIndex = 21
         CorreoLabel.Text = "Correo:"
         '
@@ -136,66 +151,93 @@ Partial Class Ingresar_Alumno
         '
         'ButtonIngresar
         '
-        Me.ButtonIngresar.Location = New System.Drawing.Point(160, 222)
+        Me.ButtonIngresar.BackColor = System.Drawing.Color.DarkKhaki
+        Me.ButtonIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonIngresar.ForeColor = System.Drawing.Color.White
+        Me.ButtonIngresar.Location = New System.Drawing.Point(536, 394)
         Me.ButtonIngresar.Name = "ButtonIngresar"
-        Me.ButtonIngresar.Size = New System.Drawing.Size(406, 67)
+        Me.ButtonIngresar.Size = New System.Drawing.Size(224, 68)
         Me.ButtonIngresar.TabIndex = 6
         Me.ButtonIngresar.Text = "Ingresar"
-        Me.ButtonIngresar.UseVisualStyleBackColor = True
+        Me.ButtonIngresar.UseVisualStyleBackColor = False
         '
         'NombreTextEdit
         '
         Me.NombreTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Nombre", True))
-        Me.NombreTextEdit.Location = New System.Drawing.Point(353, 28)
+        Me.NombreTextEdit.Location = New System.Drawing.Point(614, 113)
         Me.NombreTextEdit.Name = "NombreTextEdit"
-        Me.NombreTextEdit.Size = New System.Drawing.Size(160, 20)
+        Me.NombreTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.NombreTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.NombreTextEdit.Size = New System.Drawing.Size(160, 30)
         Me.NombreTextEdit.TabIndex = 1
         '
         'ApellidosTextEdit
         '
         Me.ApellidosTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Apellidos", True))
-        Me.ApellidosTextEdit.Location = New System.Drawing.Point(602, 28)
+        Me.ApellidosTextEdit.Location = New System.Drawing.Point(921, 113)
         Me.ApellidosTextEdit.Name = "ApellidosTextEdit"
-        Me.ApellidosTextEdit.Size = New System.Drawing.Size(160, 20)
+        Me.ApellidosTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ApellidosTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.ApellidosTextEdit.Size = New System.Drawing.Size(160, 30)
         Me.ApellidosTextEdit.TabIndex = 2
         '
         'DireccionTextEdit
         '
         Me.DireccionTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Direccion", True))
-        Me.DireccionTextEdit.Location = New System.Drawing.Point(150, 87)
+        Me.DireccionTextEdit.Location = New System.Drawing.Point(307, 202)
         Me.DireccionTextEdit.Name = "DireccionTextEdit"
-        Me.DireccionTextEdit.Size = New System.Drawing.Size(498, 20)
+        Me.DireccionTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DireccionTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.DireccionTextEdit.Size = New System.Drawing.Size(774, 30)
         Me.DireccionTextEdit.TabIndex = 3
         '
         'RNPTextEdit
         '
         Me.RNPTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "RNP", True))
-        Me.RNPTextEdit.Location = New System.Drawing.Point(67, 28)
+        Me.RNPTextEdit.Location = New System.Drawing.Point(307, 113)
         Me.RNPTextEdit.Name = "RNPTextEdit"
-        Me.RNPTextEdit.Size = New System.Drawing.Size(177, 20)
+        Me.RNPTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RNPTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RNPTextEdit.Size = New System.Drawing.Size(177, 30)
         Me.RNPTextEdit.TabIndex = 0
         '
         'TelefonoTextEdit
         '
         Me.TelefonoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Telefono", True))
-        Me.TelefonoTextEdit.Location = New System.Drawing.Point(92, 154)
+        Me.TelefonoTextEdit.Location = New System.Drawing.Point(307, 281)
         Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
-        Me.TelefonoTextEdit.Size = New System.Drawing.Size(152, 20)
+        Me.TelefonoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TelefonoTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.TelefonoTextEdit.Size = New System.Drawing.Size(152, 30)
         Me.TelefonoTextEdit.TabIndex = 4
         '
         'CorreoTextEdit
         '
         Me.CorreoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Correo", True))
-        Me.CorreoTextEdit.Location = New System.Drawing.Point(513, 150)
+        Me.CorreoTextEdit.Location = New System.Drawing.Point(832, 274)
         Me.CorreoTextEdit.Name = "CorreoTextEdit"
-        Me.CorreoTextEdit.Size = New System.Drawing.Size(249, 20)
+        Me.CorreoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CorreoTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.CorreoTextEdit.Size = New System.Drawing.Size(249, 30)
         Me.CorreoTextEdit.TabIndex = 5
+        '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label1.ForeColor = System.Drawing.Color.DimGray
+        Label1.Location = New System.Drawing.Point(370, 86)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(0, 24)
+        Label1.TabIndex = 22
         '
         'Ingresar_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 333)
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1328, 461)
+        Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(Me.CorreoTextEdit)
         Me.Controls.Add(TelefonoLabel)
