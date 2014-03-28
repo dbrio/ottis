@@ -77,7 +77,7 @@
         btnSaltar.Enabled = True
         ButtonOk.Enabled = False
 
-       
+
 
 
     End Sub
@@ -136,4 +136,6 @@
         btnSaltar.Enabled = False
         respuestaUsuario = "E"
     End Sub
+
+
 End Class

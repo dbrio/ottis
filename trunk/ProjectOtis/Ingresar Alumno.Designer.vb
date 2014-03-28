@@ -124,6 +124,16 @@ Partial Class Ingresar_Alumno
         CorreoLabel.TabIndex = 21
         CorreoLabel.Text = "Correo:"
         '
+        'Label1
+        '
+        Label1.AutoSize = True
+        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label1.ForeColor = System.Drawing.Color.DimGray
+        Label1.Location = New System.Drawing.Point(370, 86)
+        Label1.Name = "Label1"
+        Label1.Size = New System.Drawing.Size(0, 24)
+        Label1.TabIndex = 22
+        '
         'DatasetOtis
         '
         Me.DatasetOtis.DataSetName = "DatasetOtis"
@@ -221,22 +231,12 @@ Partial Class Ingresar_Alumno
         Me.CorreoTextEdit.Size = New System.Drawing.Size(249, 30)
         Me.CorreoTextEdit.TabIndex = 5
         '
-        'Label1
-        '
-        Label1.AutoSize = True
-        Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Label1.ForeColor = System.Drawing.Color.DimGray
-        Label1.Location = New System.Drawing.Point(370, 86)
-        Label1.Name = "Label1"
-        Label1.Size = New System.Drawing.Size(0, 24)
-        Label1.TabIndex = 22
-        '
         'Ingresar_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1328, 461)
+        Me.ClientSize = New System.Drawing.Size(1268, 479)
         Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(Me.CorreoTextEdit)
