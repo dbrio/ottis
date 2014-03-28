@@ -23,16 +23,31 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ButtonEmpezar = New System.Windows.Forms.Button()
+        Me.LabelBienv = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ButtonEmpezar
         '
-        Me.ButtonEmpezar.Location = New System.Drawing.Point(532, 279)
+        Me.ButtonEmpezar.BackColor = System.Drawing.Color.DarkKhaki
+        Me.ButtonEmpezar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonEmpezar.ForeColor = System.Drawing.Color.White
+        Me.ButtonEmpezar.Location = New System.Drawing.Point(531, 350)
         Me.ButtonEmpezar.Name = "ButtonEmpezar"
-        Me.ButtonEmpezar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonEmpezar.Size = New System.Drawing.Size(168, 66)
         Me.ButtonEmpezar.TabIndex = 0
-        Me.ButtonEmpezar.Text = "Button1"
-        Me.ButtonEmpezar.UseVisualStyleBackColor = True
+        Me.ButtonEmpezar.Text = "Empezar"
+        Me.ButtonEmpezar.UseVisualStyleBackColor = False
+        '
+        'LabelBienv
+        '
+        Me.LabelBienv.AutoSize = True
+        Me.LabelBienv.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelBienv.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.LabelBienv.Location = New System.Drawing.Point(399, 269)
+        Me.LabelBienv.Name = "LabelBienv"
+        Me.LabelBienv.Size = New System.Drawing.Size(231, 37)
+        Me.LabelBienv.TabIndex = 1
+        Me.LabelBienv.Text = "Bienvenido(a): "
         '
         'Form1
         '
@@ -40,13 +55,16 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1140, 521)
+        Me.Controls.Add(Me.LabelBienv)
         Me.Controls.Add(Me.ButtonEmpezar)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ButtonEmpezar As System.Windows.Forms.Button
+    Friend WithEvents LabelBienv As System.Windows.Forms.Label
 
 End Class
