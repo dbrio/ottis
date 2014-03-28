@@ -3925,12 +3925,19 @@ Namespace DatasetOtisTableAdapters
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitCommandCollection()
-            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(0) {}
+            Me._commandCollection = New Global.System.Data.SqlClient.SqlCommand(1) {}
             Me._commandCollection(0) = New Global.System.Data.SqlClient.SqlCommand()
             Me._commandCollection(0).Connection = Me.Connection
             Me._commandCollection(0).CommandText = "SELECT IdAlumno, RNP, Nombre, Apellidos, Direccion, Telefono, Correo FROM dbo.Alu" & _
                 "mnos"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
+            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).CommandText = "SELECT        IdAlumno" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            Alumnos" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "WHERE        (Nombre = @Nombre) " & _
+                "AND (Apellidos = @Apellidos)"
+            Me._commandCollection(1).CommandType = Global.System.Data.CommandType.Text
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Nombre", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Nombre", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
+            Me._commandCollection(1).Parameters.Add(New Global.System.Data.SqlClient.SqlParameter("@Apellidos", Global.System.Data.SqlDbType.NVarChar, 30, Global.System.Data.ParameterDirection.Input, 0, 0, "Apellidos", Global.System.Data.DataRowVersion.Current, False, Nothing, "", "", ""))
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -4172,6 +4179,42 @@ Namespace DatasetOtisTableAdapters
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, True)> _
         Public Overridable Overloads Function Update(ByVal RNP As String, ByVal Nombre As String, ByVal Apellidos As String, ByVal Direccion As String, ByVal Telefono As String, ByVal Correo As String, ByVal Original_IdAlumno As Integer, ByVal Original_RNP As String, ByVal Original_Nombre As String, ByVal Original_Apellidos As String, ByVal Original_Telefono As String, ByVal Original_Correo As String) As Integer
             Return Me.Update(RNP, Nombre, Apellidos, Direccion, Telefono, Correo, Original_IdAlumno, Original_RNP, Original_Nombre, Original_Apellidos, Original_Telefono, Original_Correo, Original_IdAlumno)
+        End Function
+
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"), _
+         Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")> _
+        Public Overridable Overloads Function ObtenerID(ByVal Nombre As String, ByVal Apellidos As String) As Global.System.Nullable(Of Integer)
+            Dim command As Global.System.Data.SqlClient.SqlCommand = Me.CommandCollection(1)
+            If (Nombre Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Nombre")
+            Else
+                command.Parameters(0).Value = CType(Nombre, String)
+            End If
+            If (Apellidos Is Nothing) Then
+                Throw New Global.System.ArgumentNullException("Apellidos")
+            Else
+                command.Parameters(1).Value = CType(Apellidos, String)
+            End If
+            Dim previousConnectionState As Global.System.Data.ConnectionState = command.Connection.State
+            If ((command.Connection.State And Global.System.Data.ConnectionState.Open) _
+                        <> Global.System.Data.ConnectionState.Open) Then
+                command.Connection.Open()
+            End If
+            Dim returnValue As Object
+            Try
+                returnValue = command.ExecuteScalar
+            Finally
+                If (previousConnectionState = Global.System.Data.ConnectionState.Closed) Then
+                    command.Connection.Close()
+                End If
+            End Try
+            If ((returnValue Is Nothing) _
+                        OrElse (returnValue.GetType Is GetType(Global.System.DBNull))) Then
+                Return New Global.System.Nullable(Of Integer)()
+            Else
+                Return New Global.System.Nullable(Of Integer)(CType(returnValue, Integer))
+            End If
         End Function
     End Class
 

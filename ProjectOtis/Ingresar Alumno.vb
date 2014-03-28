@@ -67,6 +67,10 @@
             .nombre = nombre
             .apellido = apellido
         End With
+        With preguntas
+            .nombre = nombre
+            .apellido = apellido
+        End With
 
         Me.Close()
     End Sub
