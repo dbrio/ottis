@@ -24,6 +24,7 @@ Partial Class Welcome
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonIrInstrucciones = New System.Windows.Forms.Button()
+        Me.LabelNombre = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,18 +43,28 @@ Partial Class Welcome
         '
         'ButtonIrInstrucciones
         '
-        Me.ButtonIrInstrucciones.Location = New System.Drawing.Point(716, 425)
+        Me.ButtonIrInstrucciones.Location = New System.Drawing.Point(640, 379)
         Me.ButtonIrInstrucciones.Name = "ButtonIrInstrucciones"
-        Me.ButtonIrInstrucciones.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonIrInstrucciones.Size = New System.Drawing.Size(151, 69)
         Me.ButtonIrInstrucciones.TabIndex = 1
         Me.ButtonIrInstrucciones.Text = "Button1"
         Me.ButtonIrInstrucciones.UseVisualStyleBackColor = True
+        '
+        'LabelNombre
+        '
+        Me.LabelNombre.AutoSize = True
+        Me.LabelNombre.Location = New System.Drawing.Point(473, 76)
+        Me.LabelNombre.Name = "LabelNombre"
+        Me.LabelNombre.Size = New System.Drawing.Size(39, 13)
+        Me.LabelNombre.TabIndex = 2
+        Me.LabelNombre.Text = "Label1"
         '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 460)
+        Me.Controls.Add(Me.LabelNombre)
         Me.Controls.Add(Me.ButtonIrInstrucciones)
         Me.Controls.Add(Me.PictureBox1)
         Me.Name = "Welcome"
@@ -61,8 +72,10 @@ Partial Class Welcome
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents ButtonIrInstrucciones As System.Windows.Forms.Button
+    Friend WithEvents LabelNombre As System.Windows.Forms.Label
 End Class

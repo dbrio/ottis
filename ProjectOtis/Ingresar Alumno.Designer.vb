@@ -136,7 +136,7 @@ Partial Class Ingresar_Alumno
         '
         'ButtonIngresar
         '
-        Me.ButtonIngresar.Location = New System.Drawing.Point(140, 222)
+        Me.ButtonIngresar.Location = New System.Drawing.Point(160, 222)
         Me.ButtonIngresar.Name = "ButtonIngresar"
         Me.ButtonIngresar.Size = New System.Drawing.Size(406, 67)
         Me.ButtonIngresar.TabIndex = 6
