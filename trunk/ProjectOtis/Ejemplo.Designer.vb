@@ -126,7 +126,7 @@ Partial Class Ejemplo
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Name = "Ejemplo"
-        Me.Text = "Ejemplo"
+        Me.Text = "Ejemplo 1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
 
