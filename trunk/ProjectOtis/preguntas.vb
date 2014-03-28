@@ -2,8 +2,12 @@
     Dim id As Integer = 1
     Dim idRespuesta As Integer = 6
     Dim respuestaUsuario As String
+    Public nombre As String
+    Public apellido As String
 
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
+        Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.RespuestasUsuario' Puede moverla o quitarla según sea necesario.
         Me.RespuestasUsuarioTableAdapter.Fill(Me.DatasetOtis.RespuestasUsuario)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Respuestas' Puede moverla o quitarla según sea necesario.
@@ -70,9 +74,9 @@
         btnSaltar.Enabled = True
         ButtonOk.Enabled = False
 
-      
+        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
 
-        RespuestasUsuarioTableAdapter.InsertRespuestaUsuario(1, id, respuestaUsuario)
+        RespuestasUsuarioTableAdapter.InsertRespuestaUsuario(idAlumno, id, respuestaUsuario)
 
 
 
