@@ -22,6 +22,7 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ButtonEmpezar = New System.Windows.Forms.Button()
         Me.LabelBienv = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -60,6 +61,7 @@ Partial Class Form1
         Me.Controls.Add(Me.LabelBienv)
         Me.Controls.Add(Me.ButtonEmpezar)
         Me.DoubleBuffered = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Bienvenido"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

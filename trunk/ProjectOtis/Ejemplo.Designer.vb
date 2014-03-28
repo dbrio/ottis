@@ -22,6 +22,7 @@ Partial Class Ejemplo
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ejemplo))
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
@@ -125,6 +126,7 @@ Partial Class Ejemplo
         Me.Controls.Add(Me.RespuestaRadioA)
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ejemplo"
         Me.Text = "Ejemplo 1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
