@@ -43,6 +43,9 @@
 
     
     Private Sub ButtonOk_Click(sender As Object, e As EventArgs) Handles ButtonOk.Click
+        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
+
+        RespuestasUsuarioTableAdapter.InsertRespuestaUsuario(idAlumno, id, respuestaUsuario)
         id = id + 1
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
@@ -74,10 +77,7 @@
         btnSaltar.Enabled = True
         ButtonOk.Enabled = False
 
-        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
-
-        RespuestasUsuarioTableAdapter.InsertRespuestaUsuario(idAlumno, id, respuestaUsuario)
-
+       
 
 
     End Sub
