@@ -1,11 +1,18 @@
 ﻿Public Class Ingresar_Alumno
-
+    Dim Alumno As String
     Private Sub AlumnosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         'Me.Validate()
         'Me.AlumnosBindingSource.EndEdit()
         'Me.TableAdapterManager.UpdateAll(Me.DatasetOtis)
 
     End Sub
+    'Private Function dameNombre() As String
+    '    Try
+    '        Return Alumno = NombreTextEdit.EditValue
+    '    Catch ex As Exception
+    '        Return 0
+    '    End Try
+    'End Function
 
     Private Sub Ingresar_Alumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
@@ -14,7 +21,7 @@
     End Sub
     Private Sub ButtonIngresar_Click(sender As Object, e As EventArgs) Handles ButtonIngresar.Click
         
-
+        'Alumno = NombreTextEdit.EditValue
         If NombreTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Nombre", MsgBoxStyle.Information)
             NombreTextEdit.Focus()
@@ -48,14 +55,20 @@
 
         AlumnosTableAdapter.Insert(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
 
-        NombreTextEdit.EditValue = ""
-        ApellidosTextEdit.EditValue = ""
-        RNPTextEdit.EditValue = ""
-        DireccionTextEdit.EditValue = ""
-        TelefonoTextEdit.EditValue = ""
-        CorreoTextEdit.EditValue = ""
+      
 
-        Welcome.Show()
+        Dim nombre As String = NombreTextEdit.EditValue
+        Dim apellido As String = ApellidosTextEdit.EditValue
+
+        With Welcome
+            .Show()
+        End With
+        With Form1
+            .nombre = nombre
+            .apellido = apellido
+        End With
+
         Me.Close()
     End Sub
+
 End Class
