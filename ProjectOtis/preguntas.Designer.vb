@@ -56,6 +56,12 @@ Partial Class preguntas
         Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
         Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
+        Me.Picture8 = New System.Windows.Forms.PictureBox()
+        Me.PictureR8A = New System.Windows.Forms.PictureBox()
+        Me.PictureR8B = New System.Windows.Forms.PictureBox()
+        Me.PictureR8C = New System.Windows.Forms.PictureBox()
+        Me.PictureR8D = New System.Windows.Forms.PictureBox()
+        Me.PictureR8E = New System.Windows.Forms.PictureBox()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,6 +76,12 @@ Partial Class preguntas
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Picture8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureR8A, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureR8B, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureR8C, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureR8D, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureR8E, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdRespuestaUsuarioLabel
@@ -97,7 +109,7 @@ Partial Class preguntas
         Me.PreguntasLabel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Preguntas1BindingSource3, "Preguntas", True))
         Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreguntasLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.PreguntasLabel.Location = New System.Drawing.Point(85, 61)
+        Me.PreguntasLabel.Location = New System.Drawing.Point(73, 77)
         Me.PreguntasLabel.Name = "PreguntasLabel"
         Me.PreguntasLabel.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.PreguntasLabel.Size = New System.Drawing.Size(1106, 172)
@@ -157,7 +169,7 @@ Partial Class preguntas
         '
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(48, 285)
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(48, 433)
         Me.RespuestaRadioA.Name = "RespuestaRadioA"
         Me.RespuestaRadioA.Size = New System.Drawing.Size(213, 24)
         Me.RespuestaRadioA.TabIndex = 6
@@ -174,7 +186,7 @@ Partial Class preguntas
         '
         Me.RadioButtonB.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonB.Location = New System.Drawing.Point(283, 285)
+        Me.RadioButtonB.Location = New System.Drawing.Point(283, 433)
         Me.RadioButtonB.Name = "RadioButtonB"
         Me.RadioButtonB.Size = New System.Drawing.Size(222, 24)
         Me.RadioButtonB.TabIndex = 7
@@ -186,7 +198,7 @@ Partial Class preguntas
         '
         Me.RadioButtonC.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonC.Location = New System.Drawing.Point(532, 285)
+        Me.RadioButtonC.Location = New System.Drawing.Point(532, 433)
         Me.RadioButtonC.Name = "RadioButtonC"
         Me.RadioButtonC.Size = New System.Drawing.Size(205, 24)
         Me.RadioButtonC.TabIndex = 8
@@ -198,7 +210,7 @@ Partial Class preguntas
         '
         Me.RadioButtonD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonD.Location = New System.Drawing.Point(797, 285)
+        Me.RadioButtonD.Location = New System.Drawing.Point(797, 433)
         Me.RadioButtonD.Name = "RadioButtonD"
         Me.RadioButtonD.Size = New System.Drawing.Size(230, 24)
         Me.RadioButtonD.TabIndex = 9
@@ -210,7 +222,7 @@ Partial Class preguntas
         '
         Me.RadioButtonE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonE.Location = New System.Drawing.Point(1055, 285)
+        Me.RadioButtonE.Location = New System.Drawing.Point(1055, 433)
         Me.RadioButtonE.Name = "RadioButtonE"
         Me.RadioButtonE.Size = New System.Drawing.Size(197, 24)
         Me.RadioButtonE.TabIndex = 10
@@ -328,6 +340,65 @@ Partial Class preguntas
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
         '
+        'Picture8
+        '
+        Me.Picture8.Image = Global.ProjectOtis.My.Resources.Resources.Pregunta8
+        Me.Picture8.Location = New System.Drawing.Point(65, 188)
+        Me.Picture8.Name = "Picture8"
+        Me.Picture8.Size = New System.Drawing.Size(1099, 154)
+        Me.Picture8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
+        Me.Picture8.TabIndex = 15
+        Me.Picture8.TabStop = False
+        Me.Picture8.Visible = False
+        '
+        'PictureR8A
+        '
+        Me.PictureR8A.Image = Global.ProjectOtis.My.Resources.Resources._8A
+        Me.PictureR8A.Location = New System.Drawing.Point(48, 348)
+        Me.PictureR8A.Name = "PictureR8A"
+        Me.PictureR8A.Size = New System.Drawing.Size(135, 79)
+        Me.PictureR8A.TabIndex = 16
+        Me.PictureR8A.TabStop = False
+        Me.PictureR8A.Visible = False
+        '
+        'PictureR8B
+        '
+        Me.PictureR8B.Image = Global.ProjectOtis.My.Resources.Resources._8B
+        Me.PictureR8B.Location = New System.Drawing.Point(283, 348)
+        Me.PictureR8B.Name = "PictureR8B"
+        Me.PictureR8B.Size = New System.Drawing.Size(135, 79)
+        Me.PictureR8B.TabIndex = 17
+        Me.PictureR8B.TabStop = False
+        Me.PictureR8B.Visible = False
+        '
+        'PictureR8C
+        '
+        Me.PictureR8C.Image = Global.ProjectOtis.My.Resources.Resources._8C
+        Me.PictureR8C.Location = New System.Drawing.Point(532, 348)
+        Me.PictureR8C.Name = "PictureR8C"
+        Me.PictureR8C.Size = New System.Drawing.Size(135, 79)
+        Me.PictureR8C.TabIndex = 18
+        Me.PictureR8C.TabStop = False
+        Me.PictureR8C.Visible = False
+        '
+        'PictureR8D
+        '
+        Me.PictureR8D.Image = Global.ProjectOtis.My.Resources.Resources._8D
+        Me.PictureR8D.Location = New System.Drawing.Point(797, 348)
+        Me.PictureR8D.Name = "PictureR8D"
+        Me.PictureR8D.Size = New System.Drawing.Size(135, 79)
+        Me.PictureR8D.TabIndex = 19
+        Me.PictureR8D.TabStop = False
+        Me.PictureR8D.Visible = False
+        '
+        'PictureR8E
+        '
+        Me.PictureR8E.Location = New System.Drawing.Point(1056, 362)
+        Me.PictureR8E.Name = "PictureR8E"
+        Me.PictureR8E.Size = New System.Drawing.Size(135, 65)
+        Me.PictureR8E.TabIndex = 20
+        Me.PictureR8E.TabStop = False
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -335,6 +406,12 @@ Partial Class preguntas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1268, 688)
+        Me.Controls.Add(Me.PictureR8E)
+        Me.Controls.Add(Me.PictureR8D)
+        Me.Controls.Add(Me.PictureR8C)
+        Me.Controls.Add(Me.PictureR8B)
+        Me.Controls.Add(Me.PictureR8A)
+        Me.Controls.Add(Me.Picture8)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(IdAlumnoLabel)
         Me.Controls.Add(Me.IdAlumnoLabel1)
@@ -366,6 +443,12 @@ Partial Class preguntas
         CType(Me.Preguntas1BindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasUsuarioBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RespuestasUsuarioBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Picture8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureR8A, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureR8B, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureR8C, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureR8D, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureR8E, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -400,4 +483,10 @@ Partial Class preguntas
     Friend WithEvents AlumnosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter
     Friend WithEvents IdAlumnoLabel1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Picture8 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureR8A As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureR8B As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureR8C As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureR8D As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
 End Class

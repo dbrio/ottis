@@ -52,6 +52,15 @@
         LabelPregunta.Text = Pregunta
         Label1.Text = id
 
+        If id = 8 Then
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+        End If
         Dim Respueta1 As String = RespuestasTableAdapter.FillBy(idRespuesta, id)
         RespuestaRadioA.Text = Respueta1
         Dim Respueta2 As String = RespuestasTableAdapter.FillBy((idRespuesta + 1), id)
