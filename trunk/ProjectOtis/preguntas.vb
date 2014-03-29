@@ -45,7 +45,7 @@
     Private Sub ButtonOk_Click(sender As Object, e As EventArgs) Handles ButtonOk.Click
         Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
 
-        RespuestasUsuarioTableAdapter.UpdateRespU(idAlumno, id, respuestaUsuario)
+        RespuestasUsuarioTableAdapter.UpdateRespU(respuestaUsuario, idAlumno, id)
         id = id + 1
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
