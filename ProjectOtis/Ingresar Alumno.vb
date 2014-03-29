@@ -20,7 +20,7 @@
 
     End Sub
     Private Sub ButtonIngresar_Click(sender As Object, e As EventArgs) Handles ButtonIngresar.Click
-        
+
         'Alumno = NombreTextEdit.EditValue
         If NombreTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Nombre", MsgBoxStyle.Information)
@@ -71,6 +71,13 @@
             .nombre = nombre
             .apellido = apellido
         End With
+
+        With reporte
+            .nombre = nombre
+            .apellido = apellido
+            .Show()
+        End With
+       
 
         Me.Close()
     End Sub
