@@ -53,7 +53,9 @@
             Exit Sub
         End If
 
-        AlumnosTableAdapter.Insert(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+
+
+        AlumnosTableAdapter.FillByProcd(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
 
       
 
