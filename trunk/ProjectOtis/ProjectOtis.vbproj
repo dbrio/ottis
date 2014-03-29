@@ -246,6 +246,11 @@
   <ItemGroup>
     <Content Include="16 %28Address book%29.ico" />
     <Content Include="Otis-01.ico" />
+    <None Include="Resources\8D.JPG" />
+    <None Include="Resources\8C.JPG" />
+    <None Include="Resources\8B.JPG" />
+    <None Include="Resources\8A.JPG" />
+    <None Include="Resources\Pregunta8.JPG" />
     <None Include="Resources\barra-05.png" />
     <None Include="Resources\fondo1-04.png" />
   </ItemGroup>

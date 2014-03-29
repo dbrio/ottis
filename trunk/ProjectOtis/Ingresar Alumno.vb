@@ -77,7 +77,7 @@
         With reporte
             .nombre = nombre
             .apellido = apellido
-            .Show()
+
         End With
        
 

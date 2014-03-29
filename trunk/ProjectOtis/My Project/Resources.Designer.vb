@@ -73,6 +73,46 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _8A() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("8A", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _8B() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("8B", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _8C() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("8C", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _8D() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("8D", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property accept() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("accept", resourceCulture)
@@ -125,6 +165,16 @@ Namespace My.Resources
         Friend ReadOnly Property Otis_011() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Otis-011", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Pregunta8() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Pregunta8", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
