@@ -258,7 +258,176 @@
     End Sub
 
     Private Sub btnSaltar_Click(sender As Object, e As EventArgs) Handles btnSaltar.Click
+        Picture8.Visible = False
+        PictureR8A.Visible = False
+        PictureR8B.Visible = False
+        PictureR8C.Visible = False
+        PictureR8D.Visible = False
+        RadioButtonE.Visible = True
         id = id + 1
+        'Evaluamos la pregunta 8
+        If id = 8 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta8.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/8A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/8B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/8C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/8D.JPG")
+
+
+        End If
+
+        'Evaluamos la pregunta 19
+        If id = 19 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta19.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/19A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/19B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/19C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/19D.JPG")
+
+
+        End If
+
+        'evaluamos la pregunta 33
+        If id = 33 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta33.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/33A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/33B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/33C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/33D.JPG")
+
+
+        End If
+
+        'evaluamos la pregunta 50
+        If id = 50 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta50.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/50A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/50B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/50C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/50D.JPG")
+
+
+        End If
+
+        'evaluamos la pregutna 61
+        If id = 61 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta61.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/61A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/61B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/61C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/61D.JPG")
+
+
+        End If
+
+
+        'evaluacion de la pregunta 73
+        If id = 73 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+            RadioButtonE.Visible = False
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta73.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/73A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/73B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/73C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/73D.JPG")
+
+
+        End If
+
+        'Evaluamos las pregutnas 77, 78 ,79
+        If id = 77 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+
+
+
+        End If
+
+        If id = 78 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+
+
+
+        End If
+
+        If id = 79 Then
+
+            Picture8.Visible = True
+            PictureR8A.Visible = True
+            PictureR8B.Visible = True
+            PictureR8C.Visible = True
+            PictureR8D.Visible = True
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+
+
+
+        End If
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
         LabelPregunta.Text = Pregunta
