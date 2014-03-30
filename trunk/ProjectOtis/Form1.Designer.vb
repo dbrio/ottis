@@ -48,7 +48,10 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1200, 686)
         Me.Controls.Add(Me.ButtonEmpezar)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Bienvenido"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

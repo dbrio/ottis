@@ -70,6 +70,7 @@ Partial Class login2
         Me.TextBoxPss.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBoxPss.Location = New System.Drawing.Point(241, 148)
         Me.TextBoxPss.Name = "TextBoxPss"
+        Me.TextBoxPss.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBoxPss.Size = New System.Drawing.Size(204, 31)
         Me.TextBoxPss.TabIndex = 2
         '

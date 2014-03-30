@@ -298,6 +298,7 @@ Partial Class preguntas
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'Preguntas1BindingSource
         '
@@ -403,7 +404,7 @@ Partial Class preguntas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1268, 688)
+        Me.ClientSize = New System.Drawing.Size(1285, 688)
         Me.Controls.Add(Me.PictureR8E)
         Me.Controls.Add(Me.PictureR8D)
         Me.Controls.Add(Me.PictureR8C)
@@ -426,6 +427,7 @@ Partial Class preguntas
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "preguntas"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

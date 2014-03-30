@@ -20,7 +20,7 @@
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Preguntas' Puede moverla o quitarla según sea necesario.
 
         Timer1.Enabled = True
-       
+        Timer1.Start()
 
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, 1)
@@ -490,10 +490,10 @@
 
    
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If tiempo = 0 Then
-            tiempo = tiempo + 1
-        Else
-            tiempo = 1800
+
+        tiempo = tiempo + 1
+        If tiempo = 1800 Then
+
             With Form2
                 .Show()
             End With

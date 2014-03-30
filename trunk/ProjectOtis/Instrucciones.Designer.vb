@@ -71,6 +71,7 @@ Partial Class Instrucciones
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Instrucciones"
         Me.Text = "Instrucciones"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
