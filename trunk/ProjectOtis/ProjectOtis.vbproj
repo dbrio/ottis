@@ -84,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="baremos.Designer.vb">
+      <DependentUpon>baremos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="baremos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DatasetOtis.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +135,18 @@
     <Compile Include="Instrucciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="listaUsuarios.Designer.vb">
+      <DependentUpon>listaUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="listaUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -170,6 +188,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="baremos.resx">
+      <DependentUpon>baremos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ejemplo.resx">
       <DependentUpon>Ejemplo.vb</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +208,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Instrucciones.resx">
       <DependentUpon>Instrucciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="listaUsuarios.resx">
+      <DependentUpon>listaUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
