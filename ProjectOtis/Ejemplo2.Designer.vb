@@ -126,6 +126,7 @@ Partial Class Ejemplo2
         Me.Controls.Add(Me.RespuestaRadioA)
         Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ejemplo2"
         Me.Text = "Ejemplo 2"

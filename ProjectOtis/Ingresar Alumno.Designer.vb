@@ -22,7 +22,6 @@ Partial Class Ingresar_Alumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
@@ -32,14 +31,14 @@ Partial Class Ingresar_Alumno
         Dim Label1 As System.Windows.Forms.Label
         Me.ButtonIngresar = New System.Windows.Forms.Button()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
+        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.ApellidosTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.DireccionTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.RNPTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         NombreLabel = New System.Windows.Forms.Label()
@@ -50,13 +49,13 @@ Partial Class Ingresar_Alumno
         CorreoLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NombreLabel
@@ -157,6 +156,16 @@ Partial Class Ingresar_Alumno
         Me.NombreTextEdit.Size = New System.Drawing.Size(160, 30)
         Me.NombreTextEdit.TabIndex = 1
         '
+        'AlumnosBindingSource
+        '
+        Me.AlumnosBindingSource.DataMember = "Alumnos"
+        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
+        '
+        'DatasetOtis
+        '
+        Me.DatasetOtis.DataSetName = "DatasetOtis"
+        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
         'ApellidosTextEdit
         '
         Me.ApellidosTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Apellidos", True))
@@ -219,16 +228,6 @@ Partial Class Ingresar_Alumno
         Me.Button1.Text = "Admin"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'AlumnosBindingSource
-        '
-        Me.AlumnosBindingSource.DataMember = "Alumnos"
-        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
-        '
-        'DatasetOtis
-        '
-        Me.DatasetOtis.DataSetName = "DatasetOtis"
-        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
         'AlumnosTableAdapter
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
@@ -243,7 +242,7 @@ Partial Class Ingresar_Alumno
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        'Me.TableAdapterManager.UsuariosTableAdapter = Nothing
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'Ingresar_Alumno
         '
@@ -266,17 +265,18 @@ Partial Class Ingresar_Alumno
         Me.Controls.Add(DireccionLabel)
         Me.Controls.Add(Me.DireccionTextEdit)
         Me.Controls.Add(Me.ButtonIngresar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Ingresar_Alumno"
         Me.Text = "REGISTRO"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
