@@ -133,11 +133,11 @@
   <data name="8A" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8A.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="8B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8B.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="accept" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accept.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Otis-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Otis-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo1-04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo1-04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,10 +148,13 @@
   <data name="connection" xml:space="preserve">
     <value />
   </data>
-  <data name="8B" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8B.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Otis-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Otis-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="8D" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8D.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1125270__happy-puppy_p" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1125270__happy-puppy_p.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
