@@ -342,7 +342,6 @@ Partial Class preguntas
         '
         'Picture8
         '
-        Me.Picture8.Image = Global.ProjectOtis.My.Resources.Resources.Pregunta8
         Me.Picture8.Location = New System.Drawing.Point(65, 188)
         Me.Picture8.Name = "Picture8"
         Me.Picture8.Size = New System.Drawing.Size(1099, 154)
@@ -353,7 +352,6 @@ Partial Class preguntas
         '
         'PictureR8A
         '
-        Me.PictureR8A.Image = Global.ProjectOtis.My.Resources.Resources._8A
         Me.PictureR8A.Location = New System.Drawing.Point(48, 348)
         Me.PictureR8A.Name = "PictureR8A"
         Me.PictureR8A.Size = New System.Drawing.Size(135, 79)
@@ -363,7 +361,6 @@ Partial Class preguntas
         '
         'PictureR8B
         '
-        Me.PictureR8B.Image = Global.ProjectOtis.My.Resources.Resources._8B
         Me.PictureR8B.Location = New System.Drawing.Point(283, 348)
         Me.PictureR8B.Name = "PictureR8B"
         Me.PictureR8B.Size = New System.Drawing.Size(135, 79)
@@ -373,7 +370,6 @@ Partial Class preguntas
         '
         'PictureR8C
         '
-        Me.PictureR8C.Image = Global.ProjectOtis.My.Resources.Resources._8C
         Me.PictureR8C.Location = New System.Drawing.Point(532, 348)
         Me.PictureR8C.Name = "PictureR8C"
         Me.PictureR8C.Size = New System.Drawing.Size(135, 79)
@@ -383,7 +379,6 @@ Partial Class preguntas
         '
         'PictureR8D
         '
-        Me.PictureR8D.Image = Global.ProjectOtis.My.Resources.Resources._8D
         Me.PictureR8D.Location = New System.Drawing.Point(797, 348)
         Me.PictureR8D.Name = "PictureR8D"
         Me.PictureR8D.Size = New System.Drawing.Size(135, 79)

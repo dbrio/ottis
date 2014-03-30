@@ -43,16 +43,20 @@
 
     
     Private Sub ButtonOk_Click(sender As Object, e As EventArgs) Handles ButtonOk.Click
+        Picture8.Visible = False
+        PictureR8A.Visible = False
+        PictureR8B.Visible = False
+        PictureR8C.Visible = False
+        PictureR8D.Visible = False
+        RadioButtonE.Visible = True
+
         Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
 
         RespuestasUsuarioTableAdapter.UpdateRespU(respuestaUsuario, idAlumno, id)
         id = id + 1
 
-        Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
-        LabelPregunta.Text = Pregunta
-        Label1.Text = id
-
         If id = 8 Then
+
             Picture8.Visible = True
             PictureR8A.Visible = True
             PictureR8B.Visible = True
@@ -60,7 +64,20 @@
             PictureR8D.Visible = True
             RadioButtonE.Visible = False
 
+
+
+            Picture8.Image = Image.FromFile("../../Resources/Pregunta8.JPG")
+            PictureR8A.Image = Image.FromFile("../../Resources/8A.JPG")
+            PictureR8B.Image = Image.FromFile("../../Resources/8B.JPG")
+            PictureR8C.Image = Image.FromFile("../../Resources/8C.JPG")
+            PictureR8D.Image = Image.FromFile("../../Resources/8D.JPG")
+
+
         End If
+        Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, id)
+        LabelPregunta.Text = Pregunta
+        Label1.Text = id
+
         Dim Respueta1 As String = RespuestasTableAdapter.FillBy(idRespuesta, id)
         RespuestaRadioA.Text = Respueta1
         Dim Respueta2 As String = RespuestasTableAdapter.FillBy((idRespuesta + 1), id)
@@ -79,6 +96,8 @@
         RadioButtonC.Checked = False
         RadioButtonD.Checked = False
         RadioButtonE.Checked = False
+
+
 
         If id = 81 Then
             ButtonOk.Enabled = False
