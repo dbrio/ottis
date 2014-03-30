@@ -5,6 +5,9 @@
     Public nombre As String
     Public apellido As String
 
+    Dim tiempo As Integer
+
+
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
         Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
@@ -15,7 +18,10 @@
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Preguntas1' Puede moverla o quitarla según sea necesario.
         'Me.Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Preguntas' Puede moverla o quitarla según sea necesario.
+
+        Timer1.Enabled = True
        
+
 
         Dim Pregunta As String = Preguntas1TableAdapter.Fill(Me.DatasetOtis.Preguntas1, 1)
         LabelPregunta.Text = Pregunta
@@ -483,4 +489,16 @@
 
 
    
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If tiempo = 0 Then
+            tiempo = tiempo + 1
+        Else
+            tiempo = 2
+            With Form2
+                .Show()
+            End With
+            Me.Close()
+
+        End If
+    End Sub
 End Class

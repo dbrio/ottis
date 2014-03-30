@@ -62,6 +62,7 @@ Partial Class preguntas
         Me.PictureR8C = New System.Windows.Forms.PictureBox()
         Me.PictureR8D = New System.Windows.Forms.PictureBox()
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -298,6 +299,7 @@ Partial Class preguntas
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'Preguntas1BindingSource
         '
@@ -394,6 +396,9 @@ Partial Class preguntas
         Me.PictureR8E.TabIndex = 20
         Me.PictureR8E.TabStop = False
         '
+        'Timer1
+        '
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -484,4 +489,5 @@ Partial Class preguntas
     Friend WithEvents PictureR8C As System.Windows.Forms.PictureBox
     Friend WithEvents PictureR8D As System.Windows.Forms.PictureBox
     Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

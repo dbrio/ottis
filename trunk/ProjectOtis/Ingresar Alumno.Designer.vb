@@ -30,10 +30,6 @@ Partial Class Ingresar_Alumno
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
-        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
-        Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         Me.ButtonIngresar = New System.Windows.Forms.Button()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.ApellidosTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -41,6 +37,11 @@ Partial Class Ingresar_Alumno
         Me.RNPTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
+        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
+        Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
         DireccionLabel = New System.Windows.Forms.Label()
@@ -48,14 +49,14 @@ Partial Class Ingresar_Alumno
         TelefonoLabel = New System.Windows.Forms.Label()
         CorreoLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'NombreLabel
@@ -134,31 +135,6 @@ Partial Class Ingresar_Alumno
         Label1.Size = New System.Drawing.Size(0, 24)
         Label1.TabIndex = 22
         '
-        'DatasetOtis
-        '
-        Me.DatasetOtis.DataSetName = "DatasetOtis"
-        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'AlumnosBindingSource
-        '
-        Me.AlumnosBindingSource.DataMember = "Alumnos"
-        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
-        '
-        'AlumnosTableAdapter
-        '
-        Me.AlumnosTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.AlumnosTableAdapter = Me.AlumnosTableAdapter
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CategoríaTableAdapter = Nothing
-        Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
-        Me.TableAdapterManager.PreguntasTableAdapter = Nothing
-        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
-        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'ButtonIngresar
         '
         Me.ButtonIngresar.BackColor = System.Drawing.Color.DarkKhaki
@@ -231,12 +207,51 @@ Partial Class Ingresar_Alumno
         Me.CorreoTextEdit.Size = New System.Drawing.Size(249, 30)
         Me.CorreoTextEdit.TabIndex = 5
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Button1.Location = New System.Drawing.Point(12, 635)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(84, 30)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Admin"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'AlumnosBindingSource
+        '
+        Me.AlumnosBindingSource.DataMember = "Alumnos"
+        Me.AlumnosBindingSource.DataSource = Me.DatasetOtis
+        '
+        'DatasetOtis
+        '
+        Me.DatasetOtis.DataSetName = "DatasetOtis"
+        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'AlumnosTableAdapter
+        '
+        Me.AlumnosTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AlumnosTableAdapter = Me.AlumnosTableAdapter
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CategoríaTableAdapter = Nothing
+        Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
+        Me.TableAdapterManager.PreguntasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
+        '
         'Ingresar_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1268, 479)
+        Me.ClientSize = New System.Drawing.Size(1268, 677)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(Me.CorreoTextEdit)
@@ -254,14 +269,14 @@ Partial Class Ingresar_Alumno
         Me.Name = "Ingresar_Alumno"
         Me.Text = "REGISTRO"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ApellidosTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DireccionTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RNPTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TelefonoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CorreoTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -277,4 +292,5 @@ Partial Class Ingresar_Alumno
     Friend WithEvents RNPTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

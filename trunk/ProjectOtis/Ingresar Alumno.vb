@@ -70,6 +70,8 @@
         Dim apellido As String = ApellidosTextEdit.EditValue
 
         With Welcome
+            .nombre = nombre
+            .apellido = apellido
             .Show()
         End With
         With Form1
@@ -86,9 +88,15 @@
             .apellido = apellido
 
         End With
+
+       
        
 
         Me.Close()
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        login.Show()
+        Me.Close()
+    End Sub
 End Class

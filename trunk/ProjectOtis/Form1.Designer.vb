@@ -24,7 +24,6 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ButtonEmpezar = New System.Windows.Forms.Button()
-        Me.LabelBienv = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ButtonEmpezar
@@ -32,23 +31,12 @@ Partial Class Form1
         Me.ButtonEmpezar.BackColor = System.Drawing.Color.DarkKhaki
         Me.ButtonEmpezar.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonEmpezar.ForeColor = System.Drawing.Color.White
-        Me.ButtonEmpezar.Location = New System.Drawing.Point(591, 608)
+        Me.ButtonEmpezar.Location = New System.Drawing.Point(540, 608)
         Me.ButtonEmpezar.Name = "ButtonEmpezar"
-        Me.ButtonEmpezar.Size = New System.Drawing.Size(168, 66)
+        Me.ButtonEmpezar.Size = New System.Drawing.Size(342, 66)
         Me.ButtonEmpezar.TabIndex = 0
-        Me.ButtonEmpezar.Text = "Empezar"
+        Me.ButtonEmpezar.Text = "Empezar la prueba"
         Me.ButtonEmpezar.UseVisualStyleBackColor = False
-        '
-        'LabelBienv
-        '
-        Me.LabelBienv.AutoSize = True
-        Me.LabelBienv.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LabelBienv.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.LabelBienv.Location = New System.Drawing.Point(438, 575)
-        Me.LabelBienv.Name = "LabelBienv"
-        Me.LabelBienv.Size = New System.Drawing.Size(157, 25)
-        Me.LabelBienv.TabIndex = 1
-        Me.LabelBienv.Text = "Bienvenido(a): "
         '
         'Form1
         '
@@ -58,7 +46,6 @@ Partial Class Form1
         Me.BackgroundImage = Global.ProjectOtis.My.Resources.Resources.Otis_011
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(1200, 686)
-        Me.Controls.Add(Me.LabelBienv)
         Me.Controls.Add(Me.ButtonEmpezar)
         Me.DoubleBuffered = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -66,10 +53,8 @@ Partial Class Form1
         Me.Text = "Bienvenido"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents ButtonEmpezar As System.Windows.Forms.Button
-    Friend WithEvents LabelBienv As System.Windows.Forms.Label
 
 End Class

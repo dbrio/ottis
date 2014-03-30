@@ -1,6 +1,6 @@
 ﻿Public Class Welcome
-    Dim nombre As String
-    Dim apellido As String
+    Public nombre As String
+    Public apellido As String
     
     Private Sub ButtonIrInstrucciones_Click(sender As Object, e As EventArgs) Handles ButtonIrInstrucciones.Click
         Instrucciones.Show()
@@ -8,11 +8,10 @@
     End Sub
 
 
+   
     Private Sub Welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        LabelBienvenido.Text = "Bienvenido(a): " + nombre + " " + apellido
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
+  
 End Class

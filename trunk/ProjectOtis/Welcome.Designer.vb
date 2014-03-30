@@ -25,6 +25,7 @@ Partial Class Welcome
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonIrInstrucciones = New System.Windows.Forms.Button()
+        Me.LabelBienvenido = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -46,6 +47,7 @@ Partial Class Welcome
         Me.ButtonIrInstrucciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ButtonIrInstrucciones.BackColor = System.Drawing.Color.Peru
         Me.ButtonIrInstrucciones.FlatAppearance.BorderColor = System.Drawing.Color.Peru
+        Me.ButtonIrInstrucciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonIrInstrucciones.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonIrInstrucciones.ForeColor = System.Drawing.Color.White
         Me.ButtonIrInstrucciones.Location = New System.Drawing.Point(640, 379)
@@ -55,11 +57,22 @@ Partial Class Welcome
         Me.ButtonIrInstrucciones.Text = "Siguiente"
         Me.ButtonIrInstrucciones.UseVisualStyleBackColor = False
         '
+        'LabelBienvenido
+        '
+        Me.LabelBienvenido.AutoSize = True
+        Me.LabelBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelBienvenido.Location = New System.Drawing.Point(340, 20)
+        Me.LabelBienvenido.Name = "LabelBienvenido"
+        Me.LabelBienvenido.Size = New System.Drawing.Size(95, 31)
+        Me.LabelBienvenido.TabIndex = 2
+        Me.LabelBienvenido.Text = "Label1"
+        '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(817, 460)
+        Me.Controls.Add(Me.LabelBienvenido)
         Me.Controls.Add(Me.ButtonIrInstrucciones)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -68,8 +81,10 @@ Partial Class Welcome
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents ButtonIrInstrucciones As System.Windows.Forms.Button
+    Friend WithEvents LabelBienvenido As System.Windows.Forms.Label
 End Class
