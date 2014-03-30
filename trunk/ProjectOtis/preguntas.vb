@@ -253,7 +253,8 @@
 
 
         If id = 81 Then
-            ButtonOk.Enabled = False
+            Form2.Show()
+            Me.Close()
         End If
         btnSaltar.Enabled = True
         ButtonOk.Enabled = False
@@ -457,7 +458,8 @@
         idRespuesta = idRespuesta + 5
 
         If id = 81 Then
-            ButtonOk.Enabled = False
+            Form2.Show()
+            Me.Close()
         End If
     End Sub
 
