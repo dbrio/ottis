@@ -394,42 +394,46 @@
 
         'Evaluamos las pregutnas 77, 78 ,79
         If id = 77 Then
-
-            Picture8.Visible = True
+            Picture8.Visible = False
+            Picture77.Visible = True
             PictureR8A.Visible = True
             PictureR8B.Visible = True
             PictureR8C.Visible = True
             PictureR8D.Visible = True
+            RadioButtonE.Visible = False
 
-            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+
+            Picture77.Image = Image.FromFile("../../Resources/Respueseta777879.JPG")
 
 
 
         End If
 
         If id = 78 Then
-
-            Picture8.Visible = True
+            Picture8.Visible = False
+            Picture77.Visible = True
             PictureR8A.Visible = True
             PictureR8B.Visible = True
             PictureR8C.Visible = True
             PictureR8D.Visible = True
+            RadioButtonE.Visible = False
 
-            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+            Picture77.Image = Image.FromFile("../../Resources/Respueseta777879.JPG")
 
 
 
         End If
 
         If id = 79 Then
-
-            Picture8.Visible = True
+            Picture8.Visible = False
+            Picture77.Visible = True
             PictureR8A.Visible = True
             PictureR8B.Visible = True
             PictureR8C.Visible = True
             PictureR8D.Visible = True
+            RadioButtonE.Visible = False
 
-            Picture8.Image = Image.FromFile("../../Resources/Pregunta777879.JPG")
+            Picture77.Image = Image.FromFile("../../Resources/Respueseta777879.JPG")
 
 
 
