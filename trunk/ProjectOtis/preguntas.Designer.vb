@@ -62,6 +62,7 @@ Partial Class preguntas
         Me.PictureR8D = New System.Windows.Forms.PictureBox()
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer()
+        Me.Picture77 = New System.Windows.Forms.PictureBox()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,6 +83,7 @@ Partial Class preguntas
         CType(Me.PictureR8C, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureR8D, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureR8E, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Picture77, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'IdRespuestaUsuarioLabel
@@ -398,13 +400,23 @@ Partial Class preguntas
         'Timer1
         '
         '
+        'Picture77
+        '
+        Me.Picture77.Location = New System.Drawing.Point(930, 100)
+        Me.Picture77.Name = "Picture77"
+        Me.Picture77.Size = New System.Drawing.Size(302, 288)
+        Me.Picture77.TabIndex = 21
+        Me.Picture77.TabStop = False
+        Me.Picture77.Visible = False
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1285, 688)
+        Me.ClientSize = New System.Drawing.Size(1284, 688)
+        Me.Controls.Add(Me.Picture77)
         Me.Controls.Add(Me.PictureR8E)
         Me.Controls.Add(Me.PictureR8D)
         Me.Controls.Add(Me.PictureR8C)
@@ -449,6 +461,7 @@ Partial Class preguntas
         CType(Me.PictureR8C, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureR8D, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureR8E, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Picture77, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -490,4 +503,5 @@ Partial Class preguntas
     Friend WithEvents PictureR8D As System.Windows.Forms.PictureBox
     Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Picture77 As System.Windows.Forms.PictureBox
 End Class
