@@ -47,6 +47,13 @@
             Exit Sub
         End If
 
+        If Not IsNumeric(TelefonoTextEdit.EditValue) Then
+            MsgBox("Debe de ser numero")
+            TelefonoTextEdit.Focus()
+            TelefonoTextEdit.EditValue = ""
+            Exit Sub
+        End If
+
         If CorreoTextEdit.EditValue = "" Then
             MsgBox("Debe agregar un Correo", MsgBoxStyle.Information)
             CorreoTextEdit.Focus()
