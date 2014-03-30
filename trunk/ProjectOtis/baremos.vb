@@ -10,5 +10,17 @@
 
         LabelMalas.Text = malas
 
+        Dim crudo As Integer = malas - buenas
+
+        If crudo < 0 Then
+            crudo = crudo * -1
+            LabelBaremo.Text = crudo
+        Else
+            LabelBaremo.Text = crudo
+        End If
+
+
+
+
     End Sub
 End Class
