@@ -7088,7 +7088,7 @@ Namespace DatasetOtisTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")> _
         Private Sub InitConnection()
             Me._connection = New Global.System.Data.SqlClient.SqlConnection()
-            Me._connection.ConnectionString = Global.ProjectOtis.My.MySettings.Default.OTISConnectionString
+            Me._connection.ConnectionString = Global.ProjectOtis.My.MySettings.Default.connection
         End Sub
 
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
@@ -7104,7 +7104,7 @@ Namespace DatasetOtisTableAdapters
                 "egoría" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
             Me._commandCollection(1) = New Global.System.Data.SqlClient.SqlCommand()
-            Me._commandCollection(1).Connection = Me.Connection
+            Me._commandCollection(1).Connection = New Global.System.Data.SqlClient.SqlConnection(Global.ProjectOtis.My.MySettings.Default.OTISConnectionString)
             Me._commandCollection(1).CommandText = "SELECT        COUNT(r.Correcta) AS 'Total'" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "FROM            RespuestasUsuario AS " & _
                 "r INNER JOIN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                         Alumnos AS a ON r.IdAlumno = a.IdAlumno I" & _
                 "NNER JOIN" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "                         Preguntas AS p ON r.IdPregunta = p.IdPregunt" & _
