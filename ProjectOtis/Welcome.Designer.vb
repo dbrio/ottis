@@ -22,6 +22,7 @@ Partial Class Welcome
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Welcome))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ButtonIrInstrucciones = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -32,7 +33,7 @@ Partial Class Welcome
         Me.PictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = Global.ProjectOtis.My.Resources.Resources._221519_198073623672728_1658463808_o
+        Me.PictureBox1.Image = Global.ProjectOtis.My.Resources.Resources._1125270__happy_puppy_p
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(819, 461)
@@ -42,12 +43,17 @@ Partial Class Welcome
         '
         'ButtonIrInstrucciones
         '
+        Me.ButtonIrInstrucciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonIrInstrucciones.BackColor = System.Drawing.Color.Peru
+        Me.ButtonIrInstrucciones.FlatAppearance.BorderColor = System.Drawing.Color.Peru
+        Me.ButtonIrInstrucciones.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonIrInstrucciones.ForeColor = System.Drawing.Color.White
         Me.ButtonIrInstrucciones.Location = New System.Drawing.Point(640, 379)
         Me.ButtonIrInstrucciones.Name = "ButtonIrInstrucciones"
         Me.ButtonIrInstrucciones.Size = New System.Drawing.Size(151, 69)
         Me.ButtonIrInstrucciones.TabIndex = 1
-        Me.ButtonIrInstrucciones.Text = "Button1"
-        Me.ButtonIrInstrucciones.UseVisualStyleBackColor = True
+        Me.ButtonIrInstrucciones.Text = "Siguiente"
+        Me.ButtonIrInstrucciones.UseVisualStyleBackColor = False
         '
         'Welcome
         '
@@ -56,6 +62,7 @@ Partial Class Welcome
         Me.ClientSize = New System.Drawing.Size(817, 460)
         Me.Controls.Add(Me.ButtonIrInstrucciones)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Welcome"
         Me.Text = "Welcome"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
