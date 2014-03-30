@@ -4,10 +4,10 @@
     Public contador As Integer
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LabelBienv.Text = "Bienvenido(a): " + nombre + " " + apellido
+
     End Sub
 
-    Private Sub LabelBienv_Click(sender As Object, e As EventArgs) Handles LabelBienv.Click
+    Private Sub LabelBienv_Click(sender As Object, e As EventArgs)
 
     End Sub
 
