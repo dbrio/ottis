@@ -2,9 +2,9 @@
     Public id As Integer
     Private Sub baremos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
-        Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
+        'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
-        Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
+        'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Buenas' Puede moverla o quitarla según sea necesario.
         Dim buenas As Integer = Me.BuenasTableAdapter.ScalarQuery(id)
 

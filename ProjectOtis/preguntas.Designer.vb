@@ -22,39 +22,38 @@ Partial Class preguntas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim IdRespuestaUsuarioLabel As System.Windows.Forms.Label
         Dim IdAlumnoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(preguntas))
         Me.PreguntasLabel = New System.Windows.Forms.Label()
-        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource()
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelPregunta = New System.Windows.Forms.Label()
         Me.ButtonOk = New System.Windows.Forms.Button()
         Me.btnSaltar = New System.Windows.Forms.Button()
         Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
-        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource()
         Me.RadioButtonB = New System.Windows.Forms.RadioButton()
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IdRespuestaUsuarioLabel1 = New System.Windows.Forms.Label()
-        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource()
         Me.IdAlumnoLabel1 = New System.Windows.Forms.Label()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource()
         Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
-        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource()
+        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource()
+        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource()
         Me.Preguntas1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter()
         Me.RespuestasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter()
-        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource()
         Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
-        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource()
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.Picture8 = New System.Windows.Forms.PictureBox()
         Me.PictureR8A = New System.Windows.Forms.PictureBox()
@@ -62,7 +61,7 @@ Partial Class preguntas
         Me.PictureR8C = New System.Windows.Forms.PictureBox()
         Me.PictureR8D = New System.Windows.Forms.PictureBox()
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer1 = New System.Windows.Forms.Timer()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -299,7 +298,6 @@ Partial Class preguntas
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'Preguntas1BindingSource
         '
