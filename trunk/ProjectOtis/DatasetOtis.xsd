@@ -495,7 +495,7 @@ where r.Correcta =1  and a.IdAlumno =@IdAlumno</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OTISConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="connection (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        COUNT(r.Correcta) AS 'Total'
@@ -539,7 +539,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
   <xs:element name="DatasetOtis" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatasetOtis" msprop:Generator_UserDSName="DatasetOtis">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Preguntas" msprop:Generator_TableClassName="PreguntasDataTable" msprop:Generator_TableVarName="tablePreguntas" msprop:Generator_RowChangedName="PreguntasRowChanged" msprop:Generator_TablePropName="Preguntas" msprop:Generator_RowDeletingName="PreguntasRowDeleting" msprop:Generator_RowChangingName="PreguntasRowChanging" msprop:Generator_RowEvHandlerName="PreguntasRowChangeEventHandler" msprop:Generator_RowDeletedName="PreguntasRowDeleted" msprop:Generator_RowClassName="PreguntasRow" msprop:Generator_UserTableName="Preguntas" msprop:Generator_RowEvArgName="PreguntasRowChangeEvent">
+        <xs:element name="Preguntas" msprop:Generator_TableClassName="PreguntasDataTable" msprop:Generator_TableVarName="tablePreguntas" msprop:Generator_TablePropName="Preguntas" msprop:Generator_RowDeletingName="PreguntasRowDeleting" msprop:Generator_RowChangingName="PreguntasRowChanging" msprop:Generator_RowEvHandlerName="PreguntasRowChangeEventHandler" msprop:Generator_RowDeletedName="PreguntasRowDeleted" msprop:Generator_UserTableName="Preguntas" msprop:Generator_RowChangedName="PreguntasRowChanged" msprop:Generator_RowEvArgName="PreguntasRowChangeEvent" msprop:Generator_RowClassName="PreguntasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdPregunta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdPregunta" msprop:Generator_ColumnPropNameInRow="IdPregunta" msprop:Generator_ColumnPropNameInTable="IdPreguntaColumn" msprop:Generator_UserColumnName="IdPregunta" type="xs:int" />
@@ -562,7 +562,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Categoría" msprop:Generator_TableClassName="CategoríaDataTable" msprop:Generator_TableVarName="tableCategoría" msprop:Generator_RowChangedName="CategoríaRowChanged" msprop:Generator_TablePropName="Categoría" msprop:Generator_RowDeletingName="CategoríaRowDeleting" msprop:Generator_RowChangingName="CategoríaRowChanging" msprop:Generator_RowEvHandlerName="CategoríaRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoríaRowDeleted" msprop:Generator_RowClassName="CategoríaRow" msprop:Generator_UserTableName="Categoría" msprop:Generator_RowEvArgName="CategoríaRowChangeEvent">
+        <xs:element name="Categoría" msprop:Generator_TableClassName="CategoríaDataTable" msprop:Generator_TableVarName="tableCategoría" msprop:Generator_TablePropName="Categoría" msprop:Generator_RowDeletingName="CategoríaRowDeleting" msprop:Generator_RowChangingName="CategoríaRowChanging" msprop:Generator_RowEvHandlerName="CategoríaRowChangeEventHandler" msprop:Generator_RowDeletedName="CategoríaRowDeleted" msprop:Generator_UserTableName="Categoría" msprop:Generator_RowChangedName="CategoríaRowChanged" msprop:Generator_RowEvArgName="CategoríaRowChangeEvent" msprop:Generator_RowClassName="CategoríaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdCategoría" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdCategoría" msprop:Generator_ColumnPropNameInRow="IdCategoría" msprop:Generator_ColumnPropNameInTable="IdCategoríaColumn" msprop:Generator_UserColumnName="IdCategoría" type="xs:int" />
@@ -576,7 +576,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Alumnos" msprop:Generator_TableClassName="AlumnosDataTable" msprop:Generator_TableVarName="tableAlumnos" msprop:Generator_RowChangedName="AlumnosRowChanged" msprop:Generator_TablePropName="Alumnos" msprop:Generator_RowDeletingName="AlumnosRowDeleting" msprop:Generator_RowChangingName="AlumnosRowChanging" msprop:Generator_RowEvHandlerName="AlumnosRowChangeEventHandler" msprop:Generator_RowDeletedName="AlumnosRowDeleted" msprop:Generator_RowClassName="AlumnosRow" msprop:Generator_UserTableName="Alumnos" msprop:Generator_RowEvArgName="AlumnosRowChangeEvent">
+        <xs:element name="Alumnos" msprop:Generator_TableClassName="AlumnosDataTable" msprop:Generator_TableVarName="tableAlumnos" msprop:Generator_TablePropName="Alumnos" msprop:Generator_RowDeletingName="AlumnosRowDeleting" msprop:Generator_RowChangingName="AlumnosRowChanging" msprop:Generator_RowEvHandlerName="AlumnosRowChangeEventHandler" msprop:Generator_RowDeletedName="AlumnosRowDeleted" msprop:Generator_UserTableName="Alumnos" msprop:Generator_RowChangedName="AlumnosRowChanged" msprop:Generator_RowEvArgName="AlumnosRowChangeEvent" msprop:Generator_RowClassName="AlumnosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdAlumno" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdAlumno" msprop:Generator_ColumnPropNameInRow="IdAlumno" msprop:Generator_ColumnPropNameInTable="IdAlumnoColumn" msprop:Generator_UserColumnName="IdAlumno" type="xs:int" />
@@ -625,7 +625,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Preguntas1" msprop:Generator_TableClassName="Preguntas1DataTable" msprop:Generator_TableVarName="tablePreguntas1" msprop:Generator_TablePropName="Preguntas1" msprop:Generator_RowDeletingName="Preguntas1RowDeleting" msprop:Generator_RowChangingName="Preguntas1RowChanging" msprop:Generator_RowEvHandlerName="Preguntas1RowChangeEventHandler" msprop:Generator_RowDeletedName="Preguntas1RowDeleted" msprop:Generator_UserTableName="Preguntas1" msprop:Generator_RowChangedName="Preguntas1RowChanged" msprop:Generator_RowEvArgName="Preguntas1RowChangeEvent" msprop:Generator_RowClassName="Preguntas1Row">
+        <xs:element name="Preguntas1" msprop:Generator_TableClassName="Preguntas1DataTable" msprop:Generator_TableVarName="tablePreguntas1" msprop:Generator_RowChangedName="Preguntas1RowChanged" msprop:Generator_TablePropName="Preguntas1" msprop:Generator_RowDeletingName="Preguntas1RowDeleting" msprop:Generator_RowChangingName="Preguntas1RowChanging" msprop:Generator_RowEvHandlerName="Preguntas1RowChangeEventHandler" msprop:Generator_RowDeletedName="Preguntas1RowDeleted" msprop:Generator_RowClassName="Preguntas1Row" msprop:Generator_UserTableName="Preguntas1" msprop:Generator_RowEvArgName="Preguntas1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdPregunta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdPregunta" msprop:Generator_ColumnPropNameInRow="IdPregunta" msprop:Generator_ColumnPropNameInTable="IdPreguntaColumn" msprop:Generator_UserColumnName="IdPregunta" type="xs:int" />
@@ -639,7 +639,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Respuestas" msprop:Generator_TableClassName="RespuestasDataTable" msprop:Generator_TableVarName="tableRespuestas" msprop:Generator_RowChangedName="RespuestasRowChanged" msprop:Generator_TablePropName="Respuestas" msprop:Generator_RowDeletingName="RespuestasRowDeleting" msprop:Generator_RowChangingName="RespuestasRowChanging" msprop:Generator_RowEvHandlerName="RespuestasRowChangeEventHandler" msprop:Generator_RowDeletedName="RespuestasRowDeleted" msprop:Generator_RowClassName="RespuestasRow" msprop:Generator_UserTableName="Respuestas" msprop:Generator_RowEvArgName="RespuestasRowChangeEvent">
+        <xs:element name="Respuestas" msprop:Generator_TableClassName="RespuestasDataTable" msprop:Generator_TableVarName="tableRespuestas" msprop:Generator_TablePropName="Respuestas" msprop:Generator_RowDeletingName="RespuestasRowDeleting" msprop:Generator_RowChangingName="RespuestasRowChanging" msprop:Generator_RowEvHandlerName="RespuestasRowChangeEventHandler" msprop:Generator_RowDeletedName="RespuestasRowDeleted" msprop:Generator_UserTableName="Respuestas" msprop:Generator_RowChangedName="RespuestasRowChanged" msprop:Generator_RowEvArgName="RespuestasRowChangeEvent" msprop:Generator_RowClassName="RespuestasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdRespuesta" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRespuesta" msprop:Generator_ColumnPropNameInRow="IdRespuesta" msprop:Generator_ColumnPropNameInTable="IdRespuestaColumn" msprop:Generator_UserColumnName="IdRespuesta" type="xs:int" />
@@ -655,7 +655,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RespuestasUsuario" msprop:Generator_TableClassName="RespuestasUsuarioDataTable" msprop:Generator_TableVarName="tableRespuestasUsuario" msprop:Generator_RowChangedName="RespuestasUsuarioRowChanged" msprop:Generator_TablePropName="RespuestasUsuario" msprop:Generator_RowDeletingName="RespuestasUsuarioRowDeleting" msprop:Generator_RowChangingName="RespuestasUsuarioRowChanging" msprop:Generator_RowEvHandlerName="RespuestasUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="RespuestasUsuarioRowDeleted" msprop:Generator_RowClassName="RespuestasUsuarioRow" msprop:Generator_UserTableName="RespuestasUsuario" msprop:Generator_RowEvArgName="RespuestasUsuarioRowChangeEvent">
+        <xs:element name="RespuestasUsuario" msprop:Generator_TableClassName="RespuestasUsuarioDataTable" msprop:Generator_TableVarName="tableRespuestasUsuario" msprop:Generator_TablePropName="RespuestasUsuario" msprop:Generator_RowDeletingName="RespuestasUsuarioRowDeleting" msprop:Generator_RowChangingName="RespuestasUsuarioRowChanging" msprop:Generator_RowEvHandlerName="RespuestasUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="RespuestasUsuarioRowDeleted" msprop:Generator_UserTableName="RespuestasUsuario" msprop:Generator_RowChangedName="RespuestasUsuarioRowChanged" msprop:Generator_RowEvArgName="RespuestasUsuarioRowChangeEvent" msprop:Generator_RowClassName="RespuestasUsuarioRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdRespuestaUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdRespuestaUsuario" msprop:Generator_ColumnPropNameInRow="IdRespuestaUsuario" msprop:Generator_ColumnPropNameInTable="IdRespuestaUsuarioColumn" msprop:Generator_UserColumnName="IdRespuestaUsuario" type="xs:int" />
@@ -672,7 +672,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="reporte" msprop:Generator_TableClassName="reporteDataTable" msprop:Generator_TableVarName="tablereporte" msprop:Generator_RowChangedName="reporteRowChanged" msprop:Generator_TablePropName="reporte" msprop:Generator_RowDeletingName="reporteRowDeleting" msprop:Generator_RowChangingName="reporteRowChanging" msprop:Generator_RowEvHandlerName="reporteRowChangeEventHandler" msprop:Generator_RowDeletedName="reporteRowDeleted" msprop:Generator_RowClassName="reporteRow" msprop:Generator_UserTableName="reporte" msprop:Generator_RowEvArgName="reporteRowChangeEvent">
+        <xs:element name="reporte" msprop:Generator_TableClassName="reporteDataTable" msprop:Generator_TableVarName="tablereporte" msprop:Generator_TablePropName="reporte" msprop:Generator_RowDeletingName="reporteRowDeleting" msprop:Generator_RowChangingName="reporteRowChanging" msprop:Generator_RowEvHandlerName="reporteRowChangeEventHandler" msprop:Generator_RowDeletedName="reporteRowDeleted" msprop:Generator_UserTableName="reporte" msprop:Generator_RowChangedName="reporteRowChanged" msprop:Generator_RowEvArgName="reporteRowChangeEvent" msprop:Generator_RowClassName="reporteRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Preguntas" msprop:Generator_ColumnVarNameInTable="columnPreguntas" msprop:Generator_ColumnPropNameInRow="Preguntas" msprop:Generator_ColumnPropNameInTable="PreguntasColumn" msprop:Generator_UserColumnName="Preguntas">
@@ -699,14 +699,14 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Buenas" msprop:Generator_TableClassName="BuenasDataTable" msprop:Generator_TableVarName="tableBuenas" msprop:Generator_TablePropName="Buenas" msprop:Generator_RowDeletingName="BuenasRowDeleting" msprop:Generator_RowChangingName="BuenasRowChanging" msprop:Generator_RowEvHandlerName="BuenasRowChangeEventHandler" msprop:Generator_RowDeletedName="BuenasRowDeleted" msprop:Generator_UserTableName="Buenas" msprop:Generator_RowChangedName="BuenasRowChanged" msprop:Generator_RowEvArgName="BuenasRowChangeEvent" msprop:Generator_RowClassName="BuenasRow">
+        <xs:element name="Buenas" msprop:Generator_TableClassName="BuenasDataTable" msprop:Generator_TableVarName="tableBuenas" msprop:Generator_RowChangedName="BuenasRowChanged" msprop:Generator_TablePropName="Buenas" msprop:Generator_RowDeletingName="BuenasRowDeleting" msprop:Generator_RowChangingName="BuenasRowChanging" msprop:Generator_RowEvHandlerName="BuenasRowChangeEventHandler" msprop:Generator_RowDeletedName="BuenasRowDeleted" msprop:Generator_RowClassName="BuenasRow" msprop:Generator_UserTableName="Buenas" msprop:Generator_RowEvArgName="BuenasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Buenas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBuenas" msprop:Generator_ColumnPropNameInRow="Buenas" msprop:Generator_ColumnPropNameInTable="BuenasColumn" msprop:Generator_UserColumnName="Buenas" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:int" minOccurs="0" />
@@ -742,7 +742,7 @@ WHERE        (a.IdAlumno = @IdAlumno) AND (c.IdCategoría = @Idcategoria) AND (r
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Preguntas_Categoría" msdata:parent="Categoría" msdata:child="Preguntas" msdata:parentkey="IdCategoría" msdata:childkey="IdCategoría" msprop:Generator_UserChildTable="Preguntas" msprop:Generator_ChildPropName="GetPreguntasRows" msprop:Generator_UserRelationName="FK_Preguntas_Categoría" msprop:Generator_ParentPropName="CategoríaRow" msprop:Generator_RelationVarName="relationFK_Preguntas_Categoría" msprop:Generator_UserParentTable="Categoría" />
+      <msdata:Relationship name="FK_Preguntas_Categoría" msdata:parent="Categoría" msdata:child="Preguntas" msdata:parentkey="IdCategoría" msdata:childkey="IdCategoría" msprop:Generator_UserChildTable="Preguntas" msprop:Generator_ChildPropName="GetPreguntasRows" msprop:Generator_UserRelationName="FK_Preguntas_Categoría" msprop:Generator_RelationVarName="relationFK_Preguntas_Categoría" msprop:Generator_UserParentTable="Categoría" msprop:Generator_ParentPropName="CategoríaRow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
