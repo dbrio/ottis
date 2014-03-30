@@ -153,6 +153,12 @@
     <Compile Include="login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="login2.Designer.vb">
+      <DependentUpon>login2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login2.resx">
+      <DependentUpon>login2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
