@@ -61,7 +61,7 @@ Partial Class login2
         Me.Button1.Location = New System.Drawing.Point(241, 210)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(204, 50)
-        Me.Button1.TabIndex = 2
+        Me.Button1.TabIndex = 3
         Me.Button1.Text = "ENTRAR"
         Me.Button1.UseVisualStyleBackColor = False
         '
@@ -71,7 +71,7 @@ Partial Class login2
         Me.TextBoxPss.Location = New System.Drawing.Point(241, 148)
         Me.TextBoxPss.Name = "TextBoxPss"
         Me.TextBoxPss.Size = New System.Drawing.Size(204, 31)
-        Me.TextBoxPss.TabIndex = 4
+        Me.TextBoxPss.TabIndex = 2
         '
         'Label2
         '
