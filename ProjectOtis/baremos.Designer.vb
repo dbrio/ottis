@@ -35,6 +35,7 @@ Partial Class baremos
         Me.BuenasLabel3 = New System.Windows.Forms.Label()
         Me.LabelBaremo = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         BuenasLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
         BuenasLabel2 = New System.Windows.Forms.Label()
@@ -63,6 +64,16 @@ Partial Class baremos
         Label1.Size = New System.Drawing.Size(76, 25)
         Label1.TabIndex = 3
         Label1.Text = "Malas:"
+        '
+        'BuenasLabel2
+        '
+        BuenasLabel2.AutoSize = True
+        BuenasLabel2.Location = New System.Drawing.Point(598, 9)
+        BuenasLabel2.Name = "BuenasLabel2"
+        BuenasLabel2.Size = New System.Drawing.Size(46, 13)
+        BuenasLabel2.TabIndex = 4
+        BuenasLabel2.Text = "Buenas:"
+        BuenasLabel2.Visible = False
         '
         'BuenasLabel1
         '
@@ -112,16 +123,6 @@ Partial Class baremos
         '
         Me.BuenasTableAdapter.ClearBeforeFill = True
         '
-        'BuenasLabel2
-        '
-        BuenasLabel2.AutoSize = True
-        BuenasLabel2.Location = New System.Drawing.Point(598, 9)
-        BuenasLabel2.Name = "BuenasLabel2"
-        BuenasLabel2.Size = New System.Drawing.Size(46, 13)
-        BuenasLabel2.TabIndex = 4
-        BuenasLabel2.Text = "Buenas:"
-        BuenasLabel2.Visible = False
-        '
         'BuenasLabel3
         '
         Me.BuenasLabel3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuenasBindingSource, "Buenas", True))
@@ -154,12 +155,24 @@ Partial Class baremos
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Resultado Crudo"
         '
+        'Label3
+        '
+        Me.Label3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuenasBindingSource, "Buenas", True))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(322, 263)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(202, 58)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Label1"
+        '
         'baremos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(752, 369)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.LabelBaremo)
         Me.Controls.Add(BuenasLabel2)
@@ -185,4 +198,5 @@ Partial Class baremos
     Friend WithEvents BuenasLabel3 As System.Windows.Forms.Label
     Friend WithEvents LabelBaremo As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
