@@ -243,7 +243,7 @@ Partial Class Ingresar_Alumno
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
+        'Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'Ingresar_Alumno
         '

@@ -493,7 +493,7 @@
         If tiempo = 0 Then
             tiempo = tiempo + 1
         Else
-            tiempo = 2
+            tiempo = 1800
             With Form2
                 .Show()
             End With
@@ -501,4 +501,6 @@
 
         End If
     End Sub
+
+  
 End Class

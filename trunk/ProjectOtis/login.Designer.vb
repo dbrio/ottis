@@ -30,7 +30,7 @@ Partial Class login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.UsuariosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.UsuariosTableAdapter()
+        'Me.UsuariosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.UsuariosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.UsuariosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -97,7 +97,7 @@ Partial Class login
         '
         'UsuariosTableAdapter
         '
-        Me.UsuariosTableAdapter.ClearBeforeFill = True
+        'Me.UsuariosTableAdapter.ClearBeforeFill = True
         '
         'TableAdapterManager
         '
@@ -109,7 +109,7 @@ Partial Class login
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        Me.TableAdapterManager.UsuariosTableAdapter = Me.UsuariosTableAdapter
+        'Me.TableAdapterManager.UsuariosTableAdapter = Me.UsuariosTableAdapter
         '
         'login
         '
@@ -136,6 +136,6 @@ Partial Class login
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents DatasetOtis As ProjectOtis.DatasetOtis
     Friend WithEvents UsuariosBindingSource As System.Windows.Forms.BindingSource
-    Friend WithEvents UsuariosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.UsuariosTableAdapter
+    'Friend WithEvents UsuariosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.UsuariosTableAdapter
     Friend WithEvents TableAdapterManager As ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager
 End Class
