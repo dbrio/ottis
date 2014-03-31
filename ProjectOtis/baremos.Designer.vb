@@ -28,12 +28,15 @@ Partial Class baremos
         Dim BuenasLabel2 As System.Windows.Forms.Label
         Dim TotalLabel As System.Windows.Forms.Label
         Me.BuenasLabel1 = New System.Windows.Forms.Label()
+        Me.BuenasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelMalas = New System.Windows.Forms.Label()
         Me.BuenasLabel3 = New System.Windows.Forms.Label()
         Me.LabelBaremo = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TotalLabel1 = New System.Windows.Forms.Label()
+        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LabelSignP = New System.Windows.Forms.Label()
         Me.labelAnalogia = New System.Windows.Forms.Label()
         Me.LabelInter = New System.Windows.Forms.Label()
@@ -49,9 +52,6 @@ Partial Class baremos
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.BuenasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         Me.BuenasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.BuenasTableAdapter()
         Me.DataTable1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.DataTable1TableAdapter()
@@ -97,6 +97,16 @@ Partial Class baremos
         BuenasLabel2.Text = "Buenas:"
         BuenasLabel2.Visible = False
         '
+        'TotalLabel
+        '
+        TotalLabel.AutoSize = True
+        TotalLabel.Location = New System.Drawing.Point(704, 9)
+        TotalLabel.Name = "TotalLabel"
+        TotalLabel.Size = New System.Drawing.Size(34, 13)
+        TotalLabel.TabIndex = 9
+        TotalLabel.Text = "Total:"
+        TotalLabel.Visible = False
+        '
         'BuenasLabel1
         '
         Me.BuenasLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuenasBindingSource, "Buenas", True))
@@ -107,6 +117,16 @@ Partial Class baremos
         Me.BuenasLabel1.Size = New System.Drawing.Size(100, 23)
         Me.BuenasLabel1.TabIndex = 2
         Me.BuenasLabel1.Text = "Label1"
+        '
+        'BuenasBindingSource
+        '
+        Me.BuenasBindingSource.DataMember = "Buenas"
+        Me.BuenasBindingSource.DataSource = Me.DatasetOtis
+        '
+        'DatasetOtis
+        '
+        Me.DatasetOtis.DataSetName = "DatasetOtis"
+        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'LabelMalas
         '
@@ -155,21 +175,11 @@ Partial Class baremos
         Me.Label3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuenasBindingSource, "Buenas", True))
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(343, 293)
+        Me.Label3.Location = New System.Drawing.Point(343, 309)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(256, 58)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Label1"
-        '
-        'TotalLabel
-        '
-        TotalLabel.AutoSize = True
-        TotalLabel.Location = New System.Drawing.Point(704, 9)
-        TotalLabel.Name = "TotalLabel"
-        TotalLabel.Size = New System.Drawing.Size(34, 13)
-        TotalLabel.TabIndex = 9
-        TotalLabel.Text = "Total:"
-        TotalLabel.Visible = False
         '
         'TotalLabel1
         '
@@ -181,6 +191,11 @@ Partial Class baremos
         Me.TotalLabel1.Text = "Label4"
         Me.TotalLabel1.Visible = False
         '
+        'DataTable1BindingSource
+        '
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.DatasetOtis
+        '
         'LabelSignP
         '
         Me.LabelSignP.AutoSize = True
@@ -188,7 +203,7 @@ Partial Class baremos
         Me.LabelSignP.ForeColor = System.Drawing.Color.DimGray
         Me.LabelSignP.Location = New System.Drawing.Point(649, 89)
         Me.LabelSignP.Name = "LabelSignP"
-        Me.LabelSignP.Size = New System.Drawing.Size(182, 16)
+        Me.LabelSignP.Size = New System.Drawing.Size(178, 16)
         Me.LabelSignP.TabIndex = 11
         Me.LabelSignP.Text = "Significado de palabras:"
         '
@@ -199,7 +214,7 @@ Partial Class baremos
         Me.labelAnalogia.ForeColor = System.Drawing.Color.DimGray
         Me.labelAnalogia.Location = New System.Drawing.Point(649, 134)
         Me.labelAnalogia.Name = "labelAnalogia"
-        Me.labelAnalogia.Size = New System.Drawing.Size(128, 16)
+        Me.labelAnalogia.Size = New System.Drawing.Size(124, 16)
         Me.labelAnalogia.TabIndex = 12
         Me.labelAnalogia.Text = "Analogia Verbal:"
         '
@@ -210,7 +225,7 @@ Partial Class baremos
         Me.LabelInter.ForeColor = System.Drawing.Color.DimGray
         Me.LabelInter.Location = New System.Drawing.Point(649, 221)
         Me.LabelInter.Name = "LabelInter"
-        Me.LabelInter.Size = New System.Drawing.Size(214, 16)
+        Me.LabelInter.Size = New System.Drawing.Size(209, 16)
         Me.LabelInter.TabIndex = 14
         Me.LabelInter.Text = "Interpretacion de Proverbios:"
         '
@@ -221,7 +236,7 @@ Partial Class baremos
         Me.LabelOraciones.ForeColor = System.Drawing.Color.DimGray
         Me.LabelOraciones.Location = New System.Drawing.Point(649, 176)
         Me.LabelOraciones.Name = "LabelOraciones"
-        Me.LabelOraciones.Size = New System.Drawing.Size(194, 16)
+        Me.LabelOraciones.Size = New System.Drawing.Size(190, 16)
         Me.LabelOraciones.TabIndex = 13
         Me.LabelOraciones.Text = "Oraciones Desordenadas:"
         '
@@ -232,7 +247,7 @@ Partial Class baremos
         Me.LabelRA.ForeColor = System.Drawing.Color.DimGray
         Me.LabelRA.Location = New System.Drawing.Point(650, 349)
         Me.LabelRA.Name = "LabelRA"
-        Me.LabelRA.Size = New System.Drawing.Size(186, 16)
+        Me.LabelRA.Size = New System.Drawing.Size(183, 16)
         Me.LabelRA.TabIndex = 18
         Me.LabelRA.Text = "Razonamiento aritmetico:"
         '
@@ -243,7 +258,7 @@ Partial Class baremos
         Me.LabelSerie.ForeColor = System.Drawing.Color.DimGray
         Me.LabelSerie.Location = New System.Drawing.Point(650, 304)
         Me.LabelSerie.Name = "LabelSerie"
-        Me.LabelSerie.Size = New System.Drawing.Size(150, 16)
+        Me.LabelSerie.Size = New System.Drawing.Size(145, 16)
         Me.LabelSerie.TabIndex = 17
         Me.LabelSerie.Text = "Series de Numeros:"
         '
@@ -254,7 +269,7 @@ Partial Class baremos
         Me.LabelRazonamientoL.ForeColor = System.Drawing.Color.DimGray
         Me.LabelRazonamientoL.Location = New System.Drawing.Point(650, 262)
         Me.LabelRazonamientoL.Name = "LabelRazonamientoL"
-        Me.LabelRazonamientoL.Size = New System.Drawing.Size(166, 16)
+        Me.LabelRazonamientoL.Size = New System.Drawing.Size(162, 16)
         Me.LabelRazonamientoL.TabIndex = 16
         Me.LabelRazonamientoL.Text = "Razonamiento Logico:"
         '
@@ -263,7 +278,7 @@ Partial Class baremos
         Me.Label11.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.BuenasBindingSource, "Buenas", True))
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label11.Location = New System.Drawing.Point(27, 293)
+        Me.Label11.Location = New System.Drawing.Point(27, 309)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(221, 58)
         Me.Label11.TabIndex = 19
@@ -346,21 +361,6 @@ Partial Class baremos
         Me.Label18.TabIndex = 20
         Me.Label18.Text = "Label18"
         '
-        'BuenasBindingSource
-        '
-        Me.BuenasBindingSource.DataMember = "Buenas"
-        Me.BuenasBindingSource.DataSource = Me.DatasetOtis
-        '
-        'DatasetOtis
-        '
-        Me.DatasetOtis.DataSetName = "DatasetOtis"
-        Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'DataTable1BindingSource
-        '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.DatasetOtis
-        '
         'TableAdapterManager
         '
         Me.TableAdapterManager.AlumnosTableAdapter = Nothing
@@ -372,6 +372,7 @@ Partial Class baremos
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'BuenasTableAdapter
         '
