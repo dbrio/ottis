@@ -1,6 +1,8 @@
 ﻿Public Class baremos
     Public id As Integer
     Private Sub baremos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable2' Puede moverla o quitarla según sea necesario.
+        Me.DataTable2TableAdapter.Fill(Me.DatasetOtis.DataTable2)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
         'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
@@ -17,6 +19,22 @@
         Dim categoria5 As Integer = DataTable1TableAdapter.ScalarQuery(id, 5)
         Dim categoria6 As Integer = DataTable1TableAdapter.ScalarQuery(id, 6)
         Dim categoria7 As Integer = DataTable1TableAdapter.ScalarQuery(id, 7)
+
+        Dim c1 As Integer = DataTable2TableAdapter.ScalarTotal(1)
+        Dim c2 As Integer = DataTable2TableAdapter.ScalarTotal(2)
+        Dim c3 As Integer = DataTable2TableAdapter.ScalarTotal(3)
+        Dim c4 As Integer = DataTable2TableAdapter.ScalarTotal(4)
+        Dim c5 As Integer = DataTable2TableAdapter.ScalarTotal(5)
+        Dim c6 As Integer = DataTable2TableAdapter.ScalarTotal(6)
+        Dim c7 As Integer = DataTable2TableAdapter.ScalarTotal(7)
+
+        LabelCategoria1.Text = c1
+        LabelCategoria2.Text = c2
+        LabelCategoria3.Text = c3
+        LabelCategoria4.Text = c4
+        LabelCategoria5.Text = c5
+        LabelCategoria6.Text = c6
+        LabelCategoria7.Text = c7
 
         Label18.Text = categoria1
         Label17.Text = categoria2
