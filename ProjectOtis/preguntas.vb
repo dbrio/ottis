@@ -98,7 +98,9 @@
    
 
     Private Sub ButtonRespuesta_Click(sender As Object, e As EventArgs) Handles ButtonRespuesta.Click
-       
+        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
+        RespuestasUsuarioTableAdapter.UpdateRespU(respuestaUsuario, idAlumno, id)
+        id = id + 1
 
         RespuestaRadioA.Checked = False
         RadioButtonB.Checked = False
@@ -114,7 +116,8 @@
         PictureR8D.Visible = False
         RadioButtonE.Visible = True
         RadioButtonD.Visible = True
-        id = id + 1
+
+     
 
 
         If id = 24 Then
@@ -347,6 +350,10 @@
         RadioButtonE.Text = Respueta5
 
         idRespuesta = idRespuesta + 5
+
+
+
+
 
         If RespuestaRadioA.Checked = False And RadioButtonB.Checked = False And RadioButtonC.Checked = False And RadioButtonD.Checked = False And RadioButtonE.Checked = False Then
             ButtonRespuesta.Enabled = False

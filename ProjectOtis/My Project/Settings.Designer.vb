@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PC-MARIO\SQLEXPRESS;Initial Catalog=OTIS;User ID=sa;Password=123")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=BRIONES\SQLEXPRESS;Initial Catalog=OTIS;User ID=sa;Password=123")>  _
         Public ReadOnly Property connection() As String
             Get
                 Return CType(Me("connection"),String)
@@ -67,7 +67,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PC-Mario\SQLEXPRESS;Initial Catalog=OTIS;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=BRIONES\SQLEXPRESS;Initial Catalog=OTIS;Integrated Security=True")>  _
         Public ReadOnly Property OTISConnectionString() As String
             Get
                 Return CType(Me("OTISConnectionString"),String)
@@ -77,8 +77,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=PC-MARIO;Initial Catalog=OTIS;Persist Security Info=True;User ID=sa;P"& _ 
-            "assword=123")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=BRIONES\SQLEXPRESS;Initial Catalog=OTIS;Persist Security Info=True;Us"& _ 
+            "er ID=sa;Password=123")>  _
         Public ReadOnly Property OTISConnectionString1() As String
             Get
                 Return CType(Me("OTISConnectionString1"),String)
