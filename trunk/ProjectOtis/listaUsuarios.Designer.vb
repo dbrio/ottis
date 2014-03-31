@@ -23,9 +23,12 @@ Partial Class listaUsuarios
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
+        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
+        Me.AlumnosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
+        Me.AlumnosGridControl = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colIdAlumno = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRNP = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -34,23 +37,13 @@ Partial Class listaUsuarios
         Me.colDireccion = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colTelefono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCorreo = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
-        CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.colFecha = New DevExpress.XtraGrid.Columns.GridColumn()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'GridControl1
-        '
-        Me.GridControl1.DataSource = Me.AlumnosBindingSource
-        Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.Location = New System.Drawing.Point(0, 0)
-        Me.GridControl1.MainView = Me.GridView1
-        Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(829, 402)
-        Me.GridControl1.TabIndex = 0
-        Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'AlumnosBindingSource
         '
@@ -62,12 +55,49 @@ Partial Class listaUsuarios
         Me.DatasetOtis.DataSetName = "DatasetOtis"
         Me.DatasetOtis.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'AlumnosTableAdapter
+        '
+        Me.AlumnosTableAdapter.ClearBeforeFill = True
+        '
+        'AlumnosBindingSource1
+        '
+        Me.AlumnosBindingSource1.DataMember = "Alumnos"
+        Me.AlumnosBindingSource1.DataSource = Me.DatasetOtis
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.AlumnosTableAdapter = Nothing
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CategoríaTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.Preguntas1TableAdapter = Nothing
+        Me.TableAdapterManager.PreguntasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasTableAdapter = Nothing
+        Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
+        '
+        'AlumnosGridControl
+        '
+        Me.AlumnosGridControl.DataSource = Me.AlumnosBindingSource
+        Me.AlumnosGridControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AlumnosGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.AlumnosGridControl.MainView = Me.GridView1
+        Me.AlumnosGridControl.Name = "AlumnosGridControl"
+        Me.AlumnosGridControl.Size = New System.Drawing.Size(829, 402)
+        Me.AlumnosGridControl.TabIndex = 0
+        Me.AlumnosGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colIdAlumno, Me.colRNP, Me.colNombre, Me.colApellidos, Me.colDireccion, Me.colTelefono, Me.colCorreo})
-        Me.GridView1.GridControl = Me.GridControl1
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colIdAlumno, Me.colRNP, Me.colNombre, Me.colApellidos, Me.colDireccion, Me.colTelefono, Me.colCorreo, Me.colFecha})
+        Me.GridView1.GridControl = Me.AlumnosGridControl
+        Me.GridView1.GroupPanelText = " "
         Me.GridView1.Name = "GridView1"
         Me.GridView1.OptionsBehavior.Editable = False
+        Me.GridView1.OptionsCustomization.AllowFilter = False
+        Me.GridView1.OptionsView.RowAutoHeight = True
+        Me.GridView1.RowHeight = 20
         '
         'colIdAlumno
         '
@@ -119,9 +149,12 @@ Partial Class listaUsuarios
         Me.colCorreo.Visible = True
         Me.colCorreo.VisibleIndex = 6
         '
-        'AlumnosTableAdapter
+        'colFecha
         '
-        Me.AlumnosTableAdapter.ClearBeforeFill = True
+        Me.colFecha.FieldName = "Fecha"
+        Me.colFecha.Name = "colFecha"
+        Me.colFecha.Visible = True
+        Me.colFecha.VisibleIndex = 7
         '
         'listaUsuarios
         '
@@ -129,22 +162,25 @@ Partial Class listaUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(829, 402)
-        Me.Controls.Add(Me.GridControl1)
+        Me.Controls.Add(Me.AlumnosGridControl)
         Me.Name = "listaUsuarios"
         Me.Text = "Lista de Usuarios"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
-    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents DatasetOtis As ProjectOtis.DatasetOtis
     Friend WithEvents AlumnosBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents AlumnosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter
+    Friend WithEvents AlumnosBindingSource1 As System.Windows.Forms.BindingSource
+    Friend WithEvents TableAdapterManager As ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager
+    Friend WithEvents AlumnosGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents colIdAlumno As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colRNP As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colNombre As DevExpress.XtraGrid.Columns.GridColumn
@@ -152,4 +188,5 @@ Partial Class listaUsuarios
     Friend WithEvents colDireccion As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colTelefono As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colCorreo As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents colFecha As DevExpress.XtraGrid.Columns.GridColumn
 End Class

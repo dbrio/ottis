@@ -22,6 +22,7 @@ Partial Class Ingresar_Alumno
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim NombreLabel As System.Windows.Forms.Label
         Dim ApellidosLabel As System.Windows.Forms.Label
         Dim DireccionLabel As System.Windows.Forms.Label
@@ -31,14 +32,13 @@ Partial Class Ingresar_Alumno
         Dim Label1 As System.Windows.Forms.Label
         Me.ButtonIngresar = New System.Windows.Forms.Button()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.ApellidosTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.DireccionTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.RNPTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.TelefonoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         NombreLabel = New System.Windows.Forms.Label()
@@ -216,18 +216,6 @@ Partial Class Ingresar_Alumno
         Me.CorreoTextEdit.Size = New System.Drawing.Size(249, 30)
         Me.CorreoTextEdit.TabIndex = 5
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.Location = New System.Drawing.Point(12, 635)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(84, 30)
-        Me.Button1.TabIndex = 23
-        Me.Button1.Text = "Admin"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'AlumnosTableAdapter
         '
         Me.AlumnosTableAdapter.ClearBeforeFill = True
@@ -250,7 +238,6 @@ Partial Class Ingresar_Alumno
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1268, 677)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(Me.CorreoTextEdit)
@@ -292,5 +279,4 @@ Partial Class Ingresar_Alumno
     Friend WithEvents RNPTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
