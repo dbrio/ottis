@@ -83,7 +83,7 @@
     End Sub
 
 
-   
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         tiempo = tiempo + 1
@@ -97,8 +97,8 @@
         End If
     End Sub
 
-  
-  
+
+
     Private Sub ButtonOk_Click_2(sender As Object, e As EventArgs) Handles ButtonOk.Click
         Picture8.Visible = False
         PictureR8A.Visible = False
