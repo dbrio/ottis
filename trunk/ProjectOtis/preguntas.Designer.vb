@@ -110,7 +110,7 @@ Partial Class preguntas
         'PreguntasLabel
         '
         Me.PreguntasLabel.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Preguntas1BindingSource3, "Preguntas", True))
-        Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PreguntasLabel.Font = New System.Drawing.Font("Arial Unicode MS", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PreguntasLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.PreguntasLabel.Location = New System.Drawing.Point(73, 77)
         Me.PreguntasLabel.Name = "PreguntasLabel"
@@ -152,14 +152,15 @@ Partial Class preguntas
         Me.btnSaltar.TabIndex = 4
         Me.btnSaltar.Text = "Saltar"
         Me.btnSaltar.UseVisualStyleBackColor = False
+        Me.btnSaltar.Visible = False
         '
         'RespuestaRadioA
         '
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(48, 433)
+        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(98, 447)
         Me.RespuestaRadioA.Name = "RespuestaRadioA"
-        Me.RespuestaRadioA.Size = New System.Drawing.Size(213, 24)
+        Me.RespuestaRadioA.Size = New System.Drawing.Size(158, 34)
         Me.RespuestaRadioA.TabIndex = 6
         Me.RespuestaRadioA.TabStop = True
         Me.RespuestaRadioA.Text = "RadioButton1"
@@ -173,10 +174,10 @@ Partial Class preguntas
         'RadioButtonB
         '
         Me.RadioButtonB.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonB.Location = New System.Drawing.Point(283, 433)
+        Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonB.Location = New System.Drawing.Point(306, 447)
         Me.RadioButtonB.Name = "RadioButtonB"
-        Me.RadioButtonB.Size = New System.Drawing.Size(222, 24)
+        Me.RadioButtonB.Size = New System.Drawing.Size(164, 34)
         Me.RadioButtonB.TabIndex = 7
         Me.RadioButtonB.TabStop = True
         Me.RadioButtonB.Text = "RadioButton1"
@@ -185,10 +186,10 @@ Partial Class preguntas
         'RadioButtonC
         '
         Me.RadioButtonC.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonC.Location = New System.Drawing.Point(532, 433)
+        Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonC.Location = New System.Drawing.Point(535, 447)
         Me.RadioButtonC.Name = "RadioButtonC"
-        Me.RadioButtonC.Size = New System.Drawing.Size(205, 24)
+        Me.RadioButtonC.Size = New System.Drawing.Size(156, 34)
         Me.RadioButtonC.TabIndex = 8
         Me.RadioButtonC.TabStop = True
         Me.RadioButtonC.Text = "RadioButton1"
@@ -197,10 +198,10 @@ Partial Class preguntas
         'RadioButtonD
         '
         Me.RadioButtonD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonD.Location = New System.Drawing.Point(797, 433)
+        Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonD.Location = New System.Drawing.Point(757, 447)
         Me.RadioButtonD.Name = "RadioButtonD"
-        Me.RadioButtonD.Size = New System.Drawing.Size(230, 24)
+        Me.RadioButtonD.Size = New System.Drawing.Size(166, 34)
         Me.RadioButtonD.TabIndex = 9
         Me.RadioButtonD.TabStop = True
         Me.RadioButtonD.Text = "RadioButton1"
@@ -209,10 +210,10 @@ Partial Class preguntas
         'RadioButtonE
         '
         Me.RadioButtonE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButtonE.Location = New System.Drawing.Point(1055, 433)
+        Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonE.Location = New System.Drawing.Point(983, 447)
         Me.RadioButtonE.Name = "RadioButtonE"
-        Me.RadioButtonE.Size = New System.Drawing.Size(197, 24)
+        Me.RadioButtonE.Size = New System.Drawing.Size(148, 34)
         Me.RadioButtonE.TabIndex = 10
         Me.RadioButtonE.TabStop = True
         Me.RadioButtonE.Text = "RadioButton1"
@@ -261,9 +262,9 @@ Partial Class preguntas
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ProjectOtis.My.Resources.Resources.barra_05
-        Me.PictureBox1.Location = New System.Drawing.Point(48, 613)
+        Me.PictureBox1.Location = New System.Drawing.Point(48, 537)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(760, 53)
+        Me.PictureBox1.Size = New System.Drawing.Size(609, 53)
         Me.PictureBox1.TabIndex = 14
         Me.PictureBox1.TabStop = False
         '
@@ -331,9 +332,9 @@ Partial Class preguntas
         '
         'Picture8
         '
-        Me.Picture8.Location = New System.Drawing.Point(65, 188)
+        Me.Picture8.Location = New System.Drawing.Point(48, 188)
         Me.Picture8.Name = "Picture8"
-        Me.Picture8.Size = New System.Drawing.Size(1099, 154)
+        Me.Picture8.Size = New System.Drawing.Size(1116, 154)
         Me.Picture8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.Picture8.TabIndex = 15
         Me.Picture8.TabStop = False
@@ -341,7 +342,7 @@ Partial Class preguntas
         '
         'PictureR8A
         '
-        Me.PictureR8A.Location = New System.Drawing.Point(48, 348)
+        Me.PictureR8A.Location = New System.Drawing.Point(98, 348)
         Me.PictureR8A.Name = "PictureR8A"
         Me.PictureR8A.Size = New System.Drawing.Size(135, 79)
         Me.PictureR8A.TabIndex = 16
@@ -350,7 +351,7 @@ Partial Class preguntas
         '
         'PictureR8B
         '
-        Me.PictureR8B.Location = New System.Drawing.Point(283, 348)
+        Me.PictureR8B.Location = New System.Drawing.Point(306, 348)
         Me.PictureR8B.Name = "PictureR8B"
         Me.PictureR8B.Size = New System.Drawing.Size(135, 79)
         Me.PictureR8B.TabIndex = 17
@@ -359,7 +360,7 @@ Partial Class preguntas
         '
         'PictureR8C
         '
-        Me.PictureR8C.Location = New System.Drawing.Point(532, 348)
+        Me.PictureR8C.Location = New System.Drawing.Point(535, 348)
         Me.PictureR8C.Name = "PictureR8C"
         Me.PictureR8C.Size = New System.Drawing.Size(135, 79)
         Me.PictureR8C.TabIndex = 18
@@ -368,7 +369,7 @@ Partial Class preguntas
         '
         'PictureR8D
         '
-        Me.PictureR8D.Location = New System.Drawing.Point(797, 348)
+        Me.PictureR8D.Location = New System.Drawing.Point(757, 348)
         Me.PictureR8D.Name = "PictureR8D"
         Me.PictureR8D.Size = New System.Drawing.Size(135, 79)
         Me.PictureR8D.TabIndex = 19
@@ -377,9 +378,9 @@ Partial Class preguntas
         '
         'PictureR8E
         '
-        Me.PictureR8E.Location = New System.Drawing.Point(1056, 362)
+        Me.PictureR8E.Location = New System.Drawing.Point(983, 353)
         Me.PictureR8E.Name = "PictureR8E"
-        Me.PictureR8E.Size = New System.Drawing.Size(135, 65)
+        Me.PictureR8E.Size = New System.Drawing.Size(135, 74)
         Me.PictureR8E.TabIndex = 20
         Me.PictureR8E.TabStop = False
         '
@@ -400,13 +401,13 @@ Partial Class preguntas
         Me.ButtonOk.BackColor = System.Drawing.Color.DarkKhaki
         Me.ButtonOk.Enabled = False
         Me.ButtonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonOk.ForeColor = System.Drawing.Color.White
         Me.ButtonOk.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ButtonOk.Location = New System.Drawing.Point(845, 613)
+        Me.ButtonOk.Location = New System.Drawing.Point(354, 516)
         Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(121, 59)
-        Me.ButtonOk.TabIndex = 3
+        Me.ButtonOk.Size = New System.Drawing.Size(387, 85)
+        Me.ButtonOk.TabIndex = 22
         Me.ButtonOk.Text = "Ok"
         Me.ButtonOk.UseVisualStyleBackColor = False
         '
@@ -417,6 +418,7 @@ Partial Class preguntas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1284, 688)
+        Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.Picture77)
         Me.Controls.Add(Me.PictureR8E)
         Me.Controls.Add(Me.PictureR8D)
@@ -436,7 +438,6 @@ Partial Class preguntas
         Me.Controls.Add(Me.RadioButtonB)
         Me.Controls.Add(Me.RespuestaRadioA)
         Me.Controls.Add(Me.btnSaltar)
-        Me.Controls.Add(Me.ButtonOk)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
         Me.DoubleBuffered = True
