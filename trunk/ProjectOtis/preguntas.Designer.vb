@@ -63,7 +63,7 @@ Partial Class preguntas
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Picture77 = New System.Windows.Forms.PictureBox()
-        Me.ButtonOk2 = New System.Windows.Forms.Button()
+        Me.ButtonRespuesta = New System.Windows.Forms.Button()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,6 +156,7 @@ Partial Class preguntas
         '
         'RespuestaRadioA
         '
+        Me.RespuestaRadioA.AutoCheck = False
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
         Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RespuestaRadioA.Location = New System.Drawing.Point(38, 447)
@@ -397,20 +398,18 @@ Partial Class preguntas
         Me.Picture77.TabStop = False
         Me.Picture77.Visible = False
         '
-        'ButtonOk2
+        'ButtonRespuesta
         '
-        Me.ButtonOk2.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ButtonOk2.Enabled = False
-        Me.ButtonOk2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOk2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOk2.ForeColor = System.Drawing.Color.White
-        Me.ButtonOk2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ButtonOk2.Location = New System.Drawing.Point(354, 516)
-        Me.ButtonOk2.Name = "ButtonOk2"
-        Me.ButtonOk2.Size = New System.Drawing.Size(387, 85)
-        Me.ButtonOk2.TabIndex = 22
-        Me.ButtonOk2.Text = "Ok"
-        Me.ButtonOk2.UseVisualStyleBackColor = False
+        Me.ButtonRespuesta.BackColor = System.Drawing.Color.DarkKhaki
+        Me.ButtonRespuesta.Enabled = False
+        Me.ButtonRespuesta.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonRespuesta.ForeColor = System.Drawing.Color.White
+        Me.ButtonRespuesta.Location = New System.Drawing.Point(322, 517)
+        Me.ButtonRespuesta.Name = "ButtonRespuesta"
+        Me.ButtonRespuesta.Size = New System.Drawing.Size(387, 84)
+        Me.ButtonRespuesta.TabIndex = 23
+        Me.ButtonRespuesta.Text = "OK"
+        Me.ButtonRespuesta.UseVisualStyleBackColor = False
         '
         'preguntas
         '
@@ -419,7 +418,7 @@ Partial Class preguntas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1284, 688)
-        Me.Controls.Add(Me.ButtonOk2)
+        Me.Controls.Add(Me.ButtonRespuesta)
         Me.Controls.Add(Me.Picture77)
         Me.Controls.Add(Me.PictureR8E)
         Me.Controls.Add(Me.PictureR8D)
@@ -506,5 +505,5 @@ Partial Class preguntas
     Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Picture77 As System.Windows.Forms.PictureBox
-    Friend WithEvents ButtonOk2 As System.Windows.Forms.Button
+    Friend WithEvents ButtonRespuesta As System.Windows.Forms.Button
 End Class
