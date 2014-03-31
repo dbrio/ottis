@@ -9,8 +9,11 @@
 
 
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ButtonOk2.Enabled = False
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
+
+        If RespuestaRadioA.Checked = False And RadioButtonB.Checked = False And RadioButtonC.Checked = False And RadioButtonD.Checked = False And RadioButtonE.Checked = False Then
+            ButtonRespuesta.Enabled = False
+        End If
         Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.RespuestasUsuario' Puede moverla o quitarla según sea necesario.
         'Me.RespuestasUsuarioTableAdapter.Fill(Me.DatasetOtis.RespuestasUsuario)
@@ -51,11 +54,6 @@
 
 
 
-
-
-
-
-
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
         tiempo = tiempo + 1
@@ -73,32 +71,34 @@
 
 
     Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
-        ButtonOk2.Enabled = True
+        ButtonRespuesta.Enabled = True
         respuestaUsuario = "A"
     End Sub
 
     Private Sub RadioButtonB_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonB.CheckedChanged
-        ButtonOk2.Enabled = True
+        ButtonRespuesta.Enabled = True
         respuestaUsuario = "B"
     End Sub
 
     Private Sub RadioButtonC_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonC.CheckedChanged
-        ButtonOk2.Enabled = True
+        ButtonRespuesta.Enabled = True
         respuestaUsuario = "C"
     End Sub
 
     Private Sub RadioButtonD_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonD.CheckedChanged
-        ButtonOk2.Enabled = True
+        ButtonRespuesta.Enabled = True
         respuestaUsuario = "D"
     End Sub
 
     Private Sub RadioButtonE_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonE.CheckedChanged
-        ButtonOk2.Enabled = True
+        ButtonRespuesta.Enabled = True
         respuestaUsuario = "E"
     End Sub
 
-    Private Sub ButtonOk2_Click(sender As Object, e As EventArgs) Handles ButtonOk2.Click
+   
 
+    Private Sub ButtonRespuesta_Click(sender As Object, e As EventArgs) Handles ButtonRespuesta.Click
+       
         RespuestaRadioA.Checked = False
         RadioButtonB.Checked = False
         RadioButtonC.Checked = False
@@ -346,6 +346,7 @@
         RadioButtonE.Text = Respueta5
 
         idRespuesta = idRespuesta + 5
+
 
         If id = 81 Then
             With Form2
