@@ -99,6 +99,7 @@
 
     Private Sub ButtonRespuesta_Click(sender As Object, e As EventArgs) Handles ButtonRespuesta.Click
        
+
         RespuestaRadioA.Checked = False
         RadioButtonB.Checked = False
         RadioButtonC.Checked = False
@@ -347,6 +348,9 @@
 
         idRespuesta = idRespuesta + 5
 
+        If RespuestaRadioA.Checked = False And RadioButtonB.Checked = False And RadioButtonC.Checked = False And RadioButtonD.Checked = False And RadioButtonE.Checked = False Then
+            ButtonRespuesta.Enabled = False
+        End If
 
         If id = 81 Then
             With Form2
