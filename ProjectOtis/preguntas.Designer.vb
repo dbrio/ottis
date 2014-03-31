@@ -22,38 +22,38 @@ Partial Class preguntas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim IdRespuestaUsuarioLabel As System.Windows.Forms.Label
         Dim IdAlumnoLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(preguntas))
         Me.PreguntasLabel = New System.Windows.Forms.Label()
-        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource()
+        Me.Preguntas1BindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelPregunta = New System.Windows.Forms.Label()
-        Me.ButtonOk = New System.Windows.Forms.Button()
         Me.btnSaltar = New System.Windows.Forms.Button()
         Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
-        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource()
+        Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadioButtonB = New System.Windows.Forms.RadioButton()
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
         Me.RadioButtonD = New System.Windows.Forms.RadioButton()
         Me.RadioButtonE = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.IdRespuestaUsuarioLabel1 = New System.Windows.Forms.Label()
-        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource()
+        Me.RespuestasUsuarioBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.IdAlumnoLabel1 = New System.Windows.Forms.Label()
-        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource()
+        Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource()
+        Me.PreguntasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.PreguntasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.PreguntasTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
-        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource()
-        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource()
-        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource()
+        Me.Preguntas1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Preguntas1BindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Preguntas1TableAdapter = New ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter()
         Me.RespuestasTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter()
-        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource()
+        Me.RespuestasUsuarioBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RespuestasUsuarioTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.RespuestasUsuarioTableAdapter()
-        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource()
+        Me.RespuestasUsuarioBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.Picture8 = New System.Windows.Forms.PictureBox()
         Me.PictureR8A = New System.Windows.Forms.PictureBox()
@@ -61,8 +61,9 @@ Partial Class preguntas
         Me.PictureR8C = New System.Windows.Forms.PictureBox()
         Me.PictureR8D = New System.Windows.Forms.PictureBox()
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
-        Me.Timer1 = New System.Windows.Forms.Timer()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Picture77 = New System.Windows.Forms.PictureBox()
+        Me.ButtonOk = New System.Windows.Forms.Button()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,21 +139,6 @@ Partial Class preguntas
         Me.LabelPregunta.TabIndex = 0
         Me.LabelPregunta.Text = "Label1"
         Me.LabelPregunta.Visible = False
-        '
-        'ButtonOk
-        '
-        Me.ButtonOk.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ButtonOk.Enabled = False
-        Me.ButtonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOk.ForeColor = System.Drawing.Color.White
-        Me.ButtonOk.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ButtonOk.Location = New System.Drawing.Point(845, 613)
-        Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(121, 59)
-        Me.ButtonOk.TabIndex = 3
-        Me.ButtonOk.Text = "Ok"
-        Me.ButtonOk.UseVisualStyleBackColor = False
         '
         'btnSaltar
         '
@@ -409,6 +395,21 @@ Partial Class preguntas
         Me.Picture77.TabStop = False
         Me.Picture77.Visible = False
         '
+        'ButtonOk
+        '
+        Me.ButtonOk.BackColor = System.Drawing.Color.DarkKhaki
+        Me.ButtonOk.Enabled = False
+        Me.ButtonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOk.ForeColor = System.Drawing.Color.White
+        Me.ButtonOk.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.ButtonOk.Location = New System.Drawing.Point(845, 613)
+        Me.ButtonOk.Name = "ButtonOk"
+        Me.ButtonOk.Size = New System.Drawing.Size(121, 59)
+        Me.ButtonOk.TabIndex = 3
+        Me.ButtonOk.Text = "Ok"
+        Me.ButtonOk.UseVisualStyleBackColor = False
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -477,7 +478,6 @@ Partial Class preguntas
     Friend WithEvents Preguntas1TableAdapter As ProjectOtis.DatasetOtisTableAdapters.Preguntas1TableAdapter
     Friend WithEvents PreguntasLabel As System.Windows.Forms.Label
     Friend WithEvents LabelPregunta As System.Windows.Forms.Label
-    Friend WithEvents ButtonOk As System.Windows.Forms.Button
     Friend WithEvents btnSaltar As System.Windows.Forms.Button
     Friend WithEvents RespuestasBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RespuestasTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter
@@ -504,4 +504,5 @@ Partial Class preguntas
     Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Picture77 As System.Windows.Forms.PictureBox
+    Friend WithEvents ButtonOk As System.Windows.Forms.Button
 End Class

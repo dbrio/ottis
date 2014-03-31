@@ -17,7 +17,7 @@
 
 
 
-    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs) Handles GridControl1.DoubleClick
+    Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs)
         Dim ID As Integer = DameId()
 
         With baremos
@@ -29,4 +29,17 @@
     End Sub
 
    
+    Private Sub AlumnosGridControl_Click(sender As Object, e As EventArgs) Handles AlumnosGridControl.Click
+
+    End Sub
+
+    Private Sub AlumnosGridControl_DoubleClick(sender As Object, e As EventArgs) Handles AlumnosGridControl.DoubleClick
+        Dim ID As Integer = DameId()
+
+        With baremos
+            .id = ID
+            .ShowDialog()
+
+        End With
+    End Sub
 End Class
