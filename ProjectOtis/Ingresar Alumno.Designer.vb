@@ -193,6 +193,12 @@ Partial Class Ingresar_Alumno
         Me.RNPTextEdit.Name = "RNPTextEdit"
         Me.RNPTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RNPTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.RNPTextEdit.Properties.DisplayFormat.FormatString = "0000-0000-00000"
+        Me.RNPTextEdit.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
+        Me.RNPTextEdit.Properties.Mask.EditMask = "\d\d\d\d-\d\d\d\d-\d\d\d\d\d"
+        Me.RNPTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx
+        Me.RNPTextEdit.Properties.Mask.ShowPlaceHolders = False
+        Me.RNPTextEdit.Properties.Mask.UseMaskAsDisplayFormat = True
         Me.RNPTextEdit.Size = New System.Drawing.Size(177, 30)
         Me.RNPTextEdit.TabIndex = 0
         '
@@ -203,6 +209,8 @@ Partial Class Ingresar_Alumno
         Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
         Me.TelefonoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonoTextEdit.Properties.Appearance.Options.UseFont = True
+        Me.TelefonoTextEdit.Properties.Mask.EditMask = "0000-0000"
+        Me.TelefonoTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple
         Me.TelefonoTextEdit.Size = New System.Drawing.Size(152, 30)
         Me.TelefonoTextEdit.TabIndex = 4
         '
