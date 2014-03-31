@@ -9,7 +9,7 @@
         'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Buenas' Puede moverla o quitarla según sea necesario.
 
-       
+
         Dim buenas As Integer = Me.BuenasTableAdapter.ScalarQuery(id)
 
         Dim categoria1 As Integer = DataTable1TableAdapter.ScalarQuery(id, 1)

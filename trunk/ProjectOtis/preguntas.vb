@@ -90,6 +90,7 @@
         If tiempo = 1800 Then
 
             With Form2
+                .Label1.Text = "Su Tiempo Se Termino, Prueba Incompleta"
                 .Show()
             End With
             Me.Close()
@@ -100,13 +101,70 @@
 
 
     Private Sub ButtonOk_Click_2(sender As Object, e As EventArgs) Handles ButtonOk.Click
+
+        RespuestaRadioA.Checked = False
+        RadioButtonB.Checked = False
+        RadioButtonC.Checked = False
+        RadioButtonD.Checked = False
+        RadioButtonE.Checked = False
+
+
         Picture8.Visible = False
         PictureR8A.Visible = False
         PictureR8B.Visible = False
         PictureR8C.Visible = False
         PictureR8D.Visible = False
         RadioButtonE.Visible = True
+        RadioButtonD.Visible = True
         id = id + 1
+
+
+        If id = 24 Then
+            RadioButtonE.Visible = False
+        End If
+
+
+        If id = 25 Then
+            RadioButtonD.Visible = False
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 35 Then
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 37 Then
+            RadioButtonD.Visible = False
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 43 Then
+            RadioButtonD.Visible = False
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 51 Then
+            RadioButtonD.Visible = False
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 56 Then
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 74 Then
+            RadioButtonD.Visible = False
+            RadioButtonE.Visible = False
+        End If
+
+        If id = 75 Then
+            RadioButtonE.Visible = False
+        End If
+
+
+
+
+
         'Evaluamos la pregunta 8
         If id = 8 Then
 
@@ -293,8 +351,12 @@
         idRespuesta = idRespuesta + 5
 
         If id = 81 Then
-            Form2.Show()
+            With Form2
+                .Label1.Text = "FELICIDADES LLEGO AL FINAL DE LA PRUEBA!!"
+            End With
             Me.Close()
         End If
     End Sub
+
+   
 End Class
