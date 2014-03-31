@@ -36,6 +36,22 @@
         LabelCategoria6.Text = c6
         LabelCategoria7.Text = c7
 
+        Dim prom1 As Integer = ((100 * categoria1) / c1)
+        Dim prom2 As Integer = ((100 * categoria2) / c2)
+        Dim prom3 As Integer = ((100 * categoria3) / c3)
+        Dim prom4 As Integer = ((100 * categoria4) / c4)
+        Dim prom5 As Integer = ((100 * categoria5) / c5)
+        Dim prom6 As Integer = ((100 * categoria6) / c6)
+        Dim prom7 As Integer = ((100 * categoria7) / c7)
+
+        LabelPromedio1.Text = prom1
+        LabelPromedio2.Text = prom2
+        LabelPromedio3.Text = prom3
+        LabelPromedio4.Text = prom4
+        LabelPromedio5.Text = prom5
+        LabelPromedio6.Text = prom6
+        LabelPromedio7.Text = prom7
+
         Label18.Text = categoria1
         Label17.Text = categoria2
         Label16.Text = categoria3
