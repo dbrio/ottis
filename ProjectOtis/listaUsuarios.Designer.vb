@@ -38,6 +38,8 @@ Partial Class listaUsuarios
         Me.colTelefono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCorreo = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colFecha = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
+        Me.ButtonBuscar = New System.Windows.Forms.Button()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlumnosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -104,57 +106,75 @@ Partial Class listaUsuarios
         Me.colIdAlumno.FieldName = "IdAlumno"
         Me.colIdAlumno.Name = "colIdAlumno"
         Me.colIdAlumno.OptionsColumn.ReadOnly = True
-        Me.colIdAlumno.Visible = True
-        Me.colIdAlumno.VisibleIndex = 0
         '
         'colRNP
         '
         Me.colRNP.FieldName = "RNP"
         Me.colRNP.Name = "colRNP"
         Me.colRNP.Visible = True
-        Me.colRNP.VisibleIndex = 1
+        Me.colRNP.VisibleIndex = 0
         '
         'colNombre
         '
         Me.colNombre.FieldName = "Nombre"
         Me.colNombre.Name = "colNombre"
         Me.colNombre.Visible = True
-        Me.colNombre.VisibleIndex = 2
+        Me.colNombre.VisibleIndex = 1
         '
         'colApellidos
         '
         Me.colApellidos.FieldName = "Apellidos"
         Me.colApellidos.Name = "colApellidos"
         Me.colApellidos.Visible = True
-        Me.colApellidos.VisibleIndex = 3
+        Me.colApellidos.VisibleIndex = 2
         '
         'colDireccion
         '
         Me.colDireccion.FieldName = "Direccion"
         Me.colDireccion.Name = "colDireccion"
         Me.colDireccion.Visible = True
-        Me.colDireccion.VisibleIndex = 4
+        Me.colDireccion.VisibleIndex = 3
         '
         'colTelefono
         '
         Me.colTelefono.FieldName = "Telefono"
         Me.colTelefono.Name = "colTelefono"
         Me.colTelefono.Visible = True
-        Me.colTelefono.VisibleIndex = 5
+        Me.colTelefono.VisibleIndex = 4
         '
         'colCorreo
         '
         Me.colCorreo.FieldName = "Correo"
         Me.colCorreo.Name = "colCorreo"
         Me.colCorreo.Visible = True
-        Me.colCorreo.VisibleIndex = 6
+        Me.colCorreo.VisibleIndex = 5
         '
         'colFecha
         '
         Me.colFecha.FieldName = "Fecha"
         Me.colFecha.Name = "colFecha"
         Me.colFecha.Visible = True
-        Me.colFecha.VisibleIndex = 7
+        Me.colFecha.VisibleIndex = 6
+        '
+        'TextBoxBuscar
+        '
+        Me.TextBoxBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxBuscar.Location = New System.Drawing.Point(511, 8)
+        Me.TextBoxBuscar.Name = "TextBoxBuscar"
+        Me.TextBoxBuscar.Size = New System.Drawing.Size(218, 20)
+        Me.TextBoxBuscar.TabIndex = 1
+        '
+        'ButtonBuscar
+        '
+        Me.ButtonBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonBuscar.BackColor = System.Drawing.Color.Gainsboro
+        Me.ButtonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonBuscar.Location = New System.Drawing.Point(741, 5)
+        Me.ButtonBuscar.Name = "ButtonBuscar"
+        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonBuscar.TabIndex = 2
+        Me.ButtonBuscar.Text = "Buscar"
+        Me.ButtonBuscar.UseVisualStyleBackColor = False
         '
         'listaUsuarios
         '
@@ -162,6 +182,8 @@ Partial Class listaUsuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(829, 402)
+        Me.Controls.Add(Me.ButtonBuscar)
+        Me.Controls.Add(Me.TextBoxBuscar)
         Me.Controls.Add(Me.AlumnosGridControl)
         Me.Name = "listaUsuarios"
         Me.Text = "Lista de Usuarios"
@@ -172,6 +194,7 @@ Partial Class listaUsuarios
         CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DatasetOtis As ProjectOtis.DatasetOtis
@@ -189,4 +212,6 @@ Partial Class listaUsuarios
     Friend WithEvents colTelefono As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colCorreo As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colFecha As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents TextBoxBuscar As System.Windows.Forms.TextBox
+    Friend WithEvents ButtonBuscar As System.Windows.Forms.Button
 End Class

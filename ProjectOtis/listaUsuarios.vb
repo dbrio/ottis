@@ -42,4 +42,8 @@
 
         End With
     End Sub
+
+    Private Sub ButtonBuscar_Click(sender As Object, e As EventArgs) Handles ButtonBuscar.Click
+        AlumnosTableAdapter.FillByBuscar(DatasetOtis.Alumnos, String.Format("{0}%", TextBoxBuscar.Text))
+    End Sub
 End Class
