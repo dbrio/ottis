@@ -22,13 +22,14 @@ Partial Class login2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBoxUser = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBoxPss = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
-        Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource()
+        Me.UsuariosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.UsuariosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.UsuariosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -112,6 +113,7 @@ Partial Class login2
         '
         'login2
         '
+        Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

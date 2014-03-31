@@ -31,33 +31,33 @@ Partial Class Instrucciones
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label1.Location = New System.Drawing.Point(37, 165)
+        Me.Label1.Location = New System.Drawing.Point(57, 224)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(938, 100)
+        Me.Label1.Size = New System.Drawing.Size(1175, 124)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = resources.GetString("Label1.Text")
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.Label2.Location = New System.Drawing.Point(37, 81)
+        Me.Label2.Location = New System.Drawing.Point(71, 142)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(183, 25)
+        Me.Label2.Size = New System.Drawing.Size(325, 42)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "INSTRUCCIONES"
         '
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.DarkKhaki
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(838, 298)
+        Me.Button1.Location = New System.Drawing.Point(581, 388)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(117, 46)
+        Me.Button1.Size = New System.Drawing.Size(187, 64)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Ir a ejemplos"
         Me.Button1.UseVisualStyleBackColor = False
@@ -67,7 +67,7 @@ Partial Class Instrucciones
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1015, 419)
+        Me.ClientSize = New System.Drawing.Size(1284, 527)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)

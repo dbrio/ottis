@@ -157,10 +157,10 @@ Partial Class preguntas
         'RespuestaRadioA
         '
         Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(98, 447)
+        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(38, 447)
         Me.RespuestaRadioA.Name = "RespuestaRadioA"
-        Me.RespuestaRadioA.Size = New System.Drawing.Size(158, 34)
+        Me.RespuestaRadioA.Size = New System.Drawing.Size(234, 34)
         Me.RespuestaRadioA.TabIndex = 6
         Me.RespuestaRadioA.TabStop = True
         Me.RespuestaRadioA.Text = "RadioButton1"
@@ -174,10 +174,10 @@ Partial Class preguntas
         'RadioButtonB
         '
         Me.RadioButtonB.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonB.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonB.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonB.Location = New System.Drawing.Point(306, 447)
         Me.RadioButtonB.Name = "RadioButtonB"
-        Me.RadioButtonB.Size = New System.Drawing.Size(164, 34)
+        Me.RadioButtonB.Size = New System.Drawing.Size(197, 34)
         Me.RadioButtonB.TabIndex = 7
         Me.RadioButtonB.TabStop = True
         Me.RadioButtonB.Text = "RadioButton1"
@@ -186,10 +186,10 @@ Partial Class preguntas
         'RadioButtonC
         '
         Me.RadioButtonC.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonC.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonC.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonC.Location = New System.Drawing.Point(535, 447)
         Me.RadioButtonC.Name = "RadioButtonC"
-        Me.RadioButtonC.Size = New System.Drawing.Size(156, 34)
+        Me.RadioButtonC.Size = New System.Drawing.Size(216, 34)
         Me.RadioButtonC.TabIndex = 8
         Me.RadioButtonC.TabStop = True
         Me.RadioButtonC.Text = "RadioButton1"
@@ -198,10 +198,10 @@ Partial Class preguntas
         'RadioButtonD
         '
         Me.RadioButtonD.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonD.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonD.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonD.Location = New System.Drawing.Point(757, 447)
         Me.RadioButtonD.Name = "RadioButtonD"
-        Me.RadioButtonD.Size = New System.Drawing.Size(166, 34)
+        Me.RadioButtonD.Size = New System.Drawing.Size(220, 34)
         Me.RadioButtonD.TabIndex = 9
         Me.RadioButtonD.TabStop = True
         Me.RadioButtonD.Text = "RadioButton1"
@@ -210,10 +210,10 @@ Partial Class preguntas
         'RadioButtonE
         '
         Me.RadioButtonE.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RadioButtonE.Font = New System.Drawing.Font("Arial Unicode MS", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonE.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.RadioButtonE.Location = New System.Drawing.Point(983, 447)
         Me.RadioButtonE.Name = "RadioButtonE"
-        Me.RadioButtonE.Size = New System.Drawing.Size(148, 34)
+        Me.RadioButtonE.Size = New System.Drawing.Size(249, 34)
         Me.RadioButtonE.TabIndex = 10
         Me.RadioButtonE.TabStop = True
         Me.RadioButtonE.Text = "RadioButton1"
@@ -228,6 +228,7 @@ Partial Class preguntas
         Me.Label1.Size = New System.Drawing.Size(85, 33)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Label1"
+        Me.Label1.Visible = False
         '
         'IdRespuestaUsuarioLabel1
         '
@@ -389,7 +390,7 @@ Partial Class preguntas
         '
         'Picture77
         '
-        Me.Picture77.Location = New System.Drawing.Point(930, 100)
+        Me.Picture77.Location = New System.Drawing.Point(930, 54)
         Me.Picture77.Name = "Picture77"
         Me.Picture77.Size = New System.Drawing.Size(302, 288)
         Me.Picture77.TabIndex = 21
@@ -413,6 +414,7 @@ Partial Class preguntas
         '
         'preguntas
         '
+        Me.AcceptButton = Me.ButtonOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True

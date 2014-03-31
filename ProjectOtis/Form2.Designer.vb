@@ -35,9 +35,8 @@ Partial Class Form2
         Me.Label1.ForeColor = System.Drawing.Color.OliveDrab
         Me.Label1.Location = New System.Drawing.Point(172, 201)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(588, 29)
+        Me.Label1.Size = New System.Drawing.Size(0, 29)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "FELICIDADES LLEGO AL FINAL DE LA PRUEBA!!"
         '
         'Button1
         '
