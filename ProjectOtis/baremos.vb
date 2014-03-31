@@ -4,17 +4,17 @@
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
         'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable1' Puede moverla o quitarla según sea necesario.
-        Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
+        'Me.DataTable1TableAdapter.Fill(Me.DatasetOtis.DataTable1)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Buenas' Puede moverla o quitarla según sea necesario.
         Dim buenas As Integer = Me.BuenasTableAdapter.ScalarQuery(id)
 
-        Dim categoria1 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 1)
-        Dim categoria2 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 2)
-        Dim categoria3 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 3)
-        Dim categoria4 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 4)
-        Dim categoria5 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 5)
-        Dim categoria6 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 6)
-        Dim categoria7 As Integer = DataTable1TableAdapter.ScalarCategoria(id, 7)
+        Dim categoria1 As Integer = DataTable1TableAdapter.ScalarQuery(id, 1)
+        Dim categoria2 As Integer = DataTable1TableAdapter.ScalarQuery(id, 2)
+        Dim categoria3 As Integer = DataTable1TableAdapter.ScalarQuery(id, 3)
+        Dim categoria4 As Integer = DataTable1TableAdapter.ScalarQuery(id, 4)
+        Dim categoria5 As Integer = DataTable1TableAdapter.ScalarQuery(id, 5)
+        Dim categoria6 As Integer = DataTable1TableAdapter.ScalarQuery(id, 6)
+        Dim categoria7 As Integer = DataTable1TableAdapter.ScalarQuery(id, 7)
 
         Label18.Text = categoria1
         Label17.Text = categoria2
