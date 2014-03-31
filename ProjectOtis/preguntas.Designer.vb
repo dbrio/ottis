@@ -63,7 +63,7 @@ Partial Class preguntas
         Me.PictureR8E = New System.Windows.Forms.PictureBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Picture77 = New System.Windows.Forms.PictureBox()
-        Me.ButtonOk = New System.Windows.Forms.Button()
+        Me.ButtonOk2 = New System.Windows.Forms.Button()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -397,30 +397,29 @@ Partial Class preguntas
         Me.Picture77.TabStop = False
         Me.Picture77.Visible = False
         '
-        'ButtonOk
+        'ButtonOk2
         '
-        Me.ButtonOk.BackColor = System.Drawing.Color.DarkKhaki
-        Me.ButtonOk.Enabled = False
-        Me.ButtonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonOk.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonOk.ForeColor = System.Drawing.Color.White
-        Me.ButtonOk.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ButtonOk.Location = New System.Drawing.Point(354, 516)
-        Me.ButtonOk.Name = "ButtonOk"
-        Me.ButtonOk.Size = New System.Drawing.Size(387, 85)
-        Me.ButtonOk.TabIndex = 22
-        Me.ButtonOk.Text = "Ok"
-        Me.ButtonOk.UseVisualStyleBackColor = False
+        Me.ButtonOk2.BackColor = System.Drawing.Color.DarkKhaki
+        Me.ButtonOk2.Enabled = False
+        Me.ButtonOk2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ButtonOk2.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonOk2.ForeColor = System.Drawing.Color.White
+        Me.ButtonOk2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.ButtonOk2.Location = New System.Drawing.Point(354, 516)
+        Me.ButtonOk2.Name = "ButtonOk2"
+        Me.ButtonOk2.Size = New System.Drawing.Size(387, 85)
+        Me.ButtonOk2.TabIndex = 22
+        Me.ButtonOk2.Text = "Ok"
+        Me.ButtonOk2.UseVisualStyleBackColor = False
         '
         'preguntas
         '
-        Me.AcceptButton = Me.ButtonOk
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1284, 688)
-        Me.Controls.Add(Me.ButtonOk)
+        Me.Controls.Add(Me.ButtonOk2)
         Me.Controls.Add(Me.Picture77)
         Me.Controls.Add(Me.PictureR8E)
         Me.Controls.Add(Me.PictureR8D)
@@ -507,5 +506,5 @@ Partial Class preguntas
     Friend WithEvents PictureR8E As System.Windows.Forms.PictureBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Picture77 As System.Windows.Forms.PictureBox
-    Friend WithEvents ButtonOk As System.Windows.Forms.Button
+    Friend WithEvents ButtonOk2 As System.Windows.Forms.Button
 End Class

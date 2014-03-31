@@ -9,6 +9,7 @@
 
 
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ButtonOk2.Enabled = False
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
         Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.RespuestasUsuario' Puede moverla o quitarla según sea necesario.
@@ -47,40 +48,11 @@
 
     'End Sub
 
-    
 
 
 
 
-    Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
-        ButtonOk.Enabled = True
-        btnSaltar.Enabled = False
-        respuestaUsuario = "A"
-    End Sub
 
-    Private Sub RadioButtonB_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonB.CheckedChanged
-        ButtonOk.Enabled = True
-        btnSaltar.Enabled = False
-        respuestaUsuario = "B"
-    End Sub
-
-    Private Sub RadioButtonC_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonC.CheckedChanged
-        ButtonOk.Enabled = True
-        btnSaltar.Enabled = False
-        respuestaUsuario = "C"
-    End Sub
-
-    Private Sub RadioButtonD_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonD.CheckedChanged
-        ButtonOk.Enabled = True
-        btnSaltar.Enabled = False
-        respuestaUsuario = "D"
-    End Sub
-
-    Private Sub RadioButtonE_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonE.CheckedChanged
-        ButtonOk.Enabled = True
-        btnSaltar.Enabled = False
-        respuestaUsuario = "E"
-    End Sub
 
 
 
@@ -100,7 +72,32 @@
 
 
 
-    Private Sub ButtonOk_Click_2(sender As Object, e As EventArgs) Handles ButtonOk.Click
+    Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
+        ButtonOk2.Enabled = True
+        respuestaUsuario = "A"
+    End Sub
+
+    Private Sub RadioButtonB_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonB.CheckedChanged
+        ButtonOk2.Enabled = True
+        respuestaUsuario = "B"
+    End Sub
+
+    Private Sub RadioButtonC_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonC.CheckedChanged
+        ButtonOk2.Enabled = True
+        respuestaUsuario = "C"
+    End Sub
+
+    Private Sub RadioButtonD_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonD.CheckedChanged
+        ButtonOk2.Enabled = True
+        respuestaUsuario = "D"
+    End Sub
+
+    Private Sub RadioButtonE_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButtonE.CheckedChanged
+        ButtonOk2.Enabled = True
+        respuestaUsuario = "E"
+    End Sub
+
+    Private Sub ButtonOk2_Click(sender As Object, e As EventArgs) Handles ButtonOk2.Click
 
         RespuestaRadioA.Checked = False
         RadioButtonB.Checked = False
@@ -356,7 +353,6 @@
             End With
             Me.Close()
         End If
-    End Sub
 
-   
+    End Sub
 End Class
