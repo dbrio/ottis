@@ -11,4 +11,5 @@
         Ingresar_Alumno.Show()
         Me.Close()
     End Sub
+
 End Class

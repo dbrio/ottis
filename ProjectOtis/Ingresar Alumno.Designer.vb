@@ -41,6 +41,7 @@ Partial Class Ingresar_Alumno
         Me.CorreoTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
+        Me.Label2 = New System.Windows.Forms.Label()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
         DireccionLabel = New System.Windows.Forms.Label()
@@ -240,12 +241,24 @@ Partial Class Ingresar_Alumno
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.DimGray
+        Me.Label2.Location = New System.Drawing.Point(510, 9)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(273, 33)
+        Me.Label2.TabIndex = 23
+        Me.Label2.Text = "Registro de Usuario"
+        '
         'Ingresar_Alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1268, 677)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
         Me.Controls.Add(Me.CorreoTextEdit)
@@ -287,4 +300,5 @@ Partial Class Ingresar_Alumno
     Friend WithEvents RNPTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class
