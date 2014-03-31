@@ -434,77 +434,77 @@ Partial Class baremos
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label12.Location = New System.Drawing.Point(231, 336)
+        Me.Label12.Location = New System.Drawing.Point(264, 336)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(66, 18)
+        Me.Label12.Size = New System.Drawing.Size(17, 18)
         Me.Label12.TabIndex = 63
-        Me.Label12.Text = "Label12"
+        Me.Label12.Text = "L"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label13.Location = New System.Drawing.Point(204, 290)
+        Me.Label13.Location = New System.Drawing.Point(263, 290)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(66, 18)
+        Me.Label13.Size = New System.Drawing.Size(17, 18)
         Me.Label13.TabIndex = 62
-        Me.Label13.Text = "Label13"
+        Me.Label13.Text = "L"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label14.Location = New System.Drawing.Point(204, 248)
+        Me.Label14.Location = New System.Drawing.Point(264, 248)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(66, 18)
+        Me.Label14.Size = New System.Drawing.Size(17, 18)
         Me.Label14.TabIndex = 61
-        Me.Label14.Text = "Label14"
+        Me.Label14.Text = "L"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label15.Location = New System.Drawing.Point(253, 203)
+        Me.Label15.Location = New System.Drawing.Point(263, 205)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(66, 18)
+        Me.Label15.Size = New System.Drawing.Size(17, 18)
         Me.Label15.TabIndex = 60
-        Me.Label15.Text = "Label15"
+        Me.Label15.Text = "L"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label16.Location = New System.Drawing.Point(244, 161)
+        Me.Label16.Location = New System.Drawing.Point(263, 161)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(66, 18)
+        Me.Label16.Size = New System.Drawing.Size(17, 18)
         Me.Label16.TabIndex = 59
-        Me.Label16.Text = "Label16"
+        Me.Label16.Text = "L"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label17.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label17.Location = New System.Drawing.Point(180, 122)
+        Me.Label17.Location = New System.Drawing.Point(263, 122)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(66, 18)
+        Me.Label17.Size = New System.Drawing.Size(17, 18)
         Me.Label17.TabIndex = 58
-        Me.Label17.Text = "Label17"
+        Me.Label17.Text = "L"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.ForeColor = System.Drawing.SystemColors.AppWorkspace
-        Me.Label18.Location = New System.Drawing.Point(239, 76)
+        Me.Label18.Location = New System.Drawing.Point(263, 76)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(66, 18)
+        Me.Label18.Size = New System.Drawing.Size(17, 18)
         Me.Label18.TabIndex = 57
-        Me.Label18.Text = "Label18"
+        Me.Label18.Text = "L"
         '
         'LabelRA
         '
