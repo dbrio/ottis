@@ -11,9 +11,9 @@
     Private Sub preguntas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.Alumnos' Puede moverla o quitarla según sea necesario.
 
-        If RespuestaRadioA.Checked = False And RadioButtonB.Checked = False And RadioButtonC.Checked = False And RadioButtonD.Checked = False And RadioButtonE.Checked = False Then
-            ButtonRespuesta.Enabled = False
-        End If
+        'If RespuestaRadioA.Checked = False And RadioButtonB.Checked = False And RadioButtonC.Checked = False And RadioButtonD.Checked = False And RadioButtonE.Checked = False Then
+        '    ButtonRespuesta.Enabled = False
+        'End If
         Me.AlumnosTableAdapter.Fill(Me.DatasetOtis.Alumnos)
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.RespuestasUsuario' Puede moverla o quitarla según sea necesario.
         'Me.RespuestasUsuarioTableAdapter.Fill(Me.DatasetOtis.RespuestasUsuario)
@@ -70,7 +70,7 @@
 
 
 
-    Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
+    Private Sub RespuestaRadioA_CheckedChanged(sender As Object, e As EventArgs)
         ButtonRespuesta.Enabled = True
         respuestaUsuario = "A"
     End Sub
@@ -98,16 +98,8 @@
    
 
     Private Sub ButtonRespuesta_Click(sender As Object, e As EventArgs) Handles ButtonRespuesta.Click
-        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
-        RespuestasUsuarioTableAdapter.UpdateRespU(respuestaUsuario, idAlumno, id)
-        id = id + 1
-
-        RespuestaRadioA.Checked = False
-        RadioButtonB.Checked = False
-        RadioButtonC.Checked = False
-        RadioButtonD.Checked = False
-        RadioButtonE.Checked = False
-
+       
+        
 
         Picture8.Visible = False
         PictureR8A.Visible = False
@@ -118,7 +110,15 @@
         RadioButtonD.Visible = True
 
      
+        Dim idAlumno As Integer = AlumnosTableAdapter.ObtenerID(nombre, apellido)
+        RespuestasUsuarioTableAdapter.UpdateRespU(respuestaUsuario, idAlumno, id)
+        id = id + 1
 
+        RespuestaRadioA.Checked = False
+        RadioButtonB.Checked = False
+        RadioButtonC.Checked = False
+        RadioButtonD.Checked = False
+        RadioButtonE.Checked = False
 
         If id = 24 Then
             RadioButtonE.Visible = False
@@ -365,6 +365,12 @@
             End With
             Me.Close()
         End If
+
+    End Sub
+
+    Private Sub RespuestaRadioA_CheckedChanged_1(sender As Object, e As EventArgs) Handles RespuestaRadioA.CheckedChanged
+        ButtonRespuesta.Enabled = True
+        respuestaUsuario = "A"
 
     End Sub
 End Class
