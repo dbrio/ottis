@@ -31,7 +31,6 @@ Partial Class preguntas
         Me.DatasetOtis = New ProjectOtis.DatasetOtis()
         Me.LabelPregunta = New System.Windows.Forms.Label()
         Me.btnSaltar = New System.Windows.Forms.Button()
-        Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
         Me.RespuestasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.RadioButtonB = New System.Windows.Forms.RadioButton()
         Me.RadioButtonC = New System.Windows.Forms.RadioButton()
@@ -64,6 +63,7 @@ Partial Class preguntas
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Picture77 = New System.Windows.Forms.PictureBox()
         Me.ButtonRespuesta = New System.Windows.Forms.Button()
+        Me.RespuestaRadioA = New System.Windows.Forms.RadioButton()
         IdRespuestaUsuarioLabel = New System.Windows.Forms.Label()
         IdAlumnoLabel = New System.Windows.Forms.Label()
         CType(Me.Preguntas1BindingSource3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -153,19 +153,6 @@ Partial Class preguntas
         Me.btnSaltar.Text = "Saltar"
         Me.btnSaltar.UseVisualStyleBackColor = False
         Me.btnSaltar.Visible = False
-        '
-        'RespuestaRadioA
-        '
-        Me.RespuestaRadioA.AutoCheck = False
-        Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
-        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RespuestaRadioA.Location = New System.Drawing.Point(38, 447)
-        Me.RespuestaRadioA.Name = "RespuestaRadioA"
-        Me.RespuestaRadioA.Size = New System.Drawing.Size(234, 34)
-        Me.RespuestaRadioA.TabIndex = 6
-        Me.RespuestaRadioA.TabStop = True
-        Me.RespuestaRadioA.Text = "RadioButton1"
-        Me.RespuestaRadioA.UseVisualStyleBackColor = True
         '
         'RespuestasBindingSource
         '
@@ -413,6 +400,18 @@ Partial Class preguntas
         Me.ButtonRespuesta.Text = "OK"
         Me.ButtonRespuesta.UseVisualStyleBackColor = False
         '
+        'RespuestaRadioA
+        '
+        Me.RespuestaRadioA.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Me.RespuestasBindingSource, "Respuesta", True))
+        Me.RespuestaRadioA.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RespuestaRadioA.Location = New System.Drawing.Point(80, 447)
+        Me.RespuestaRadioA.Name = "RespuestaRadioA"
+        Me.RespuestaRadioA.Size = New System.Drawing.Size(197, 34)
+        Me.RespuestaRadioA.TabIndex = 24
+        Me.RespuestaRadioA.TabStop = True
+        Me.RespuestaRadioA.Text = "RadioButton1"
+        Me.RespuestaRadioA.UseVisualStyleBackColor = True
+        '
         'preguntas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -420,6 +419,7 @@ Partial Class preguntas
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1284, 688)
+        Me.Controls.Add(Me.RespuestaRadioA)
         Me.Controls.Add(Me.ButtonRespuesta)
         Me.Controls.Add(Me.Picture77)
         Me.Controls.Add(Me.PictureR8E)
@@ -438,7 +438,6 @@ Partial Class preguntas
         Me.Controls.Add(Me.RadioButtonD)
         Me.Controls.Add(Me.RadioButtonC)
         Me.Controls.Add(Me.RadioButtonB)
-        Me.Controls.Add(Me.RespuestaRadioA)
         Me.Controls.Add(Me.btnSaltar)
         Me.Controls.Add(Me.PreguntasLabel)
         Me.Controls.Add(Me.LabelPregunta)
@@ -484,7 +483,6 @@ Partial Class preguntas
     Friend WithEvents btnSaltar As System.Windows.Forms.Button
     Friend WithEvents RespuestasBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents RespuestasTableAdapter As ProjectOtis.DatasetOtisTableAdapters.RespuestasTableAdapter
-    Friend WithEvents RespuestaRadioA As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonB As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonC As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButtonD As System.Windows.Forms.RadioButton
@@ -508,4 +506,5 @@ Partial Class preguntas
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
     Friend WithEvents Picture77 As System.Windows.Forms.PictureBox
     Friend WithEvents ButtonRespuesta As System.Windows.Forms.Button
+    Friend WithEvents RespuestaRadioA As System.Windows.Forms.RadioButton
 End Class
