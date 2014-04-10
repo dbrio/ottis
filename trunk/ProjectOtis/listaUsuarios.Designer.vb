@@ -28,7 +28,8 @@ Partial Class listaUsuarios
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.AlumnosBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
-        Me.AlumnosGridControl = New DevExpress.XtraGrid.GridControl()
+        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
+        Me.ButtonBuscar = New System.Windows.Forms.Button()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colIdAlumno = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colRNP = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -38,13 +39,13 @@ Partial Class listaUsuarios
         Me.colTelefono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colCorreo = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.colFecha = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.TextBoxBuscar = New System.Windows.Forms.TextBox()
-        Me.ButtonBuscar = New System.Windows.Forms.Button()
+        Me.colIdSexo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.AlumnosGridControl = New DevExpress.XtraGrid.GridControl()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlumnosBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AlumnosBindingSource
@@ -79,20 +80,29 @@ Partial Class listaUsuarios
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
-        'AlumnosGridControl
+        'TextBoxBuscar
         '
-        Me.AlumnosGridControl.DataSource = Me.AlumnosBindingSource
-        Me.AlumnosGridControl.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AlumnosGridControl.Location = New System.Drawing.Point(0, 0)
-        Me.AlumnosGridControl.MainView = Me.GridView1
-        Me.AlumnosGridControl.Name = "AlumnosGridControl"
-        Me.AlumnosGridControl.Size = New System.Drawing.Size(829, 402)
-        Me.AlumnosGridControl.TabIndex = 0
-        Me.AlumnosGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
+        Me.TextBoxBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBoxBuscar.Location = New System.Drawing.Point(511, 8)
+        Me.TextBoxBuscar.Name = "TextBoxBuscar"
+        Me.TextBoxBuscar.Size = New System.Drawing.Size(218, 20)
+        Me.TextBoxBuscar.TabIndex = 1
+        '
+        'ButtonBuscar
+        '
+        Me.ButtonBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonBuscar.BackColor = System.Drawing.Color.Gainsboro
+        Me.ButtonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ButtonBuscar.Location = New System.Drawing.Point(741, 5)
+        Me.ButtonBuscar.Name = "ButtonBuscar"
+        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonBuscar.TabIndex = 2
+        Me.ButtonBuscar.Text = "Buscar"
+        Me.ButtonBuscar.UseVisualStyleBackColor = False
         '
         'GridView1
         '
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colIdAlumno, Me.colRNP, Me.colNombre, Me.colApellidos, Me.colDireccion, Me.colTelefono, Me.colCorreo, Me.colFecha})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colIdAlumno, Me.colRNP, Me.colNombre, Me.colApellidos, Me.colDireccion, Me.colTelefono, Me.colCorreo, Me.colFecha, Me.colIdSexo})
         Me.GridView1.GridControl = Me.AlumnosGridControl
         Me.GridView1.GroupPanelText = " "
         Me.GridView1.Name = "GridView1"
@@ -156,25 +166,23 @@ Partial Class listaUsuarios
         Me.colFecha.Visible = True
         Me.colFecha.VisibleIndex = 6
         '
-        'TextBoxBuscar
+        'colIdSexo
         '
-        Me.TextBoxBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBoxBuscar.Location = New System.Drawing.Point(511, 8)
-        Me.TextBoxBuscar.Name = "TextBoxBuscar"
-        Me.TextBoxBuscar.Size = New System.Drawing.Size(218, 20)
-        Me.TextBoxBuscar.TabIndex = 1
+        Me.colIdSexo.FieldName = "IdSexo"
+        Me.colIdSexo.Name = "colIdSexo"
+        Me.colIdSexo.Visible = True
+        Me.colIdSexo.VisibleIndex = 7
         '
-        'ButtonBuscar
+        'AlumnosGridControl
         '
-        Me.ButtonBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonBuscar.BackColor = System.Drawing.Color.Gainsboro
-        Me.ButtonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ButtonBuscar.Location = New System.Drawing.Point(741, 5)
-        Me.ButtonBuscar.Name = "ButtonBuscar"
-        Me.ButtonBuscar.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonBuscar.TabIndex = 2
-        Me.ButtonBuscar.Text = "Buscar"
-        Me.ButtonBuscar.UseVisualStyleBackColor = False
+        Me.AlumnosGridControl.DataSource = Me.AlumnosBindingSource
+        Me.AlumnosGridControl.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AlumnosGridControl.Location = New System.Drawing.Point(0, 0)
+        Me.AlumnosGridControl.MainView = Me.GridView1
+        Me.AlumnosGridControl.Name = "AlumnosGridControl"
+        Me.AlumnosGridControl.Size = New System.Drawing.Size(829, 402)
+        Me.AlumnosGridControl.TabIndex = 0
+        Me.AlumnosGridControl.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'listaUsuarios
         '
@@ -191,8 +199,8 @@ Partial Class listaUsuarios
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AlumnosBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.AlumnosGridControl, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -202,7 +210,8 @@ Partial Class listaUsuarios
     Friend WithEvents AlumnosTableAdapter As ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter
     Friend WithEvents AlumnosBindingSource1 As System.Windows.Forms.BindingSource
     Friend WithEvents TableAdapterManager As ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager
-    Friend WithEvents AlumnosGridControl As DevExpress.XtraGrid.GridControl
+    Friend WithEvents TextBoxBuscar As System.Windows.Forms.TextBox
+    Friend WithEvents ButtonBuscar As System.Windows.Forms.Button
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents colIdAlumno As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colRNP As DevExpress.XtraGrid.Columns.GridColumn
@@ -212,6 +221,6 @@ Partial Class listaUsuarios
     Friend WithEvents colTelefono As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colCorreo As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colFecha As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents TextBoxBuscar As System.Windows.Forms.TextBox
-    Friend WithEvents ButtonBuscar As System.Windows.Forms.Button
+    Friend WithEvents colIdSexo As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents AlumnosGridControl As DevExpress.XtraGrid.GridControl
 End Class
