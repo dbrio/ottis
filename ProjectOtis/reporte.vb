@@ -17,4 +17,8 @@
 
 
 
+  
+    Private Sub ReporteGridControl_DoubleClick(sender As Object, e As EventArgs) Handles ReporteGridControl.DoubleClick
+
+    End Sub
 End Class

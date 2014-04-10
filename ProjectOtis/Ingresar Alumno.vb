@@ -1,4 +1,5 @@
 ﻿Public Class Ingresar_Alumno
+    Dim IdSexo As Integer
     Dim Alumno As String
     Private Sub AlumnosBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         'Me.Validate()
@@ -60,11 +61,21 @@
             Exit Sub
         End If
 
+        If RadioButtonM.Checked = False And RadioButtonF.Checked = False Then
+            MsgBox("Debe de seleccionar un Sexo", MsgBoxStyle.Information)
+            Exit Sub
+        End If
+
+        If RadioButtonM.Checked = True Then
+            IdSexo = 1
+        Else
+            IdSexo = 2
+        End If
 
 
-        AlumnosTableAdapter.FillByProcd(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue)
+        AlumnosTableAdapter.FillByProcd(RNPTextEdit.EditValue, NombreTextEdit.EditValue, ApellidosTextEdit.EditValue, DireccionTextEdit.EditValue, TelefonoTextEdit.EditValue, CorreoTextEdit.EditValue, IdSexo)
 
-      
+
 
         Dim nombre As String = NombreTextEdit.EditValue
         Dim apellido As String = ApellidosTextEdit.EditValue
@@ -89,8 +100,8 @@
 
         End With
 
-       
-       
+
+
 
         Me.Close()
     End Sub

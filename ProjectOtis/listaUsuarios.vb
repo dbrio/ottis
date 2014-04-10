@@ -14,19 +14,29 @@
         End Try
     End Function
 
+    Private Function DameIdSexo() As Integer
+        Try
+            Return GridView1.GetRowCellValue(GridView1.FocusedRowHandle, "IdSexo")
+        Catch ex As Exception
+
+        End Try
+    End Function
+
 
 
 
     Private Sub GridControl1_DoubleClick(sender As Object, e As EventArgs)
         Dim ID As Integer = DameId()
-
+        Dim IDSEXO As Integer = DameIdSexo()
         With baremos
             .id = ID
+            .IdSexo = IDSEXO
             .ShowDialog()
 
         End With
 
     End Sub
+
 
    
     Private Sub AlumnosGridControl_Click(sender As Object, e As EventArgs) Handles AlumnosGridControl.Click
@@ -35,9 +45,10 @@
 
     Private Sub AlumnosGridControl_DoubleClick(sender As Object, e As EventArgs) Handles AlumnosGridControl.DoubleClick
         Dim ID As Integer = DameId()
-
+        Dim IDSEXO As Integer = DameIdSexo()
         With baremos
             .id = ID
+            .IdSexo = IDSEXO
             .ShowDialog()
 
         End With

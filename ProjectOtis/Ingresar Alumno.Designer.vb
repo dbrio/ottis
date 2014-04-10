@@ -30,6 +30,7 @@ Partial Class Ingresar_Alumno
         Dim TelefonoLabel As System.Windows.Forms.Label
         Dim CorreoLabel As System.Windows.Forms.Label
         Dim Label1 As System.Windows.Forms.Label
+        Dim Label3 As System.Windows.Forms.Label
         Me.ButtonIngresar = New System.Windows.Forms.Button()
         Me.NombreTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.AlumnosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -42,6 +43,8 @@ Partial Class Ingresar_Alumno
         Me.AlumnosTableAdapter = New ProjectOtis.DatasetOtisTableAdapters.AlumnosTableAdapter()
         Me.TableAdapterManager = New ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.RadioButtonM = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonF = New System.Windows.Forms.RadioButton()
         NombreLabel = New System.Windows.Forms.Label()
         ApellidosLabel = New System.Windows.Forms.Label()
         DireccionLabel = New System.Windows.Forms.Label()
@@ -49,6 +52,7 @@ Partial Class Ingresar_Alumno
         TelefonoLabel = New System.Windows.Forms.Label()
         CorreoLabel = New System.Windows.Forms.Label()
         Label1 = New System.Windows.Forms.Label()
+        Label3 = New System.Windows.Forms.Label()
         CType(Me.NombreTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AlumnosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DatasetOtis, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,7 +112,7 @@ Partial Class Ingresar_Alumno
         TelefonoLabel.AutoSize = True
         TelefonoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         TelefonoLabel.ForeColor = System.Drawing.Color.DimGray
-        TelefonoLabel.Location = New System.Drawing.Point(150, 284)
+        TelefonoLabel.Location = New System.Drawing.Point(150, 339)
         TelefonoLabel.Name = "TelefonoLabel"
         TelefonoLabel.Size = New System.Drawing.Size(102, 24)
         TelefonoLabel.TabIndex = 20
@@ -119,7 +123,7 @@ Partial Class Ingresar_Alumno
         CorreoLabel.AutoSize = True
         CorreoLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         CorreoLabel.ForeColor = System.Drawing.Color.DimGray
-        CorreoLabel.Location = New System.Drawing.Point(742, 278)
+        CorreoLabel.Location = New System.Drawing.Point(742, 333)
         CorreoLabel.Name = "CorreoLabel"
         CorreoLabel.Size = New System.Drawing.Size(73, 24)
         CorreoLabel.TabIndex = 21
@@ -140,9 +144,9 @@ Partial Class Ingresar_Alumno
         Me.ButtonIngresar.BackColor = System.Drawing.Color.DarkKhaki
         Me.ButtonIngresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonIngresar.ForeColor = System.Drawing.Color.White
-        Me.ButtonIngresar.Location = New System.Drawing.Point(536, 394)
+        Me.ButtonIngresar.Location = New System.Drawing.Point(536, 428)
         Me.ButtonIngresar.Name = "ButtonIngresar"
-        Me.ButtonIngresar.Size = New System.Drawing.Size(224, 68)
+        Me.ButtonIngresar.Size = New System.Drawing.Size(224, 70)
         Me.ButtonIngresar.TabIndex = 6
         Me.ButtonIngresar.Text = "Ingresar"
         Me.ButtonIngresar.UseVisualStyleBackColor = False
@@ -206,7 +210,7 @@ Partial Class Ingresar_Alumno
         'TelefonoTextEdit
         '
         Me.TelefonoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Telefono", True))
-        Me.TelefonoTextEdit.Location = New System.Drawing.Point(307, 281)
+        Me.TelefonoTextEdit.Location = New System.Drawing.Point(307, 336)
         Me.TelefonoTextEdit.Name = "TelefonoTextEdit"
         Me.TelefonoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TelefonoTextEdit.Properties.Appearance.Options.UseFont = True
@@ -218,7 +222,7 @@ Partial Class Ingresar_Alumno
         'CorreoTextEdit
         '
         Me.CorreoTextEdit.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AlumnosBindingSource, "Correo", True))
-        Me.CorreoTextEdit.Location = New System.Drawing.Point(832, 274)
+        Me.CorreoTextEdit.Location = New System.Drawing.Point(832, 329)
         Me.CorreoTextEdit.Name = "CorreoTextEdit"
         Me.CorreoTextEdit.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CorreoTextEdit.Properties.Appearance.Options.UseFont = True
@@ -252,6 +256,43 @@ Partial Class Ingresar_Alumno
         Me.Label2.TabIndex = 23
         Me.Label2.Text = "Registro de Usuario"
         '
+        'Label3
+        '
+        Label3.AutoSize = True
+        Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Label3.ForeColor = System.Drawing.Color.DimGray
+        Label3.Location = New System.Drawing.Point(166, 270)
+        Label3.Name = "Label3"
+        Label3.Size = New System.Drawing.Size(71, 24)
+        Label3.TabIndex = 24
+        Label3.Text = "* Sexo:"
+        '
+        'RadioButtonM
+        '
+        Me.RadioButtonM.AutoSize = True
+        Me.RadioButtonM.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonM.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.RadioButtonM.Location = New System.Drawing.Point(307, 266)
+        Me.RadioButtonM.Name = "RadioButtonM"
+        Me.RadioButtonM.Size = New System.Drawing.Size(114, 28)
+        Me.RadioButtonM.TabIndex = 25
+        Me.RadioButtonM.TabStop = True
+        Me.RadioButtonM.Text = "Masculino"
+        Me.RadioButtonM.UseVisualStyleBackColor = True
+        '
+        'RadioButtonF
+        '
+        Me.RadioButtonF.AutoSize = True
+        Me.RadioButtonF.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButtonF.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.RadioButtonF.Location = New System.Drawing.Point(468, 266)
+        Me.RadioButtonF.Name = "RadioButtonF"
+        Me.RadioButtonF.Size = New System.Drawing.Size(115, 28)
+        Me.RadioButtonF.TabIndex = 26
+        Me.RadioButtonF.TabStop = True
+        Me.RadioButtonF.Text = "Femenino"
+        Me.RadioButtonF.UseVisualStyleBackColor = True
+        '
         'Ingresar_Alumno
         '
         Me.AcceptButton = Me.ButtonIngresar
@@ -259,6 +300,9 @@ Partial Class Ingresar_Alumno
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(1268, 677)
+        Me.Controls.Add(Me.RadioButtonF)
+        Me.Controls.Add(Me.RadioButtonM)
+        Me.Controls.Add(Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Label1)
         Me.Controls.Add(CorreoLabel)
@@ -302,4 +346,6 @@ Partial Class Ingresar_Alumno
     Friend WithEvents TelefonoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents CorreoTextEdit As DevExpress.XtraEditors.TextEdit
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents RadioButtonM As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButtonF As System.Windows.Forms.RadioButton
 End Class

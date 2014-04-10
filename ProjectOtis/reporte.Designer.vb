@@ -84,6 +84,7 @@ Partial Class reporte
         Me.TableAdapterManager.RespuestasTableAdapter = Nothing
         Me.TableAdapterManager.RespuestasUsuarioTableAdapter = Me.RespuestasUsuarioTableAdapter
         Me.TableAdapterManager.UpdateOrder = ProjectOtis.DatasetOtisTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        Me.TableAdapterManager.UsuariosTableAdapter = Nothing
         '
         'ReporteGridControl
         '

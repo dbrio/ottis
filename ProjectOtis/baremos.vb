@@ -1,5 +1,6 @@
 ﻿Public Class baremos
     Public id As Integer
+    Public IdSexo As Integer
     Private Sub baremos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: esta línea de código carga datos en la tabla 'DatasetOtis.DataTable2' Puede moverla o quitarla según sea necesario.
         Me.DataTable2TableAdapter.Fill(Me.DatasetOtis.DataTable2)
@@ -69,27 +70,33 @@
         Dim crudo As Integer = buenas - malas
         LabelBaremo.Text = crudo
 
-        If crudo >= 51 Then
-            Label3.Text = "Superior"
+
+        If IdSexo = 1 Then
+            If crudo >= 51 Then
+                Label3.Text = "Superior"
+            End If
+            If crudo <= 50 And crudo > 45 Then
+                Label3.Text = "Superior al TM"
+            End If
+            If crudo <= 45 And crudo > 42 Then
+                Label3.Text = "TM +"
+            End If
+            If crudo <= 42 And crudo > 39 Then
+                Label3.Text = "TM"
+            End If
+            If crudo <= 39 And crudo > 35 Then
+                Label3.Text = "TM -"
+            End If
+            If crudo <= 35 And crudo > 30 Then
+                Label3.Text = "Inferior al TM"
+            End If
+            If crudo < 29 Then
+                Label3.Text = "Deficiente"
+            End If
+        Else
+            MsgBox("esto es culerada")
         End If
-        If crudo <= 50 And crudo > 45 Then
-            Label3.Text = "Superior al TM"
-        End If
-        If crudo <= 45 And crudo > 42 Then
-            Label3.Text = "TM +"
-        End If
-        If crudo <= 42 And crudo > 39 Then
-            Label3.Text = "TM"
-        End If
-        If crudo <= 39 And crudo > 35 Then
-            Label3.Text = "TM -"
-        End If
-        If crudo <= 35 And crudo > 30 Then
-            Label3.Text = "Inferior al TM"
-        End If
-        If crudo < 29 Then
-            Label3.Text = "Deficiente"
-        End If
+        
 
 
 
